@@ -65,8 +65,24 @@
             border-radius: 50%;
         }
         #bottom{
-            height:200px;
+            color:white;
         }
+        #chatbot{
+            position:fixed;
+            right:30px;
+            bottom:20px;
+        }
+
+        #chatbot-popup{
+            display:none;
+            position:fixed;
+            right:30px;
+            bottom:20px;
+        }
+        .chatbotimg{
+            width:150px;    
+        }
+
     </style>
     
 </head>
@@ -176,37 +192,67 @@
         </button>
     </div>
     
-    <div class="row align-items-center" id="box">
-        <div class="col-9" id="text">
-            <p class="h1 text-center">About Us</p>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quidem voluptate non blanditiis ipsum sed dolorem laudantium cum officiis doloremque? Consectetur dolor esse accusantium voluptate ut atque, explicabo eos facilis?</p>
+    <div class="container-fluid">
+        <div class="row align-items-center" id="box">
+            <div class="col-9" id="text">
+                <p class="h1 text-center">About Us</p>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quidem voluptate non blanditiis ipsum sed dolorem laudantium cum officiis doloremque? Consectetur dolor esse accusantium voluptate ut atque, explicabo eos facilis?</p>
+            </div>
+            <div class="col-3 p-0">
+                <img id="doctor" src="images/Doctor1.jpg" class="w-100">
+            </div>  
         </div>
-        <div class="col-3 p-0">
-            <img id="doctor" src="images/Doctor1.jpg" class="w-100">
-        </div>  
     </div>
+    
     <!-- [END] MIDDLE OF PAGE -->
 
 
 
     <!-- [START] BOTTOM OF PAGE -->
-    <div class="bg-secondary" id="bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-3 text-center">
-                    <h1>Contact</h1>
-                    <p>GetDiagnosed</p>
-                </div>
-                <div class="col-3">
-                    h1
-
-                </div>
-                <div class="col-6">
-                    
-                </div>
+    <div class="container-fluid bg-secondary" id="bottom">
+        <div class="row">
+            <div class="col">
+                <h1>Contact</h1>
+                <p>GetDiagnosed</p>
+                <p>81 Victoria St</p>
+                <p>Singapore 188065</p>
             </div>
+
+            <div class="col">
+                <p>Tel +65 87654321</p>
+                
+                <p>Email GetDiagnosed@business.com</p>
+                
+                <p>Book a Consultation</p>
+                
+                
+            </div>
+            <div class="col">col3</div>
         </div>
     </div>
+    
+    <div>
+        <img class="chatbotimg" id="chatbot" src="images/chatbot.png">
+        <button type="button" class="btn btn-light" id="chatbot" onclick="openForm()"> AI Symptoms Checker --> Click here to chat</button>
+    </div>
+    
+
+    <div id="chatbot-popup">
+        <div class="input-group text-center">
+            <button class="btn btn-light w-100" type="button" onclick="closeForm()">Get your symptoms checked out!</button>
+        </div>
+        <div class="input-group" style="Display:none" id="chatlog">
+            
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Message</span>
+            <textarea class="form-control" aria-label="With textarea" name="textbox" id="usertext" rows="4" placeholder="Shift + Enter to create new line"></textarea>
+            <button type="button" class="btn btn-light " onclick="message()" id="send"> Send </button> 
+        </div>
+        
+    </div>
+
+    
     <!-- [END] BOTTOM OF PAGE -->
 
     <div id="gotoTop" class="uil uil-angle-up" onclick="topFunction()">Top</div>    
