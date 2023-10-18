@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Ivy Streams</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='consult.css'>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
         <div id="video-streams"></div>
 
         <div id="stream-controls">
-            <button id="leave-btn">Leave Stream</button>
+            <button id="leave-btn" onclick="warning()">End Consultation</button>
             <button id="mic-btn">Mic On</button>
             <button id="camera-btn">Camera on</button>
         </div>
@@ -26,5 +26,5 @@
 </body>
 <!-- <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script> -->
 <script src="AgoraRTC_N-4.7.3.js"></script>
-<script src='main.js'></script>
+<script src='consult.js'></script>
 </html>
