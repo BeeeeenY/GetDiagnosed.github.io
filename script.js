@@ -41,14 +41,54 @@ function closeForm() {
 }());
 
 
-function message(){
-    var usertext = document.getElementById('usertext').value
-
-    if(document.getElementById('chatlog').style.display == "none"){
-        str = ``
-    }
-    str += `<span class="input-group-text">username: ${usertext}</span>`
+async function message() {
+    // get the resposes from call_chatgpt, varibale save as an array
+    var user_input = document.getElementById('usertext').value
+    let str_repsonses_innerhtml = await call_chatgpt(user_input)
+    console.log(str_repsonses_innerhtml)
+    display_all_response(str_repsonses_innerhtml, user_input)
+    
+}
+function display_all_response(str_repsonses_innerhtml,user_input){
+// display of responses from user input and chatgpt response
+    str = ``
+    str += '<div class="input-group-text">username: ${user_input}</div>'
+    str += `<div style="color:blue; font-size:6px" class="input-group-text">bot:${str_repsonses_innerhtml}</div>`
     document.getElementById('chatlog').style.display = "block"
     document.getElementById('chatlog').innerHTML = str
     document.getElementById('usertext').value = "";
+}
+
+async function call_chatgpt(user_input){
+    let api_endpoint_url = "https://api.openai.com/v1/chat/completions"
+    
+    try {
+     console.log("Getting GPT chat...")
+     const data = {
+      model: 'gpt-3.5-turbo',
+      messages: [
+          {
+              role: 'system',
+              content: 'You are as pre doctor check that allow users to type in symptoms. You will show basic reccomendations for the symptoms. Keep only 3 short recomendations  and in a list'
+          },
+          {
+              role: 'user',
+              content: user_input
+          }
+      ]
+  };
+
+  const requestOptions = {
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + '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'
+      },
+  };
+
+  // Get chat GPT response
+  const res = await axios.post(api_endpoint_url, data, requestOptions)
+  return res.data.choices[0].message.content
+ } catch (error) {
+  console.log(error.message)
+ }
 }
