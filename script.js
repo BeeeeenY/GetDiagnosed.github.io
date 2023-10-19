@@ -45,6 +45,7 @@ async function message() {
     // get the resposes from call_chatgpt, varibale save as an array
     var user_input = document.getElementById('usertext').value
     let str_repsonses_innerhtml = await call_chatgpt(user_input)
+
     console.log(str_repsonses_innerhtml)
     display_all_response(str_repsonses_innerhtml, user_input)
     
@@ -53,7 +54,7 @@ function display_all_response(str_repsonses_innerhtml,user_input){
 // display of responses from user input and chatgpt response
     str = ``
     str += `<div class="input-group-text">username: ${user_input}</div>`
-    str += `<div style="color:blue; font-size:6px" class="input-group-text">bot:${str_repsonses_innerhtml}</div>`
+    str += `<div style="color:blue; font-size:10px" class="input-group-text">bot:${str_repsonses_innerhtml}</div>`
     document.getElementById('chatlog').style.display = "block"
     document.getElementById('chatlog').innerHTML = str
     document.getElementById('usertext').value = "";
@@ -89,7 +90,21 @@ async function call_chatgpt(user_input){
 
   // Get chat GPT response
   const res = await axios.post(api_endpoint_url, data, requestOptions)
-  return res.data.choices[0].message.content
+  var ai_responses_split = (res.data.choices[0].message.content).split('\n')
+
+  var setstr = '<ul>'
+        // console.log('---------------------before----------------')
+        // console.log(message)
+        for(let i = 0; i<ai_responses_split.length;i++){
+            if(ai_responses_split[i]==''){        
+            }
+            else{
+                let input_text = ai_responses_split[i].slice(2)
+                setstr+=`<li>${input_text}</li>`
+            }
+        }
+        setstr +="</ul>"
+  return  setstr
  } catch (error) {
   console.log(error.message)
  }
