@@ -52,12 +52,24 @@ async function message() {
 }
 function display_all_response(str_repsonses_innerhtml,user_input){
 // display of responses from user input and chatgpt response
-    str = ``
-    str += `<div class="input-group-text">username: ${user_input}</div>`
-    str += `<div style="color:blue; font-size:10px" class="input-group-text">bot:${str_repsonses_innerhtml}</div>`
-    document.getElementById('chatlog').style.display = "block"
-    document.getElementById('chatlog').innerHTML = str
-    document.getElementById('usertext').value = "";
+
+    //first entry into chatbot
+    if (typeof str == 'undefined'){
+        str = ``
+        str += `<div class="input-group-text">username: ${user_input}</div>`
+        str += `<div style="color:blue; font-size:12px" class="input-group-text">bot:${str_repsonses_innerhtml}</div>`
+        document.getElementById('chatlog').style.display = "block"
+        document.getElementById('chatlog').innerHTML = str
+        document.getElementById('usertext').value = ""; 
+    }
+    //following entries into chatbot
+    else{
+        str += `<div class="input-group-text">username: ${user_input}</div>`
+        str += `<div style="color:blue; font-size:12px" class="input-group-text">bot:${str_repsonses_innerhtml}</div>`
+        document.getElementById('chatlog').style.display = "block"
+        document.getElementById('chatlog').innerHTML = str
+        document.getElementById('usertext').value = ""; 
+    }
 }
 
 async function call_chatgpt(user_input){
