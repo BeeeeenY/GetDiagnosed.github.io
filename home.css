@@ -83,4 +83,7 @@ a:hover{
 .chatbotimg{
     width:150px;    
 }
+#input-group-text{
+    justify-content: center;  
+}
 
