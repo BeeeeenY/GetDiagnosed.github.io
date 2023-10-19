@@ -1,0 +1,87 @@
+a:link{
+    text-decoration: None;
+    color:white;
+}
+
+a:visited{
+    color:black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#highlight{
+    background-color: blue;
+    color:white;
+    border-radius: 50%;
+    padding:10px;
+}
+
+
+#gotoTop:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#top{
+    background-color: white;
+}
+
+#links{
+    align-items: center;
+    display:flex;
+}
+
+#chatbot{
+    position:fixed;
+    right:30px;
+    bottom:20px;
+}
+
+#chatbot-popup{
+    display:none;
+    position:fixed;
+    right:30px;
+    bottom:20px;
+}
+.chatbotimg{
+    width:150px;    
+}
+#rounded{
+    border-radius: 10px;
+}
+#password{
+    border-radius: 10px;
+    position:relative;
+}
+#togglePassword{
+    right:10px;
+}
+form i{
+    margin-left: -30px;
+    cursor: pointer;
+}
+#right{
+    display:flex;
+    align-items: right;
+    justify-content: end;
+}
+#loginphoto{
+    width:445px;
+    height:500px;
+}
+
+#background{
+    background-image: url("images/background.avif");
+}
+
+#text{
+    margin-top: 120px;
+}
+
+#overbackground{
+    background-image: url("images/overbackground.jpeg");
+}
+#black{
+    color:black;
+}
