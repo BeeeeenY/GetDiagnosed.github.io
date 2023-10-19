@@ -52,7 +52,7 @@ async function message() {
 function display_all_response(str_repsonses_innerhtml,user_input){
 // display of responses from user input and chatgpt response
     str = ``
-    str += '<div class="input-group-text">username: ${user_input}</div>'
+    str += `<div class="input-group-text">username: ${user_input}</div>`
     str += `<div style="color:blue; font-size:6px" class="input-group-text">bot:${str_repsonses_innerhtml}</div>`
     document.getElementById('chatlog').style.display = "block"
     document.getElementById('chatlog').innerHTML = str
@@ -61,6 +61,7 @@ function display_all_response(str_repsonses_innerhtml,user_input){
 
 async function call_chatgpt(user_input){
     let api_endpoint_url = "https://api.openai.com/v1/chat/completions"
+    let access_key_openai = "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"
     
     try {
      console.log("Getting GPT chat...")
@@ -81,7 +82,7 @@ async function call_chatgpt(user_input){
   const requestOptions = {
       headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + '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'
+          'Authorization': 'Bearer ' + access_key_openai
       },
   };
 
