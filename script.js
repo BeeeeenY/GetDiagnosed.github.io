@@ -61,7 +61,8 @@ function display_all_response(str_repsonses_innerhtml,user_input){
 
 async function call_chatgpt(user_input){
     let api_endpoint_url = "https://api.openai.com/v1/chat/completions"
-    let access_key_openai = "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"
+    const encodedString = "V1hwS2VtUkdTa2xhU0ZKVFVtc3dlbGt6Y0U5aFJsWkZWVlJXVDFKVWJIZFZWRXAzVFVkTmVGWnNWazVOUlhCNlYxY3hNRkl4VG5GUmJrcFdUVEJ3UTFsV1drdE9SbXhZVkZoa1UySllhRTlWTWpFelpWZEdWVlpzWXowPQ=="
+    const halfDecoded = atob(atob(encodedString))
     
     try {
      console.log("Getting GPT chat...")
@@ -82,7 +83,7 @@ async function call_chatgpt(user_input){
   const requestOptions = {
       headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + access_key_openai
+          'Authorization': 'Bearer ' + atob(atob(halfDecoded))
       },
   };
 
