@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-3">
                     <div class="col-3">
-                        <a href="home.html"><img src="images/Logo.jpg" width="300"></a>
+                        <a href="/PROJECT/home/home.html"><img src="images/Logo.jpg" width="300"></a>
                     </div>
                     <div class="col-9">
                     </div>
@@ -33,20 +33,20 @@
 
     <div class="container-fluid">
         <div class="row m-5 justify-content-md-center ">
-            <div class="col col-lg-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded text-center" id="background">
-                <h2>New here?</h2>
-                <p>Sign up for quality and easily accessible healthcare</p>
+            <div class="col col-lg-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded text-center" id="newbox">
+                <h2 id="newtext">New here?</h2>
+                <p id="description">Sign up for quality and easily accessed healthcare</p>
                 <p id="text">
-                    <a class="btn btn-secondary" href="register_patient.html" role="button">Sign Up here</a>
-
+                    <button class="btn btn-secondary" onclick="transition()" id="register">Sign Up here</button>
+                    <button class="btn btn-secondary" onclick="closebox()" id="closebox">Login here</button>
                 </p>
             </div>
-            <div class="col col-lg-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-                <h2>Log In</h2> 
+            <div class="col col-lg-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="loginbox">
+                <h2 id="logintext">Log In</h2> 
                 <form action="POST">
                     <p>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Email or Patient ID" aria-label="Username" aria-describedby="basic-addon1" id="rounded">
+                            <input type="text" class="form-control" placeholder="Email or Patient ID" aria-label="Username" aria-describedby="basic-addon1" id="username">
                         </div>
 
                     </p>
@@ -56,12 +56,19 @@
                             <i class="bi bi-eye-slash position-absolute top-50 translate-middle-y" id="togglePassword"></i>
                         </div>
                     </p>
+
+                    <p>
+                        <div class="input-group" >
+                            <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Username" aria-describedby="basic-addon1" id="confirmpassword">
+                            <i class="bi bi-eye-slash position-absolute top-50 translate-middle-y" id="togglePassword2"></i>
+                        </div>
+                    </p>
                     <span class="opacity-50">
-                        <a id="black" href="forgotpassword.html">forgot password?</a>
+                        <a id="forgotpassword" href="forgotpassword.html">forgot password?</a>
                     </span>
                     
                     <p id="right">
-                        <a class="btn btn-secondary" href="homelogin.html" role="button">Login</a>
+                        <a class="btn btn-secondary" href="homelogin.html" role="button" id="loginbutton">Login</a>
                     </p>
                         
                 </form>

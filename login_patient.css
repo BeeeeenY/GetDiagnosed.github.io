@@ -47,7 +47,7 @@ a:hover{
 .chatbotimg{
     width:150px;    
 }
-#rounded{
+#username{
     border-radius: 10px;
 }
 #password{
@@ -71,8 +71,12 @@ form i{
     height:500px;
 }
 
-#background{
+#newbox{
     background-image: url("images/background.avif");
+    transition: transform 0.5s;
+}
+#loginbox{
+    transition: transform 0.5s;
 }
 
 #text{
@@ -82,6 +86,19 @@ form i{
 #overbackground{
     background-image: url("images/overbackground.jpeg");
 }
-#black{
+#forgotpassword{
     color:black;
+}
+
+#closebox{
+    display:none;
+}
+#confirmpassword{
+    border-radius:10px;
+    position:relative;
+    display:none;
+}
+#togglePassword2{
+    right:10px;
+    display:none;
 }
