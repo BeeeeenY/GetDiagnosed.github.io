@@ -13,6 +13,16 @@ button{
     margin:2px;
     cursor: pointer;
 }
+#highlight{
+    border: 1px solid black;
+    background: linear-gradient(to right, yellow 50%, red 50%);
+    color: black;
+    border-radius: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:10px;
+    padding-right:10px;
+}
 
 #chat-btn{
     position: absolute;
