@@ -1,0 +1,103 @@
+a:link{
+    text-decoration: None;
+    color:white;
+}
+
+a:visited{
+    color:black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#highlight{
+    background-color: blue;
+    color:white;
+    border-radius: 50%;
+    padding:10px;
+}
+
+
+#gotoTop:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#top{
+    background-color: white;
+}
+
+#links{
+    align-items: center;
+    display:flex;
+}
+
+#chatbot{
+    position:fixed;
+    right:30px;
+    bottom:20px;
+}
+
+#chatbot-popup{
+    display:none;
+    position:fixed;
+    right:30px;
+    bottom:20px;
+}
+.chatbotimg{
+    width:150px;    
+}
+#username{
+    border-radius: 10px;
+}
+#password{
+    border-radius: 10px;
+    position:relative;
+}
+#togglePassword{
+    right:10px;
+}
+form i{
+    margin-left: -30px;
+    cursor: pointer;
+}
+#right{
+    display:flex;
+    align-items: right;
+    justify-content: end;
+}
+#loginphoto{
+    width:445px;
+    height:500px;
+}
+
+#newbox{
+    background-image: url("../images/background.avif");
+    transition: transform 0.5s;
+}
+#loginbox{
+    transition: transform 0.5s;
+}
+
+#text{
+    margin-top: 120px;
+}
+
+#overbackground{
+    background-image: url("../images/overbackground.jpeg");
+}
+#forgotpassword{
+    color:black;
+    display:none;
+}
+
+#closebox{
+    display:none;
+}
+#confirmpassword{
+    border-radius:10px;
+    position:relative;
+}
+#togglePassword2{
+    right:10px;
+}

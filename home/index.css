@@ -1,0 +1,89 @@
+a:link{
+    text-decoration: None;
+    color:black;
+}
+
+a:visited{
+    color:black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#highlight{
+    border: 1px solid black;
+    background: linear-gradient(to right, yellow 50%, red 50%);
+    color: black;
+    border-radius: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+#carouimage{
+    height: 600px;
+}
+#gotoTop {
+    display: block; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    left: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#gotoTop:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#top{
+    background-color: white;
+}
+
+#links{
+    align-items: center;
+    display:flex;
+}
+
+#box{
+    height:450px;
+    background-color: darkblue;
+    color:white;
+}
+#doctor{
+    height:450px;
+    border-radius: 50%;
+    padding:20px;
+}
+#bottom{
+    color:white;
+    height:600px;
+}
+#chatbot{
+    position:fixed;
+    right:30px;
+    bottom:20px;
+}
+
+#chatbot-popup{
+    display:none;
+    position:fixed;
+    right:30px;
+    bottom:20px;
+}
+.chatbotimg{
+    width:150px;    
+}
+#input-group-text{
+    justify-content: center;  
+}
+
