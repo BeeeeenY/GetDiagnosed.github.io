@@ -29,7 +29,7 @@ let joinAndDisplayLocalStream = async () => {
 
 let joinStream = async () => {
     await joinAndDisplayLocalStream()
-    document.getElementById('join-btn').style.display = 'none'
+   
     document.getElementById('stream-controls').style.display = 'flex'
 }
 
@@ -68,7 +68,6 @@ let leaveAndRemoveLocalStream = async () => {
     }
 
     await client.leave()
-    document.getElementById('join-btn').style.display = 'block'
     document.getElementById('stream-controls').style.display = 'none'
     document.getElementById('video-streams').innerHTML = ''
 }
@@ -77,11 +76,13 @@ let toggleMic = async (e) => {
     if (localTracks[0].muted){
         await localTracks[0].setMuted(false)
         e.target.innerText = 'Mic on'
-        e.target.style.backgroundColor = 'cadetblue'
+        e.target.style.backgroundColor = 'cadetblue';
+        
     }else{
         await localTracks[0].setMuted(true)
         e.target.innerText = 'Mic off'
         e.target.style.backgroundColor = '#EE4B2B'
+        
     }
 }
 
@@ -90,10 +91,12 @@ let toggleCamera = async (e) => {
         await localTracks[1].setMuted(false)
         e.target.innerText = 'Camera on'
         e.target.style.backgroundColor = 'cadetblue'
+        
     }else{
         await localTracks[1].setMuted(true)
         e.target.innerText = 'Camera off'
         e.target.style.backgroundColor = '#EE4B2B'
+        
     }
 }
 
