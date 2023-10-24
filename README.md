@@ -1,1 +1,0 @@
-# GetDiagnosed.github.io
