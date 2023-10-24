@@ -15,11 +15,7 @@
 	<link rel="stylesheet" href="style.css">
 
 	<!-- Font Icons -->
-	<link rel="stylesheet" href="css/font-icons.css">
 	<link rel="stylesheet" href="css/medical-icons.css">
-
-	<!-- Plugins/Components CSS -->
-	<link rel="stylesheet" href="css/swiper.css">
 
 	<!-- Niche Demos -->
 	<link rel="stylesheet" href="css/medical.css">
@@ -27,8 +23,22 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/custom.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+	
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+	<!-- Unicons Icons -->
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+	<!-- Fontawesome -->
+	<script src="https://kit.fontawesome.com/7fab40c677.js" crossorigin="anonymous"></script>
+
+	<!-- Medical Icons -->
+	<link rel="stylesheet" href="css/wfmi-style.css">
+	
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="css/swiper.css">
+
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 	<title>GetDiagnosed</title>
@@ -40,7 +50,49 @@
 	<!-- Document Wrapper
 	============================================= -->
 	<div id="wrapper">
+		
+		<!-- Top Bar
+		============================================= -->
+		<div id="top-bar">
+			<div class="container">
 
+				<div class="row justify-content-between">
+					<div class="col-12 col-md-auto d-none d-md-flex">
+
+						<!-- Top Links
+						============================================= -->
+						<div class="top-links">
+							<ul class="top-links-container">
+								<li class="top-links-item"><a href="#"><i class="bi-clock"></i> Timings</a></li>
+								<li class="top-links-item"><a href="#"><i class="bi-telephone"></i> +65 98765432</a></li>
+								<li class="top-links-item"><a href="#" class="text-transform-none"><i class="bi-envelope"></i> GetDiagnosed@medical.com</a></li>
+							</ul>
+						</div><!-- .top-links end -->
+
+					</div>
+
+					<div class="col-12 col-md-auto">
+
+						<!-- Top Links
+						============================================= -->
+						<div class="top-links">
+							<ul class="top-links-container">
+								<li class="top-links-item"><a href="#">EN</a>
+									<ul class="top-links-sub-menu">
+										<li class="top-links-item"><a href="#"><img src="images/french.png" alt="French"> FR</a></li>
+										<li class="top-links-item"><a href="#"><img src="images/italian.png" alt="Italian"> IT</a></li>
+										<li class="top-links-item"><a href="#"><img src="images/german.png" alt="German"> DE</a></li>
+									</ul>
+								</li>
+								<li class="top-links-item"><a href="" class="bg-color text-white">Book an Appointment</a></li>
+							</ul>
+						</div><!-- .top-links end -->
+
+					</div>
+				</div>
+
+			</div>
+		</div><!-- #top-bar end -->
 
 		<!-- Header
 		============================================= -->
@@ -53,7 +105,7 @@
 						============================================= -->
 						<div id="logo">
 							<a href="index.html">
-								<img class="logo-default" srcset="images/Logo.png, images/logo@2x.JPG 2x" src="images/logo.png" alt="Logo">
+								<img class="logo-default" src="images/logo.png">
 							</a>
 						</div><!-- #logo end -->
 
@@ -68,19 +120,19 @@
 						<nav class="primary-menu style-3 menu-spacing-margin">
 
 							<ul class="menu-container">
-								<li class="menu-item current"><a class="menu-link" href="demo-medical.html"><div>Home</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-medical-about-us.html"><div>About Us</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-medical-departments.html"><div>Departments</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-medical-appointment.html"><div>Appointment</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-medical-doctors.html"><div>Doctors</div></a>
+								<li class="menu-item current"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="about-us.html"><div>About Us</div></a></li>
+								<li class="menu-item"><a class="menu-link" href=""><div>Consult</div></a></li>
+								<li class="menu-item"><a class="menu-link" href=""><div>Nearest Clinic</div></a></li>
+								<li class="menu-item"><div class="menu-link">Login/Register</div>
 									<ul class="sub-menu-container">
-										<li class="menu-item"><a class="menu-link" href="demo-medical-doctors-lists.html"><div>2 columns - List style</div></a></li>
-										<li class="menu-item"><a class="menu-link" href="demo-medical-doctors-3.html"><div>3 columns</div></a></li>
-										<li class="menu-item"><a class="menu-link" href="demo-medical-doctors.html"><div>4 columns</div></a></li>
+										<li class="menu-item"><div>Patient</div></li>
+										<li class="menu-item"><a class="menu-link" href="register_patient.html"><div>Register Patient</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="login_patient.html"><div>Login Patient</div></a></li>
+										<li class="menu-item"><div>Doctor</div></li>
+										<li class="menu-item"><a class="menu-link" href=""><div>Login Doctor</div></a></li>
 									</ul>
 								</li>
-								<li class="menu-item"><a class="menu-link" href="demo-medical-blog.html"><div>Blog</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-medical-contact.html"><div>Contact</div></a></li>
 							</ul>
 
 						</nav><!-- #primary-menu end -->
@@ -89,7 +141,8 @@
 				</div>
 			</div>
 			<div class="header-wrap-clone"></div>
-		</header><!-- #header end -->
+		</header>
+		<!-- #header end -->
 
 		<!-- Slider
 		============================================= -->
@@ -505,10 +558,33 @@
 	============================================= -->
 	<div id="gotoTop" class="uil uil-angle-up rounded-circle"></div>
 
+	<!-- Chatbot -->
+	<div>
+        <img class="chatbotimg" id="chatbot" src="images/chatbot.png">
+        <button type="button" class="btn btn-light" id="chatbot" onclick="openForm()"> AI Symptoms Checker --> Click here to chat</button>
+    </div>
+    
+
+    <div id="chatbot-popup">
+        <div class="input-group text-center">
+            <button class="btn btn-light w-100" type="button" onclick="closeForm()">Get your symptoms checked out!</button>
+        </div>
+        <div class="input-group" style="Display:none" id="chatlog">
+            
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Message</span>
+            <textarea class="form-control" aria-label="With textarea" name="textbox" id="usertext" rows="4" placeholder="Shift + Enter to create new line"></textarea>
+            <button type="button" class="btn btn-light " onclick="message()" id="send"> Send </button> 
+        </div>
+        
+    </div>
+
 	<!-- JavaScripts
 	============================================= -->
 	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
+	<script src="js/custom.js"></script>
 
 </body>
 </html>
