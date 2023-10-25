@@ -175,14 +175,14 @@
         font-weight: bold;
         font-size: 40px;
       }
+  
 
     </style>
     <script>
       const CONFIGURATION = {
         "locations": [
           {"title":"Lim Clinic \u0026 Surgery","address1":"109 Lor 1 Toa Payoh","address2":"Singapore 310109","coords":{"lat":1.3413043294820781,"lng":103.84630102023775},"placeId":"ChIJp4T8PGoX2jERl6ixZs5ZKos"},
-          {"title":"Eu Yan Sang TCM Clinic @ Chinatown Point","address1":"133 New Bridge Rd","address2":"#03-18 Chinatown Point, Singapore 059413","coords":{"lat":1.285241478410888,"lng":103.84470670674588},"placeId":"ChIJ_UjmkJUZ2jER8nJECpdDHsE"},
-          {"title":"18 Clinic","address1":"101 Towner Rd","address2":"#01-228, Singapore 322101","coords":{"lat":1.3195846259907453,"lng":103.86118160674592},"placeId":"ChIJqe-U-tAZ2jERwNJp4nC6404"},
+          {"title":"Eu Yan Sang TCM Clinic @ Chinatown Point","address1":"133 New Bridge Rd","address2":"#03-18 Chinatown Point, Singapore 059413","coords":{"lat":1.2852307522739685,"lng":103.84471743558194},"placeId":"ChIJ_UjmkJUZ2jER8nJECpdDHsE"},
           {"title":"The Health Advisory Clinic - Women\u0027s Health | STD/HIV Testing","address1":"1 Raffles Pl","address2":"#04-49, Singapore 048616","coords":{"lat":1.2844453045613318,"lng":103.85098716441806},"placeId":"ChIJ0aEnxTAZ2jERNWeFo1Ru3a0"},
           {"title":"Trinity Medical \u0026 Aesthetic Clinic","address1":"151 Simei Street 1","address2":"#01-33, Singapore 520151","coords":{"lat":1.3459115552572487,"lng":103.95726367790985},"placeId":"ChIJC5pMDR892jERIjd8U_NGtcI"},
           {"title":"Singapore Cataract Clinic - Bladeless Cataract Surgery: Dr Leo Seo Wei","address1":"3 Mount Elizabeth","address2":"Mount Elizabeth Hospital, Unit 10.04, Singapore 228510","coords":{"lat":1.3051263521055678,"lng":103.83542443558194},"placeId":"ChIJq6pq-JIZ2jEREKrZLS4VOOM"}
@@ -196,36 +196,6 @@
             "zoomControl":true,
             "maxZoom":17,
             "mapId":"",
-            styles: [
-                {
-                featureType: "all",
-                stylers: [
-                    { saturation: -100 }, // Desaturate all elements
-                    { lightness: 0 }, // Increase contrast
-                ],
-                },
-                {
-                elementType: "labels.text.fill",
-                stylers: [
-                    { color: "#000000" }, // Set text color to black
-                ],
-                },
-                {
-                featureType: "road",
-                elementType: "geometry.fill",
-                stylers: [
-                    { color: "#4c4c4c" }, // Set road color to gray
-                ],
-                },
-                {
-                featureType: "road",
-                elementType: "labels.icon",
-                stylers: [
-                    { visibility: "off" }, // Hide road icons
-                ],
-                },
-                // Add more style rules as needed
-            ],
         },
         "mapsApiKey": "AIzaSyCdMG1LPiHo0fyICMnksOKaHB9ClRznhdk",
         "capabilities": {"input":true,"autocomplete":true,"directions":true,"distanceMatrix":true,"details":true,"actions":false}
@@ -341,7 +311,7 @@
               title: location.title,
               icon: {
                 // Use the custom blue marker icon
-                url: 'https://freesvg.org/img/map-pin.png', // Replace with the URL of your custom marker icon
+                url: 'https://cdn-icons-png.flaticon.com/512/6330/6330641.png', // Replace with the URL of your custom marker icon
                 scaledSize: new this.mapsLibraries.core.Size(50, 50), // Adjust size if needed
                 },
             });
@@ -450,12 +420,12 @@
           }
           if (this.searchLocation) {
             this.sectionNameEl.textContent =
-                'Nearest locations (' + locations.length + ')';
+                'Nearest clinics (' + locations.length + ')';
             locations.sort((a, b) => {
               return this.getLocationDistance(a) - this.getLocationDistance(b);
             });
           } else {
-            this.sectionNameEl.textContent = `All locations (${locations.length})`;
+            this.sectionNameEl.textContent = `All clinics (${locations.length})`;
           }
 
           this.resultsContainerEl.replaceChildren(
@@ -478,7 +448,7 @@
             title: 'My location',
             icon: {
               path: this.mapsLibraries.core.SymbolPath.CIRCLE,
-              scale: 12,
+              scale: 40,
               fillColor: '#3367D6',
               fillOpacity: 0.5,
               strokeOpacity: 0,
@@ -505,6 +475,18 @@
           const placePicker = document.querySelector('gmpx-place-picker');
           placePicker.addEventListener('gmpx-placechange', () => {
             this.updateSearchLocation(placePicker.value);
+
+            // After updating the search location, check if the searchLocationMarker exists.
+            // If it does, change its color to red.
+            if (this.searchLocationMarker) {
+              this.searchLocationMarker.setIcon({
+                path: this.mapsLibraries.core.SymbolPath.CIRCLE,
+                scale: 30,
+                fillColor: '#FF0000',  // Change the fillColor to red (#FF0000)
+                fillOpacity: 0.5,
+                strokeOpacity: 0,
+              });
+            }
           });
         }
 
@@ -574,6 +556,8 @@
             this.overlayLayoutEl.showOverlay();
           }
         }
+
+        
       }
 
       document.addEventListener('DOMContentLoaded', () => LocatorPlus.init(CONFIGURATION));
@@ -590,14 +574,14 @@
           <div id="locations-panel-list">
             <header>
               <h1 class="search-title" style="font-size: 30px;">
-                <img src="https://freesvg.org/img/map-pin.png" alt="" style="height:40px;width: 40px;"/>
+                <img src="https://cdn-icons-png.flaticon.com/512/6330/6330641.png" alt="" style="height:40px;width: 40px;"/>
                 Find a clinic
               </h1>
               <gmpx-place-picker for-map="main-map" placeholder="Enter the address or zip code" type="geocode" style="font:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
               </gmpx-place-picker>
             </header>
-            <div class="section-name" id="location-results-section-name">
-              All locations
+            <div class="section-name" id="location-results-section-name" style="text-align: left; font-size: 24px;">
+              All clinics
             </div>
             <div class="results">
               <ul id="location-results-list"></ul>
