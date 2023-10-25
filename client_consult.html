@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GetDiagnosed</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../consult/client_consult.css'>
+    <link rel="stylesheet" href="../home/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div id="top">
+        <div class="container mw-100 mh-100">
+            <div class="row">
+                <div class="col-3">
+                    <div class="col-3">
+                        <a href="../home/index.html"><img src="../images/Logo.jpg" width="300"></a>
+                    </div>
+                    <div class="col-9">
+                    </div>
+                </div>
+    
+                <div class="col-2">  
+                </div>
+              
+                <div class="col m-5">
+                    <!-- <div class="input-group align-right">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <button type="button" class="btn btn-outline-primary">search</button>
+                    </div> -->
+                    <div class="row text-center">
+                        <div id="links" class="col border-end">
+                            <a href="../home/index.html">Home</a>
+                        </div>
+    
+                        <div id="links" class="col border-end">
+                            <a href="../consult/client_consult.html"><span id="highlight">Consult</span></a>
+                        </div>
+    
+                        <div id="links" class="col border-end">
+                            <a href="contact.html">Contact</a>
+                        </div>
+    
+                        <div id="links" class="col">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Log in / Register
+                                </a>
+                              
+                                <ul class="dropdown-menu">
+                                  <li>Patient<a class="dropdown-item" href="../login_patient/login_patient.html">Log In</a> <a class="dropdown-item" href="../register_patient/register_patient.html">Sign Up</a></li>
+                                  <li>Doctor<a class="dropdown-item" href="../login_doctor/login_doctor.html">Log In</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+<!-- Middle of body (2 buttons) -->
+<div id="welcome">
+    <!-- get value from firebase and appendchild -->
+</div>
+
+<div id="welcome">
+    <h1 class="display-2">Welcome User</h1>
+</div>
+
+<div id="before" class="container">
+    <form method="get" action="doctor_selection.html">
+        <div id="inputs" class="row">
+            <div class="col-2"></div>
+            <div class="col-8 justify-content-center">
+                <p>
+                    <label for="fullname">Fullname </label>
+                    <input type="text" name="Fullname" id="fullname" value="">
+                </p>
+                
+                    <label for="reason">Reason For Consult </label>
+                    <textarea name="reason" id="reason" cols="30" rows="10"></textarea>
+                </p>
+                <p>
+                    <label for="specialisation">Specialisation Required </label>
+                    
+                    <div class="select-container">
+                        <select class="select-box" name="" id="">
+                            <option value="first">First</option>
+                            <option value="second">Second</option>
+                            <option value="third">Third</option>
+                            <option value="fourth">Fourth</option>
+                            
+                        </select>
+                    </div>
+                </p>
+        
+                <p>
+                    <label for="preconditions">Pre-Existing Conditions </label>
+                    <input type="text" name="preconditions" id="preconditions" required>
+                </p>
+        
+                <p>
+                    <label for="allergies">Drug Allergies (If Any) </label>
+                    <input type="text" name="Allergies" id="allergies" required>
+                </p>
+           
+            </div>
+        </div>
+
+            <div class="d-flex justify-content-center">
+                
+                    <button type="submit" id="submit-btn" >Find a Doctor</button>
+                
+            </div>
+
+            
+            
+        </div>
+       
+    </form>
+</div>
+    
+
+    
+
+<script src="client_consult.js"></script>
+</body>
+</html>
