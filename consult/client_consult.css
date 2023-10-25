@@ -15,11 +15,7 @@ body{
     background:#0F2027;
     background:-webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027) ;
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    
-}
 
-#after{
-    display: none;
 }
 
 label{
@@ -40,28 +36,15 @@ textarea{
 #submit-btn{
     border:none;
     position: absolute;
-    right: 200px;
-    top: 200px;
     background-color: cadetblue;
     color:#fff;
-    padding:50px 100px;
+    padding:20px 40px;
     font-size:16px;
-    margin:2px;
+    margin: 20px;
     cursor: pointer;
     transition: 0.5s;
     border-radius: 5px;
     
-}
-
-#chat-btn, #find-btn{
-    border:none;
-    background-color: cadetblue;
-    color:#fff;
-    padding:10px 20px;
-    font-size:16px;
-    margin:50px;
-    cursor: pointer;
-    transition: 0.5s;
 }
 
 button:hover{
@@ -83,52 +66,39 @@ button:hover{
     padding-right:10px;
 }
 
-#chat-btn{
-    position: absolute;
-    top:50%;
-    left:35%;
-    margin-top:-30px;
-    margin-left:-100px;
-    font-size:18px;
-    padding:20px 40px;
-    border-radius: 5px;
-
-}
-
-#find-btn{
-    position: absolute;
-    top:50%;
-    left: 65%;
-    margin-top:-30px;
-    margin-left:-100px;
-    font-size:18px;
-    padding:20px 40px;
-    border-radius: 5px;
-}
-
 #welcome{
-    
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 50px;
 }
+
 
 #before{
     position: relative;
-    margin-left: 100px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
     animation: transitionIn 1s;
     transition: 0.5s;
-    display: flex;
+    top: 30px;
+    padding-top: 30px;
+    height: 85vh;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
 }
 
 #reason{
+    width: 100%;
+    min-width: 300px;
     height: 200px;
-    width: 600px;
+    resize: none;
 }
 
 .select-box{
-    width: 400px;
+    width: 80%;
     height: 30px;
+    min-width: 300px;
 }
 
 /* Dropdown */

@@ -30,7 +30,7 @@ body{
 
 .video-container{
     max-height: 1000px;
-    border: 5px solid black;
+    border: 2px solid #203A43;
     background-color: #203A49;
     animation: transitionIn 1s;
 }
