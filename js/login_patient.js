@@ -27,6 +27,20 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 });
 
+const firebaseConfig = {
+    apiKey: "AIzaSyD9ouBle0s4OAyamcvXrmjKRpHrSXc_unI",
+    authDomain: "firebasics-281dd.firebaseapp.com",
+    projectId: "fiitemsRefrebasics-281dd",
+    storageBucket: "firebasics-281dd.appspot.com",
+    messagingSenderId: "941290209708",
+    appId: "1:941290209708:web:93f3bf62c88882e40afa09",
+    measurementId: "G-YWMCHYLBS7",
+    databaseURL: "https://firebasics-281dd-default-rtdb.asia-southeast1.firebasedatabase.app/"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
 function transition() {
     var box1 = document.querySelector('#newbox');
     var box2 = document.querySelector('#loginbox')
@@ -135,39 +149,41 @@ function closebox() {
 }
 // END OF PASSWORD FUNCTIONS
 
-function validateregister(){
-    var username = document.getElementById("username").value
-    var password = document.getElementById("password").value
-    var confpassword = document.getElementById("confirmpassword").value
-    var email = document.getElementById("email").value
-    var code = document.getElementById("code").value
-    var number = document.getElementById("number").value
-    var day = document.getElementById("day").value
-    var month = document.getElementById("month").value
-    var year = document.getElementById("year").value
+var username = document.getElementById("username").value
+var password_log = document.getElementById("password").value
+var confpassword = document.getElementById("confirmpassword").value
+var email = document.getElementById("email").value
+var code = document.getElementById("code").value
+var number = document.getElementById("number").value
+var day = document.getElementById("day").value
+var month = document.getElementById("month").value
+var year = document.getElementById("year").value
 
+function validateregister(){
 
     var errormessage = ""
+    console.log(username, password_log)
+
     if(username.length < 8){
         errormessage += "Username must have more than 8 characters!\n"
     }
 
-    if(password != confpassword){
+    if(password_log != confpassword){
         errormessage += "Passwords do not match!\n"
     }
-    if(password.length < 8){
+    if(password_log.length < 8){
         errormessage += "Passwords must have more than 8 characters!\n"
     }
-    if(!containsSpecialChars(password)){
+    if(!containsSpecialChars(password_log)){
         errormessage += "Password must contain at least one special character! (!@#$%^&*)\n"
     }
-    if(!containsNumber(password)){
+    if(!containsNumber(password_log)){
         errormessage += "Password must contain at least one number (0-9)\n"
     }
-    if(!containsUppercase(password)){
+    if(!containsUppercase(password_log)){
         errormessage += "Password must contain at least one Uppercase character (A-Z)\n"
     }
-    if(!containsLowercase(password)){
+    if(!containsLowercase(password_log)){
         errormessage += "Password must contain at least one Lowercase character (a-z)\n"
     }
     if(!email.includes("@")){
@@ -189,7 +205,11 @@ function validateregister(){
         alert(errormessage)
     }
     else{
+        // add register function
+
+        register(username,password_log)
         alert("Successful Registration\nClick Ok to head to login page")
+
         window.location.href = "login_patient.html"
         document.getElementById("registration").reset()
     }
@@ -219,6 +239,7 @@ function validatelogin(){
     if(!document.getElementById("registration").checkValidity()){
         errormessage += "Please fill in required fields\n"
     }
+    
     if(errormessage != ""){
         alert(errormessage)
     }
@@ -226,4 +247,36 @@ function validatelogin(){
         window.location.href = "homelogin.html"
         document.getElementById("registration").reset()
     }
+}
+
+function register(user, pw){
+
+    console.log('====Start Register====')
+    console.log(user, pw)
+    firebase.database().ref('accounts/' + user).set({
+    username: user,//adding the details into the database, format--> column name: variable
+    password:pw
+    })
+    console.log('====End Register====')
+
+}
+async function login(user, pw){
+    //return bool t/f 
+    // await as config with firebase is slower than process
+    login_success=false
+
+    var acctsRef = firebase.database().ref().child("accounts")
+    
+       await acctsRef.once('value', function (snapshot) {
+            snapshot.forEach(function (acct_snapshot) {
+            console.log(user, acct_snapshot.val().username)
+                if(user == acct_snapshot.val().username && pw == acct_snapshot.val().password)
+                    login_success = true
+        
+                })
+            })
+            // console.log(login_success)
+            return login_success
+    
+
 }
