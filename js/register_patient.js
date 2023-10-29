@@ -218,6 +218,8 @@ function containsOnlyNumbers(str) {
 }
 
 function validatelogin(){
+    var username = document.getElementById("username").value
+    var password = document.getElementById("password").value
     errormessage = ""
     if(!document.getElementById("registration").checkValidity()){
         errormessage += "Please fill in required fields\n"
@@ -225,8 +227,13 @@ function validatelogin(){
     if(errormessage != ""){
         alert(errormessage)
     }
+    if((login(username,password)) === false){
+        errormessage += "Invalid Username or Password"
+    }
+        
     else{
-        window.location.href = "homelogin.html"
+        document.getElementById("registration").action = "homelogin.html"
+        document.getElementById("registration").submit()
         document.getElementById("registration").reset()
     }
 }
