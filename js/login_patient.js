@@ -27,20 +27,6 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 });
 
-const firebaseConfig = {
-    apiKey: "AIzaSyD9ouBle0s4OAyamcvXrmjKRpHrSXc_unI",
-    authDomain: "firebasics-281dd.firebaseapp.com",
-    projectId: "fiitemsRefrebasics-281dd",
-    storageBucket: "firebasics-281dd.appspot.com",
-    messagingSenderId: "941290209708",
-    appId: "1:941290209708:web:93f3bf62c88882e40afa09",
-    measurementId: "G-YWMCHYLBS7",
-    databaseURL: "https://firebasics-281dd-default-rtdb.asia-southeast1.firebasedatabase.app/"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-
 function transition() {
     var box1 = document.querySelector('#newbox');
     var box2 = document.querySelector('#loginbox')
@@ -149,41 +135,39 @@ function closebox() {
 }
 // END OF PASSWORD FUNCTIONS
 
-var username = document.getElementById("username").value
-var password_log = document.getElementById("password").value
-var confpassword = document.getElementById("confirmpassword").value
-var email = document.getElementById("email").value
-var code = document.getElementById("code").value
-var number = document.getElementById("number").value
-var day = document.getElementById("day").value
-var month = document.getElementById("month").value
-var year = document.getElementById("year").value
-
 function validateregister(){
+    var username = document.getElementById("username").value
+    var password = document.getElementById("password").value
+    var confpassword = document.getElementById("confirmpassword").value
+    var email = document.getElementById("email").value
+    var code = document.getElementById("code").value
+    var number = document.getElementById("number").value
+    var day = document.getElementById("day").value
+    var month = document.getElementById("month").value
+    var year = document.getElementById("year").value
+
 
     var errormessage = ""
-    console.log(username, password_log)
-
     if(username.length < 8){
         errormessage += "Username must have more than 8 characters!\n"
     }
 
-    if(password_log != confpassword){
+    if(password != confpassword){
         errormessage += "Passwords do not match!\n"
     }
-    if(password_log.length < 8){
+    if(password.length < 8){
         errormessage += "Passwords must have more than 8 characters!\n"
     }
-    if(!containsSpecialChars(password_log)){
+    if(!containsSpecialChars(password)){
         errormessage += "Password must contain at least one special character! (!@#$%^&*)\n"
     }
-    if(!containsNumber(password_log)){
+    if(!containsNumber(password)){
         errormessage += "Password must contain at least one number (0-9)\n"
     }
-    if(!containsUppercase(password_log)){
+    if(!containsUppercase(password)){
         errormessage += "Password must contain at least one Uppercase character (A-Z)\n"
     }
-    if(!containsLowercase(password_log)){
+    if(!containsLowercase(password)){
         errormessage += "Password must contain at least one Lowercase character (a-z)\n"
     }
     if(!email.includes("@")){
@@ -205,12 +189,10 @@ function validateregister(){
         alert(errormessage)
     }
     else{
-        // add register function
-
-        register(username,password_log)
+        register(username,password)
         alert("Successful Registration\nClick Ok to head to login page")
-
-        window.location.href = "login_patient.html"
+        document.getElementById("registration").action = "login_patient.html"
+        document.getElementById("registration").submit()
         document.getElementById("registration").reset()
     }
 }
@@ -240,14 +222,30 @@ function validatelogin(){
         errormessage += "Please fill in required fields\n"
     }
     
+    if((login(username,password)) === false){
+        errormessage += "Invalid Username or Password"
+    }
     if(errormessage != ""){
         alert(errormessage)
     }
     else{
-        window.location.href = "homelogin.html"
+        document.getElementById("registration").submit()
         document.getElementById("registration").reset()
     }
 }
+
+const firebaseConfig = {
+    apiKey: "AIzaSyD9ouBle0s4OAyamcvXrmjKRpHrSXc_unI",
+    authDomain: "firebasics-281dd.firebaseapp.com",
+    projectId: "fiitemsRefrebasics-281dd",
+    storageBucket: "firebasics-281dd.appspot.com",
+    messagingSenderId: "941290209708",
+    appId: "1:941290209708:web:93f3bf62c88882e40afa09",
+    measurementId: "G-YWMCHYLBS7",
+    databaseURL: "https://firebasics-281dd-default-rtdb.asia-southeast1.firebasedatabase.app/"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 function register(user, pw){
 
@@ -277,6 +275,5 @@ async function login(user, pw){
             })
             // console.log(login_success)
             return login_success
-    
-
 }
+    
