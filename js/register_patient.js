@@ -191,8 +191,9 @@ function validateregister(){
         alert(errormessage)
     }
     else{
+        register(username,password)
         alert("Successful Registration\nClick Ok to head to login page")
-        window.location.href = "login_patient.html"
+        document.getElementById("registration").submit()
         document.getElementById("registration").reset()
     }
 }
@@ -228,4 +229,36 @@ function validatelogin(){
         window.location.href = "homelogin.html"
         document.getElementById("registration").reset()
     }
+}
+
+function register(user, pw){
+
+    console.log('====Start Register====')
+    console.log(user, pw)
+    firebase.database().ref('accounts/' + user).set({
+    username: user,//adding the details into the database, format--> column name: variable
+    password:pw
+    })
+    console.log('====End Register====')
+
+}
+async function login(user, pw){
+    //return bool t/f 
+    // await as config with firebase is slower than process
+    login_success=false
+
+    var acctsRef = firebase.database().ref().child("accounts")
+    
+       await acctsRef.once('value', function (snapshot) {
+            snapshot.forEach(function (acct_snapshot) {
+            console.log(user, acct_snapshot.val().username)
+                if(user == acct_snapshot.val().username && pw == acct_snapshot.val().password)
+                    login_success = true
+        
+                })
+            })
+            // console.log(login_success)
+            return login_success
+    
+
 }
