@@ -217,6 +217,8 @@ function containsOnlyNumbers(str) {
 }
 
 function validatelogin(){
+    var username = document.getElementById("username").value
+    var password = document.getElementById("password").value
     errormessage = ""
     if(!document.getElementById("registration").checkValidity()){
         errormessage += "Please fill in required fields\n"
