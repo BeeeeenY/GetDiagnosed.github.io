@@ -20,15 +20,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+    <!-- Bootstrap v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Core Style -->
+	  <link rel="stylesheet" href="style.css">
+
     <style>
       html,
       body {
         height: 100%;
         margin: 0;
         padding: 0;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        --gmpx-font-family-base: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        --gmpx-font-family-headings: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        /* --gmpx-font-family-base: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+        /* --gmpx-font-family-headings: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
         --gmpx-color-primary: rgb(157, 43, 43);
       }
 
@@ -63,7 +72,7 @@
       }
 
       #locations-panel-list > header {
-        padding: 1.4em 1.4em 0 1.4em;
+        padding: 0.5em 1em 0 1em;
       }
 
       #locations-panel-list h1.search-title {
@@ -109,13 +118,13 @@
       }
 
       #location-results-list h2 {
-        font-size: 1em;
+        font-size: 1.2em;
         font-weight: 500;
         margin: 0 0 0.6em 0;
       }
 
       #location-results-list .address {
-        font-size: 0.9em;
+        font-size: 1em;
         margin-bottom: 0.5em;
       }
 
@@ -173,7 +182,7 @@
       .search-title h1{
         text-align: left;
         font-weight: bold;
-        font-size: 40px;
+        font-size: 50px;
       }
   
 
@@ -185,7 +194,7 @@
           {"title":"Eu Yan Sang TCM Clinic @ Chinatown Point","address1":"133 New Bridge Rd","address2":"#03-18 Chinatown Point, Singapore 059413","coords":{"lat":1.2852307522739685,"lng":103.84471743558194},"placeId":"ChIJ_UjmkJUZ2jER8nJECpdDHsE"},
           {"title":"The Health Advisory Clinic - Women\u0027s Health | STD/HIV Testing","address1":"1 Raffles Pl","address2":"#04-49, Singapore 048616","coords":{"lat":1.2844453045613318,"lng":103.85098716441806},"placeId":"ChIJ0aEnxTAZ2jERNWeFo1Ru3a0"},
           {"title":"Trinity Medical \u0026 Aesthetic Clinic","address1":"151 Simei Street 1","address2":"#01-33, Singapore 520151","coords":{"lat":1.3459115552572487,"lng":103.95726367790985},"placeId":"ChIJC5pMDR892jERIjd8U_NGtcI"},
-          {"title":"Singapore Cataract Clinic - Bladeless Cataract Surgery: Dr Leo Seo Wei","address1":"3 Mount Elizabeth","address2":"Mount Elizabeth Hospital, Unit 10.04, Singapore 228510","coords":{"lat":1.3051263521055678,"lng":103.83542443558194},"placeId":"ChIJq6pq-JIZ2jEREKrZLS4VOOM"}
+          {"title":"Singapore Cataract Clinic - Bladeless Cataract Surgery","address1":"3 Mount Elizabeth","address2":"Mount Elizabeth Hospital, Unit 10.04, Singapore 228510","coords":{"lat":1.3051263521055678,"lng":103.83542443558194},"placeId":"ChIJq6pq-JIZ2jEREKrZLS4VOOM"}
         ],
         "mapOptions": {
             "center":{"lat":38.0,"lng":-100.0},
@@ -572,20 +581,69 @@
       <gmpx-overlay-layout slot="fixed">
         <div id="locations-panel" slot="main">
           <div id="locations-panel-list">
+
+              <nav class="navbar bg-white">
+                <div class="container-fluid">
+                  <div id="logo">
+                    <a href="index.html" style="width:200px;">
+                      <img class="logo-default" src="images/logo.png">
+                    </a>
+                  </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-us.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Consult</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="locator.html">
+                                  <button class="btn btn-danger btn-sm btn-subtle text-white">
+                                      Nearest Clinic
+                                  </button>
+                              </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="profile.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hyunbinhubby
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li class="dropdown-item"><a class="dropdown-link" href="register_patient.html" style="color: black;">Register Patient</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-link" href="login_patient.html" style="color: black;">Login Patient</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-link" href="#" style="color: black;">Doctor</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-link" href="#" style="color: black;">Login Doctor</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                      
+                    </div>
+                </div>
+            </nav>
+
             <header>
-              <h1 class="search-title" style="font-size: 30px;">
-                <img src="https://cdn-icons-png.flaticon.com/512/6330/6330641.png" alt="" style="height:40px;width: 40px;"/>
-                Find a clinic
-              </h1>
-              <gmpx-place-picker for-map="main-map" placeholder="Enter the address or zip code" type="geocode" style="font:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+              <div class="d-flex">
+                <img src="https://cdn-icons-png.flaticon.com/512/6330/6330641.png" alt="clinic_icon" class="align-top" style="height:35px;width: 35px;"/>
+                <h1 class="search-title" style="font-size: 30px; margin-left: 10px;">
+                  Find a clinic
+                </h1>
+              </div>
+              <gmpx-place-picker for-map="main-map" placeholder="Enter your address or zip code" type="geocode">
               </gmpx-place-picker>
             </header>
-            <div class="section-name" id="location-results-section-name" style="text-align: left; font-size: 24px;">
+            <div class="section-name" id="location-results-section-name" style="text-align: left; font-size: 24px; margin-left:30px; margin-top: 15px; margin-bottom: 15px;">
               All clinics
             </div>
             <div class="results">
               <ul id="location-results-list"></ul>
             </div>
+            
           </div>
         </div>
         <div id="details-panel" slot="overlay">
@@ -624,6 +682,9 @@
     </template>
   </body>
 </html>
+
+
+
 
 
 
