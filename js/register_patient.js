@@ -191,7 +191,7 @@ function validateregister(){
         alert(errormessage)
     }
     else{
-        register(username,password)
+        register(username,confpassword)
         alert("Successful Registration\nClick Ok to head to login page")
         document.getElementById("registration").submit()
         document.getElementById("registration").reset()
@@ -221,27 +221,52 @@ function validatelogin(){
     var username = document.getElementById("username").value
     var password = document.getElementById("password").value
     errormessage = ""
+    console.log('testtt is pass or fail')
+
+    // var login_success=false
+
+
     if(!document.getElementById("registration").checkValidity()){
         errormessage += "Please fill in required fields\n"
     }
     if(errormessage != ""){
         alert(errormessage)
-    }
-    if((login(username,password)) === false){
-        errormessage += "Invalid Username or Password"
-    }
-        
-    else{
-        document.getElementById("registration").action = "homelogin.html"
-        document.getElementById("registration").submit()
         document.getElementById("registration").reset()
+        
     }
+
+
+    login(username,password).then(function(result){
+        console.log(result)
+        if(result == false){
+            alert("Invalid Username or Password")
+            document.getElementById("registration").reset()
+        }
+        else{
+            console.log('success')
+            document.getElementById("registration").submit()
+            document.getElementById("registration").reset()
+        }
+    })
+    
 }
+
+const firebaseConfig = {
+    apiKey: "AIzaSyD9ouBle0s4OAyamcvXrmjKRpHrSXc_unI",
+    authDomain: "firebasics-281dd.firebaseapp.com",
+    projectId: "fiitemsRefrebasics-281dd",
+    storageBucket: "firebasics-281dd.appspot.com",
+    messagingSenderId: "941290209708",
+    appId: "1:941290209708:web:93f3bf62c88882e40afa09",
+    measurementId: "G-YWMCHYLBS7",
+    databaseURL: "https://firebasics-281dd-default-rtdb.asia-southeast1.firebasedatabase.app/"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 function register(user, pw){
 
     console.log('====Start Register====')
-    console.log(user, pw)
     firebase.database().ref('accounts/' + user).set({
     username: user,//adding the details into the database, format--> column name: variable
     password:pw
@@ -258,7 +283,7 @@ async function login(user, pw){
     
        await acctsRef.once('value', function (snapshot) {
             snapshot.forEach(function (acct_snapshot) {
-            console.log(user, acct_snapshot.val().username)
+            // console.log(user, acct_snapshot.val().username)
                 if(user == acct_snapshot.val().username && pw == acct_snapshot.val().password)
                     login_success = true
         

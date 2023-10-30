@@ -220,20 +220,37 @@ function validatelogin(){
     var username = document.getElementById("username").value
     var password = document.getElementById("password").value
     errormessage = ""
+    console.log('testtt is pass or fail')
+
+    // var login_success=false
+
+
     if(!document.getElementById("registration").checkValidity()){
         errormessage += "Please fill in required fields\n"
     }
-    
-    if((login(username,password)) === false){
-        errormessage += "Invalid Username or Password"
-    }
     if(errormessage != ""){
         alert(errormessage)
-    }
-    else{
-        document.getElementById("registration").submit()
         document.getElementById("registration").reset()
+        
     }
+
+
+    login(username,password).then(function(result){
+        console.log(result)
+        if(result == false){
+            alert("Invalid Username or Password")
+            document.getElementById("registration").reset()
+        }
+        else{
+            console.log('success')
+            document.getElementById("registration").submit()
+            document.getElementById("registration").reset()
+        }
+    })
+    
+    
+    
+   
 }
 
 const firebaseConfig = {
@@ -269,9 +286,11 @@ async function login(user, pw){
     
        await acctsRef.once('value', function (snapshot) {
             snapshot.forEach(function (acct_snapshot) {
-            console.log(user, acct_snapshot.val().username)
+           
                 if(user == acct_snapshot.val().username && pw == acct_snapshot.val().password)
                     login_success = true
+                    // console.log(user+'='+ acct_snapshot.val().username)
+                    // console.log(pw +'='+ acct_snapshot.val().password)
         
                 })
             })
