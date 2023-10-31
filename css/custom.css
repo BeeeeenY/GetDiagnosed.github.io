@@ -50,6 +50,9 @@
   .chatbotimg {
     width: 150px;
   }
+#spacing{
+	padding:10px;
+}
 /* End of ChatBot */
 
 /* Start of Password CSS */
