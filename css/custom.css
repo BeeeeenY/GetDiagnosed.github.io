@@ -27,26 +27,29 @@
 /* END */
 
 /* Start of Chatbot */
-#chatbot{
-    position:fixed;
-    right:30px;
-    bottom:20px;
-	z-index: 999;
-}
-
-#chatbot-popup{
-    display:none;
-    position:fixed;
-    right:30px;
-    bottom:20px;
-	z-index: 9999;
-}
-.chatbotimg{
-    width:150px;    
-}
-#input-group-text{
-    justify-content: center;  
-}
+#chatbot {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    z-index: 999;
+  }
+  
+  #chatbot-popup {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    z-index: 9999;
+    width: 450px; /* Set the desired fixed width */
+  }
+  
+  #usertext {
+    width: 100%; /* Make the textarea width 100% to fill the chatbox */
+  }
+  
+  .chatbotimg {
+    width: 150px;
+  }
 /* End of ChatBot */
 
 /* Start of Password CSS */
