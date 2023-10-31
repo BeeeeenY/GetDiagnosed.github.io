@@ -10,14 +10,6 @@
     }
 }
 
-
-
-body{
-    background:#0F2027;
-    background:-webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027) ;
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-}
-
 #video-streams{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -46,13 +38,12 @@ button{
     color:#fff;
     padding:10px 20px;
     font-size:16px;
-    margin:50px;
+    margin:20px;
     cursor: pointer;
     transition: 0.5s;
 }
 button:hover{
     background: cadetblue;
-    letter-spacing: 0.02rem;
 }
 
 #stream-controls{
