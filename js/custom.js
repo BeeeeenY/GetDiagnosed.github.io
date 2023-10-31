@@ -50,14 +50,14 @@ function display_all_response(str_responses_innerhtml,user_input){
     }
     //following entries into chatbot
     else{
-        str += `<div class="input-group-text">username: ${user_input}</div>`
+        str += `<div class="bg bg-secondary-subtle border border-black" style="border-radius:5px">username: <br>${user_input}</div>`
         str += 
         `
-        <div class="input-group">
-            <span style="color:blue; font-size:12px" class="input-group-text">bot: </span>
-            <span style="color:blue; font-size:12px" class="input-group-text">${str_responses_innerhtml}</span>
-        </div>`
-        
+        <div class="bg bg-secondary-subtle border border-black" style="border-radius:5px">
+            <span style="color:blue; font-size:12px" >bot:<br> ${str_responses_innerhtml}</span>
+        </div>
+        `
+        console.log(str_responses_innerhtml)
         document.getElementById('chatlog').style.display = "block"
         document.getElementById('chatlog').innerHTML = str
         document.getElementById('textsubmit').value = ""; 
