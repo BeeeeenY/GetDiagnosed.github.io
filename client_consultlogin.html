@@ -42,52 +42,19 @@
 
     <!-- Vue.js 3 CDN -->
     <script src="https://unpkg.com/vue@next"></script>
+    <!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="css/swiper.css">
+
+	 <!-- Bootstrap v5.3.2 -->
+	 <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body class="stretched" data-loader-html="<div id='css3-spinner-svg-pulse-wrapper'><svg id='css3-spinner-svg-pulse' version='1.2' height='210' width='550' xmlns='https://www.w3.org/2000/svg' viewport='0 0 60 60' xmlns:xlink='https://www.w3.org/1999/xlink'><path id='css3-spinner-pulse' stroke='#DE6262' fill='none' stroke-width='2' stroke-linejoin='round' d='M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210'></svg></div>">
     <div id="wrapper">
-    <div id="top-bar">
-        <div class="container">
-
-            <div class="row justify-content-between">
-                <div class="col-12 col-md-auto d-none d-md-flex">
-
-                    <!-- Top Links
-                    ============================================= -->
-                    <div class="top-links">
-                        <ul class="top-links-container">
-                            <li class="top-links-item"><a href="#"><i class="bi-clock"></i> Timings</a></li>
-                            <li class="top-links-item"><a href="#"><i class="bi-telephone"></i> +65 98765432</a></li>
-                            <li class="top-links-item"><a href="#" class="text-transform-none"><i class="bi-envelope"></i> GetDiagnosed@medical.com</a></li>
-                        </ul>
-                    </div><!-- .top-links end -->
-
-                </div>
-
-                <div class="col-12 col-md-auto">
-
-                    <!-- Top Links
-                    ============================================= -->
-                    <div class="top-links">
-                        <ul class="top-links-container">
-                            <li class="top-links-item"><a href="#">EN</a>
-                                <ul class="top-links-sub-menu">
-                                    <li class="top-links-item"><a href="#"><img src="images/french.png" alt="French"> FR</a></li>
-                                    <li class="top-links-item"><a href="#"><img src="images/italian.png" alt="Italian"> IT</a></li>
-                                    <li class="top-links-item"><a href="#"><img src="images/german.png" alt="German"> DE</a></li>
-                                </ul>
-                            </li>
-                            <li class="top-links-item"><a href="" class="bg-color text-white">Book an Appointment</a></li>
-                        </ul>
-                    </div><!-- .top-links end -->
-
-                </div>
-            </div>
-
-        </div>
-    </div><!-- #top-bar end -->
+        
 
     <!-- Header
     ============================================= -->
@@ -118,7 +85,7 @@
                             <li class="menu-item"><a class="menu-link" href="homelogin.html"><div>Home</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="about-uslogin.html"><div>About Us</div></a></li>
                             <li class="menu-item current"><a class="menu-link" href="client_consultlogin.html"><div>Consult</div></a></li>
-                            <li class="menu-item"><a class="menu-link" href="locator.html"><div>Nearest Clinic</div></a></li>
+                            <li class="menu-item"><a class="menu-link" href="locatorlogin.html"><div>Nearest Clinic</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="profile.html"><div>Hyunbinhubby</div></a>
                                 <ul class="sub-menu-container">
                                     <li class="menu-item"><a class="menu-link" href="index.html"><div>Logout</div></li></a>
@@ -139,7 +106,7 @@
     </header>
 <!--FORM STARTS HERE -->
 <div id="welcome">
-    <h1 class="display-5">Welcome {First Name}</h1>
+    <h1 class="display-5">Welcome Hyunbinhubby</h1>
 </div>
 
 <div class="section row p-0 align-items-stretch dark mt-4">
@@ -178,8 +145,8 @@
                 </div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4"></div>
-                <div class="col-md-4 form-group">
-                    <label for="hehe">What is wrong? Let us know</label>
+                <div class="col-md-4 form-group mt-3">
+                    <label for="hehe"> How are you feeling?</label>
                     <textarea id="hehe" name="comments" class="form-control not-dark required" cols="30" rows="5"></textarea>
                 </div>
                 <div class="col-md-4"></div>
@@ -266,28 +233,24 @@
 				============================================= -->
 
 
-					<div class="col-mb-50" >
-
-						<div class="col-md-4 ">
-
 							<div class="widget mt-3">
 
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<div class="footer-big-contacts">
 											<span>Call Us:</span>
 											+65 87654321
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<div class="footer-big-contacts">
 											<span>Address:</span>
 											
 										</div>
-										GetDiagnosed 81 Victoria Street, Singapore 188065
+										<div class="footer-big-contacts">GetDiagnosed 81 Victoria Street, Singapore 188065</div>
 									</div>
 
-									<div class="col-lg-12">
+									<div class="col-lg-4">
 										<div class="footer-big-contacts">
 											<span>Send an Email:</span>
 											GetDiagnosed@business.com
@@ -318,8 +281,9 @@
 
 							</div>
 
-						</div>
-					</div><!-- .footer-widgets-wrap end -->
+					
+					
+					<!-- .footer-widgets-wrap end -->
 			</div>
 
 			<!-- Copyrights
