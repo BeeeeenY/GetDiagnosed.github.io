@@ -22,6 +22,7 @@ label{
     color: white;
 }
 
+
 input,label{
     display: block;
     width: 300px;
@@ -47,13 +48,6 @@ textarea{
     
 }
 
-button:hover{
-    background: cadetblue;
-    letter-spacing: 0.01rem;
-    box-shadow: 0 0 35px cadetblue;
-    
-
-}
 
 #highlight{
     border: 1px solid black;
@@ -102,4 +96,3 @@ button:hover{
 }
 
 /* Dropdown */
-

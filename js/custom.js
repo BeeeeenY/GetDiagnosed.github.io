@@ -10,8 +10,8 @@ function closeForm() {
 }
 
 (function() {
-    var usertext = document.getElementById('usertext');
-    usertext.addEventListener('keypress', function(event) {
+    var textsubmit = document.getElementById('textsubmit');
+    textsubmit.addEventListener('keypress', function(event) {
         var enter = event.keyCode
         if (enter == 13 && !event.shiftKey) {
             event.preventDefault()
@@ -23,32 +23,44 @@ function closeForm() {
 
 async function message() {
     // get the resposes from call_chatgpt, varibale save as an array
-    var user_input = document.getElementById('usertext').value
-    let str_repsonses_innerhtml = await call_chatgpt(user_input)
+    var user_input = document.getElementById('textsubmit').value
+    let str_responses_innerhtml = await call_chatgpt(user_input)
 
-    console.log(str_repsonses_innerhtml)
-    display_all_response(str_repsonses_innerhtml, user_input)
+    // console.log(str_responses_innerhtml)
+    display_all_response(str_responses_innerhtml, user_input)
     
 }
-function display_all_response(str_repsonses_innerhtml,user_input){
+function display_all_response(str_responses_innerhtml,user_input){
 // display of responses from user input and chatgpt response
 
     //first entry into chatbot
     if (typeof str == 'undefined'){
         str = ``
-        str += `<div class="input-group-text">username: ${user_input}</div>`
-        str += `<div style="color:blue; font-size:12px" class="input-group-text">bot:${str_repsonses_innerhtml}</div>`
+        str += `<div class="bg bg-secondary-subtle border border-black" style="border-radius:5px" id="spacing">username: <br>${user_input}</div>`
+        str += 
+        `
+        <div class="bg bg-secondary-subtle border border-black" style="border-radius:5px" id="spacing">
+            <span style="color:blue; font-size:12px" >bot:<br> ${str_responses_innerhtml}</span>
+        </div>
+        `
+        console.log(str_responses_innerhtml)
         document.getElementById('chatlog').style.display = "block"
         document.getElementById('chatlog').innerHTML = str
-        document.getElementById('usertext').value = ""; 
+        document.getElementById('textsubmit').value = ""; 
     }
     //following entries into chatbot
     else{
-        str += `<div class="input-group-text">username: ${user_input}</div>`
-        str += `<div style="color:blue; font-size:12px" class="input-group-text">bot:${str_repsonses_innerhtml}</div>`
+        str += `<div class="bg bg-secondary-subtle border border-black" style="border-radius:5px" id="spacing">username: <br>${user_input}</div>`
+        str += 
+        `
+        <div class="bg bg-secondary-subtle border border-black" style="border-radius:5px" id="spacing">
+            <span style="color:blue; font-size:12px" >bot:<br> ${str_responses_innerhtml}</span>
+        </div>
+        `
+        console.log(str_responses_innerhtml)
         document.getElementById('chatlog').style.display = "block"
         document.getElementById('chatlog').innerHTML = str
-        document.getElementById('usertext').value = ""; 
+        document.getElementById('textsubmit').value = ""; 
     }
 }
 
@@ -71,37 +83,34 @@ async function call_chatgpt(user_input){
               content: user_input
           }
       ]
-  };
+    };
 
-  const requestOptions = {
-      headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + atob(atob(halfDecoded))
-      },
-  };
+    const requestOptions = {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + atob(atob(halfDecoded))
+        },
+    };
 
-  // Get chat GPT response
-  const res = await axios.post(api_endpoint_url, data, requestOptions)
-  var ai_responses_split = (res.data.choices[0].message.content).split('\n')
-
-  var setstr = '<ul>'
-        // console.log('---------------------before----------------')
-        // console.log(message)
-        for(let i = 0; i<ai_responses_split.length;i++){
-            if(ai_responses_split[i]==''){        
-            }
-            else{
-                let input_text = ai_responses_split[i].slice(2)
-                setstr+=`<li>${input_text}</li>`
-            }
+    // Get chat GPT response
+    const res = await axios.post(api_endpoint_url, data, requestOptions)
+    var ai_responses_split = (res.data.choices[0].message.content).split('\n')
+    var setstr = ''
+    // console.log('---------------------before----------------')
+    // console.log(message)
+    for(let i = 0; i<ai_responses_split.length;i++){
+        if(ai_responses_split[i]==''){        
         }
-        setstr +="</ul>"
+        else{
+            let input_text = ai_responses_split[i]
+            setstr+= input_text + `<br>`
+        }
+    }
   return  setstr
  } catch (error) {
   console.log(error.message)
  }
 }
-// END OF CHATBOT
 
 // START OF PASSWORD FUNCTIONS
 const togglePassword = document.querySelector("#togglePassword");

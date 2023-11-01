@@ -27,34 +27,41 @@
 /* END */
 
 /* Start of Chatbot */
-#chatbot{
-    position:fixed;
-    right:30px;
-    bottom:20px;
-	z-index: 999;
-}
-
-#chatbot-popup{
-    display:none;
-    position:fixed;
-    right:30px;
-    bottom:20px;
-	z-index: 9999;
-}
-.chatbotimg{
-    width:150px;    
-}
-#input-group-text{
-    justify-content: center;  
+#chatbot {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    z-index: 999;
+  }
+  
+  #chatbot-popup {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    z-index: 9999;
+    width: 450px; /* Set the desired fixed width */
+  }
+  
+  #usertext {
+    width: 100%; /* Make the textarea width 100% to fill the chatbox */
+  }
+  
+  .chatbotimg {
+    width: 150px;
+  }
+#spacing{
+	padding:10px;
 }
 /* End of ChatBot */
 
 /* Start of Password CSS */
-#username{
-    border-radius: 10px;
-}
 #password{
-    border-radius: 10px;
+    border-radius: 5px;
+    position:relative;
+}
+#confirmpassword{
+    border-radius:5px;
     position:relative;
 }
 #togglePassword{
@@ -76,19 +83,26 @@ form i{
 
 #newbox{
     background-image: url("../images/background.avif");
-    transition: transform 0.5s;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: transform 1s;
 }
 #loginbox{
-    transition: transform 0.5s;
+    transition: transform 1s;
 }
 
 #text{
-    margin-top: 120px;
+    margin-top: 50%;
 }
 
 #overbackground{
     background-image: url("../images/overbackground.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center center;
 }
+
 #forgotpassword{
     color:black;
     display:none;
@@ -97,12 +111,23 @@ form i{
 #closebox{
     display:none;
 }
-#confirmpassword{
-    border-radius:10px;
-    position:relative;
-}
+
 #togglePassword2{
     right:10px;
 }
-/* End of Password CSS */
+.center{
+  transform: translate(0, 10%);
+  padding: 10px;
+}
 
+#space{
+    margin-right:5px;
+}
+
+#gender{
+    margin-right:10px;
+}
+
+#country{
+    border-radius: 5px;
+}

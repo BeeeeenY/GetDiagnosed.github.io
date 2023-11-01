@@ -1,3 +1,4 @@
+// START OF PASSWORD FUNCTIONS
 const togglePassword = document.querySelector("#togglePassword");
 const togglePassword2 = document.querySelector("#togglePassword2");
 const password = document.querySelector("#password");
@@ -21,13 +22,16 @@ togglePassword.addEventListener("click", function () {
     this.classList.toggle("bi-eye");
 });
 
+
+
 // prevent form submit
 const form = document.querySelector("form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 });
 
-function transition() {
+
+function transit() {
     var box1 = document.querySelector('#newbox');
     var box2 = document.querySelector('#loginbox')
     var button = document.getElementById('register');
@@ -51,34 +55,32 @@ function transition() {
     var day = document.getElementById("day")
     var month = document.getElementById("month")
     var year = document.getElementById("year")
-    
-
 
     // Slide the red box to the left (take over the blue box)
     box1.style.transform = 'translateX(+100%)';
     box2.style.transform = 'translateX(-100%)';
     button.style.display = 'none';
     close.style.display = 'inline';
-    desc.innerHTML = "Returning User?";
-    message.innerHTML = "Welcome Back! We hope to heal you :D Click button below to Log In"
-    formtitle.innerHTML = "Registration";
-    confpw.style.display = "initial";
-    togglePassword2.style.display = "initial";
-    accdetails.style.display = "initial";
-    text.style.marginTop = "50%";
-    forgotpw.style.display = "none";
-    registerbutton.style.display = "block";
-    loginbutton.style.display = "none";
-    confpw.required = true;
-    fname.required = true;
-    lname.required = true;
-    email.required = true;
-    code.required = true;
-    number.required = true;
-    day.required = true;
-    month.required = true;
-    year.required = true;
-    // main.classList.remove("center")
+    desc.innerHTML = "New here?";
+    message.innerHTML = "Sign up for quality and easily accessed healthcare"
+    formtitle.innerHTML = "Login";
+    confpw.style.display = "none";
+    togglePassword2.style.display = "none";
+    accdetails.style.display = "none";
+    text.style.marginTop = "20%";
+    forgotpw.style.display = "inline";
+    registerbutton.style.display = "none";
+    loginbutton.style.display = "block";
+    confpw.required = false;
+    fname.required = false;
+    lname.required = false;
+    email.required = false;
+    code.required = false;
+    number.required = false;
+    day.required = false;
+    month.required = false;
+    year.required = false;
+    // main.classList.add("center");
     
 }
 function closebox() {
@@ -107,30 +109,30 @@ function closebox() {
     var year = document.getElementById("year")
 
     // Slide the red box to the left (take over the blue box)
-    box1.style.transform = 'translateX(0)';
-    box2.style.transform = 'translateX(0)';
+    box1.style.transform = 'none';
+    box2.style.transform = 'none';
     button.style.display = 'inline';
     close.style.display = 'none';
-    desc.innerHTML = "New here?";
-    message.innerHTML = "Sign up for quality and easily accessed healthcare"
-    formtitle.innerHTML = "Login";
-    confpw.style.display = "none";
-    togglePassword2.style.display = "none";
-    accdetails.style.display = "none";
-    text.style.marginTop = "20%";
-    forgotpw.style.display = "inline"
-    registerbutton.style.display = "none";
-    loginbutton.style.display = "block";
-    confpw.required = false;
-    fname.required = false;
-    lname.required = false;
-    email.required = false;
-    code.required = false;
-    number.required = false;
-    day.required = false;
-    month.required = false;
-    year.required = false;
-    // main.classList.add("center")
+    desc.innerHTML = "Returning User?";
+    message.innerHTML = "Welcome Back! We hope to heal you :D Click button below to Log In"
+    formtitle.innerHTML = "Registration";
+    confpw.style.display = "initial";
+    togglePassword2.style.display = "initial";
+    accdetails.style.display = "initial";
+    text.style.marginTop = "50%";
+    forgotpw.style.display = "none";
+    registerbutton.style.display = "block";
+    loginbutton.style.display = "none";
+    confpw.required = true;
+    fname.required = true;
+    lname.required = true;
+    email.required = true;
+    code.required = true;
+    number.required = true;
+    day.required = true;
+    month.required = true;
+    year.required = true;
+    // main.classList.remove("center");
     
 }
 // END OF PASSWORD FUNCTIONS
@@ -189,9 +191,8 @@ function validateregister(){
         alert(errormessage)
     }
     else{
-        register(username,password)
+        register(username,confpassword)
         alert("Successful Registration\nClick Ok to head to login page")
-        document.getElementById("registration").action = "login_patient.html"
         document.getElementById("registration").submit()
         document.getElementById("registration").reset()
     }
@@ -248,9 +249,6 @@ function validatelogin(){
         }
     })
     
-    
-    
-   
 }
 
 const firebaseConfig = {
@@ -269,7 +267,6 @@ firebase.initializeApp(firebaseConfig);
 function register(user, pw){
 
     console.log('====Start Register====')
-    console.log(user, pw)
     firebase.database().ref('accounts/' + user).set({
     username: user,//adding the details into the database, format--> column name: variable
     password:pw
@@ -286,15 +283,14 @@ async function login(user, pw){
     
        await acctsRef.once('value', function (snapshot) {
             snapshot.forEach(function (acct_snapshot) {
-           
+            // console.log(user, acct_snapshot.val().username)
                 if(user == acct_snapshot.val().username && pw == acct_snapshot.val().password)
                     login_success = true
-                    // console.log(user+'='+ acct_snapshot.val().username)
-                    // console.log(pw +'='+ acct_snapshot.val().password)
         
                 })
             })
             // console.log(login_success)
             return login_success
-}
     
+
+}
