@@ -36,11 +36,11 @@ function display_all_response(str_responses_innerhtml,user_input){
     //first entry into chatbot
     if (typeof str == 'undefined'){
         str = ``
-        str += `<div class="bg bg-secondary-subtle border border-black" style="border-radius:5px" id="spacing">username: <br>${user_input}</div>`
+        str += `<div class="bg bg-white border border-danger" style="border-radius:5px;font-size:12px" id="spacing"><span style="font-weight:bold">Guest:</span> <br>${user_input}</div>`
         str += 
         `
-        <div class="bg bg-secondary-subtle border border-black" style="border-radius:5px" id="spacing">
-            <span style="color:blue; font-size:12px" >bot:<br> ${str_responses_innerhtml}</span>
+        <div class="bg bg-white border border-danger" style="border-radius:5px; font-size:12px" id="spacing">
+            <span><span style="font-weight:bold">Botty:</span><br> ${str_responses_innerhtml}</span>
         </div>
         `
         console.log(str_responses_innerhtml)
@@ -50,11 +50,11 @@ function display_all_response(str_responses_innerhtml,user_input){
     }
     //following entries into chatbot
     else{
-        str += `<div class="bg bg-secondary-subtle border border-black" style="border-radius:5px" id="spacing">username: <br>${user_input}</div>`
+        str += `<div class="bg bg-white border border-danger" style="border-radius:5px;font-size:12px" id="spacing"><span style="font-weight:bold">Guest:</span> <br>${user_input}</div>`
         str += 
         `
-        <div class="bg bg-secondary-subtle border border-black" style="border-radius:5px" id="spacing">
-            <span style="color:blue; font-size:12px" >bot:<br> ${str_responses_innerhtml}</span>
+        <div class="bg bg-white border border-danger" style="border-radius:5px; font-size:12px" id="spacing">
+            <span><span style="font-weight:bold">Botty:</span><br> ${str_responses_innerhtml}</span>
         </div>
         `
         console.log(str_responses_innerhtml)
