@@ -80,3 +80,7 @@ button:hover{
     height: 100px;
     background: white;
 }
+
+#call{
+    display: none;
+}
