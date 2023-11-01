@@ -79,7 +79,6 @@
 
                     <div id="accdetails">
                         <hr>
-
                         <h3>Account Details</h3>
 
                         <p>
@@ -128,9 +127,27 @@
                         </p>
                     </div>
 
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Invalid Registration</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" id="errormessage">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="#" id="tologin">Close</a> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <p id="right">
-                        <input class="btn btn-secondary" type="submit" value="Register" onclick="validateregister()" id="registerbutton">
-                        <input class="btn btn-secondary" type="submit" value="login" onclick="validatelogin()" style="display:none" id="loginbutton">
+                        <input class="btn btn-secondary" type="submit" value="Register" onclick="validateregister()" data-bs-toggle="modal" data-bs-target="#registerModal" id="registerbutton">
+                        <input class="btn btn-secondary" type="submit" value="Login" onclick="validatelogin()" data-bs-toggle="modal" data-bs-target="#loginModal" style="display:none" id="loginbutton">
                     </p> 
                 </form>
             </div>
