@@ -14,6 +14,11 @@
 
     <!-- Core Style -->
 	  <link rel="stylesheet" href="style.css">
+	     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script> 
+
+     <!-- This is the API from Firebase Realtime Database -->
+     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script> 
 
     <style>
       html,
@@ -174,14 +179,34 @@
 
     </style>
     <script>
+      //Start of firebase configure
+        const firebaseConfig = {
+            apiKey: "AIzaSyD9ouBle0s4OAyamcvXrmjKRpHrSXc_unI",
+            authDomain: "firebasics-281dd.firebaseapp.com",
+            projectId: "fiitemsRefrebasics-281dd",
+            storageBucket: "firebasics-281dd.appspot.com",
+            messagingSenderId: "941290209708",
+            appId: "1:941290209708:web:93f3bf62c88882e40afa09",
+            measurementId: "G-YWMCHYLBS7",
+            databaseURL: "https://firebasics-281dd-default-rtdb.asia-southeast1.firebasedatabase.app/"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig); 
+
+      function show_clinics() {
+          var list_of_clinics = []
+          var itemsRef = firebase.database().ref().child("locations");  
+          itemsRef.once('value', function (snapshot) {
+          snapshot.forEach(function (item_snapshot) {
+          list_of_clinics.push(item_snapshot.val())
+        })
+      })
+      return list_of_clinics
+      }
+    
+
       const CONFIGURATION = {
-        "locations": [
-            {"title":"Medsense Family Clinic","address1":"93350 Kuching","address2":"Sarawak, Malaysia","coords":{"lat":1.4975753006861536,"lng":110.37180460674591},"placeId":"ChIJp0bxI3ih-zERs63AixjnxyI"},
-            {"title":"Primecare Medical Clinic","address1":"Commercial Centre 5 \u0026 6","address2":"Tabuan Tranquility, Jalan Canna, Tabuan Jaya, 93350 Kuching, Sarawak, Malaysia","coords":{"lat":1.515381400000004,"lng":110.38673179325409},"placeId":"ChIJyeTA792m-zERieZ1owawHNs"},
-            {"title":"Clinic Dr. Wong Kai Siong","address1":"GF","address2":"Commercial Centre, 21, Jalan Song, Tabuan Heights, 93350 Kuching, Sarawak, Malaysia","coords":{"lat":1.5173794501478477,"lng":110.36636890674588},"placeId":"ChIJY9kS9xen-zERSerCzdiQTYw"},
-            {"title":"Metro Clinic","address1":"Ground Floor","address2":"Sublot 17, Lorong Metrocity Height 1, Metrocity, 93050, Q309, Taman Fah Tah, 93050 Kuching, Sarawak, Malaysia","coords":{"lat":1.5693440744356464,"lng":110.30576470674593},"placeId":"ChIJr7EROHUI-zEREW5RZGNlC4E"},
-            {"title":"RELIANCE MEDICAL CLINIC KUCHING","address1":"NO. 505","address2":"GROUND FLOOR\u0026FIRST FLOOR, LOT 4291, BLOCK 233 KNLD 7TH MILE, JALAN LIU SHAN BANG, OFF, Jalan Penrissen, 93250 Kuching, Sarawak, Malaysia","coords":{"lat":1.4762833505498918,"lng":110.33166226441804},"placeId":"ChIJMRQee0ih-zERy04kSdHw1Tg"}
-        ],
+        "locations": show_clinics(),
         "mapOptions": {
             "center":{"lat":38.0,"lng":-100.0},
             "fullscreenControl":true,
@@ -195,6 +220,8 @@
         "mapsApiKey": "AIzaSyCdMG1LPiHo0fyICMnksOKaHB9ClRznhdk",
         "capabilities": {"input":true,"autocomplete":true,"directions":true,"distanceMatrix":true,"details":true,"actions":false}
       };
+
+
 
     </script>
     <script type="module">
