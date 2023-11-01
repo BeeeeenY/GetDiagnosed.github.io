@@ -139,13 +139,14 @@
     </header>
 <!--FORM STARTS HERE -->
 <div id="welcome">
-    <h1 class="display-2">Welcome {First Name}</h1>
+    <h1 class="display-5">Welcome {First Name}</h1>
 </div>
 
 <div class="section row p-0 align-items-stretch dark mt-4">
+    
     <div id="patient_form" class="col-lg-12 p-0">
-        <div class="bg-color form-widget col-padding" data-loader="button">
-            <h2>Take the first step</h2>
+        <div class="bg-color form-widget col-padding " data-loader="button">
+            <h2 class="text-center">Take the first step</h2>
             <div class="form-result"></div>
             <form class="row mb-0" id="consult-form" name="consult-form" action="doctor_selection.html" method="get">
                 <div class="form-process">
@@ -153,44 +154,44 @@
                         <div class="css3-spinner-scaler"></div>
                     </div>
                 </div>
-                <div class="col-md-6 form-group">
-                    <!-- auto fill -->
-                    <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname" class="form-control not-dark" value="">
-                </div>
-                <div class="col-md-6 form-group">
-                    <!-- auto fill -->
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname" class="form-control not-dark " value="">
-                </div>
-                <div class="w-100"></div>
-                <div class="col-md-6 form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 form-group">
                     <label for="specialisation">Specialisation Required</label>
                     <select class="form-select not-dark" name="specialisation" id="specialisation"  v-model="selected_specialisation">
                         <option value="">-----Select-----</option>
                         <option v-for="spec of specialty_list" :key="spec" :value="spec">{{spec}}</option>
                     </select>
                 </div>
-                <div class="col-md-6 form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4 form-group">
                     <label for="allergies">Drug Allergies</label>
                     <input type="text" id="allergies" name="allergies" class="form-control not-dark required" value="" placeholder="None">
                 </div>
-                <div class="w-100"></div>
-                <div class="col-md-5">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
                     
                             <label for="preconditions">Pre Existing Conditions</label>
                             <input type="text" id="preconditions" name="preconditions" class="form-control not-dark required" value="" placeholder="None">
                         
                 </div>
-                <div class="col-md-7 form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4 form-group">
                     <label for="hehe">What is wrong? Let us know</label>
                     <textarea id="hehe" name="comments" class="form-control not-dark required" cols="30" rows="5"></textarea>
                 </div>
-                <div class="w-100"></div>
-                <div class="col-12 form-group text-end">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                
+                
+                <div class="col-4 form-group text-end">
                     <button class="button button-white button-light button-rounded m-0" type="submit" value="submit">Find a Doctor Now</button>
                     
                 </div>
+                <div class="col-md-4"></div>
+                
                 <input type="hidden" name="prefix" value="template-medical-">
             </form>
 
