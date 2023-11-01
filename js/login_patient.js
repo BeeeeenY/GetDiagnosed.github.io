@@ -147,56 +147,93 @@ function validateregister(){
     var year = document.getElementById("year").value
 
 
-    var errormessage = ""
+    var errormessage = []
     if(username.length < 8){
-        errormessage += "Username must have more than 8 characters!\n"
+        errormessage.push("Username must have more than 8 characters!")
     }
 
     if(password != confpassword){
-        errormessage += "Passwords do not match!\n"
+        errormessage.push("Passwords do not match!")
     }
     if(password.length < 8){
-        errormessage += "Passwords must have more than 8 characters!\n"
+        errormessage.push("Passwords must have more than 8 characters!")
     }
     if(!containsSpecialChars(password)){
-        errormessage += "Password must contain at least one special character! (!@#$%^&*)\n"
+        errormessage.push("Password must contain at least one special character! (!@#$%^&*)")
     }
     if(!containsNumber(password)){
-        errormessage += "Password must contain at least one number (0-9)\n"
+        errormessage.push("Password must contain at least one number (0-9)")
     }
     if(!containsUppercase(password)){
-        errormessage += "Password must contain at least one Uppercase character (A-Z)\n"
+        errormessage.push("Password must contain at least one Uppercase character (A-Z)")
     }
     if(!containsLowercase(password)){
-        errormessage += "Password must contain at least one Lowercase character (a-z)\n"
+        errormessage.push("Password must contain at least one Lowercase character (a-z)")
     }
     if(!email.includes("@")){
-        errormessage += "Email is Invalid\n"
+        errormessage.push("Email is Invalid")
     }
     if(!code.includes("+")){
-        errormessage += "Please include (+) in Country Code\n"
+        errormessage.push("Please include (+) in Country Code")
     }
     if(number.length < 7 || !containsOnlyNumbers(number)){
-        errormessage += "Invalid Contact Number\n"
+        errormessage.push("Invalid Contact Number")
     }
     if(day.length != 2 || month.length != 2 || year.length != 4 || !containsOnlyNumbers(day) || !containsOnlyNumbers(month) || !containsOnlyNumbers(year)){
-        errormessage += "Invalid Date of Birth (dd/mm/yyyy)\n"
+        errormessage.push("Invalid Date of Birth (dd/mm/yyyy)")
     }
     if(!document.getElementById("registration").checkValidity()){
-        errormessage += "Please fill in required fields!\n"
+        errormessage.push("Please fill in required fields!")
     }
-    if(errormessage != ""){
-        alert(errormessage)
+    if(errormessage != []){
+        var text = document.getElementById("errormessage")
+        var str = `Please change accordingly :D<br>
+        `
+        console.log(errormessage)
+        
+        for(i=0;i<errormessage.length;i++){
+            str += `${i+1}. ${errormessage[i]} <br>`
+        }
+        text.innerHTML = str
     }
     else{
-        register(username,password)
-        alert("Successful Registration\nClick Ok to head to login page")
-        document.getElementById("registration").action = "login_patient.html"
-        document.getElementById("registration").submit()
+        register(username,confpassword)
+        console.log("registering")
+        var text = document.getElementById("errormessage")
+        var title = document.getElementById("staticBackdropLabel")
+        text.innerHTML = "Do click on the Close button to get to Log In Page"
+        title.innerHTML = "Successful Registration"
+        document.getElementById("tologin").href= "login_patient.html"
         document.getElementById("registration").reset()
+        
     }
 }
 
+function validatelogin(){
+    var username = document.getElementById("username").value
+    var password = document.getElementById("password").value
+    errormessage = []
+
+    login(username,password).then(function(result){
+    console.log(result)
+    if(result == false){
+        var text = document.getElementById("errormessage")
+        var str = `Wrong Username or Password
+        `
+        text.innerHTML = str
+    }
+    else{
+        var text = document.getElementById("errormessage")
+        text.innerHTML = "Do click on the Close button to get started!"
+        var title = document.getElementById("staticBackdropLabel")
+        title.innerHTML = "Successfully Logged In"
+        
+        document.getElementById("tologin").href= "homelogin.html"
+        document.getElementById("registration").reset()
+    }
+    })
+    
+}
 function containsSpecialChars(str) {
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     return specialChars.test(str);
@@ -214,43 +251,6 @@ function containsLowercase(str) {
 }
 function containsOnlyNumbers(str) {
     return /^\d+$/.test(str);
-}
-
-function validatelogin(){
-    var username = document.getElementById("username").value
-    var password = document.getElementById("password").value
-    errormessage = ""
-    console.log('testtt is pass or fail')
-
-    // var login_success=false
-
-
-    if(!document.getElementById("registration").checkValidity()){
-        errormessage += "Please fill in required fields\n"
-    }
-    if(errormessage != ""){
-        alert(errormessage)
-        document.getElementById("registration").reset()
-        
-    }
-
-
-    login(username,password).then(function(result){
-        console.log(result)
-        if(result == false){
-            alert("Invalid Username or Password")
-            document.getElementById("registration").reset()
-        }
-        else{
-            console.log('success')
-            document.getElementById("registration").submit()
-            document.getElementById("registration").reset()
-        }
-    })
-    
-    
-    
-   
 }
 
 const firebaseConfig = {
