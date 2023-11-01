@@ -513,25 +513,24 @@
 
 	<!-- Chatbot -->
 	<div>
-        <img class="chatbotimg" id="chatbot" src="images/chatbot.png">
-        <button type="button" class="btn btn-light" id="chatbot" onclick="openForm()"> AI Symptoms Checker --> Click here to chat</button>
-    </div>
+	        <img class="chatbotimg" id="chatbot" src="images/chatbot.png">
+	        <button type="button" class="btn btn-light" id="chatbot" onclick="openForm()"> AI Symptoms Checker --> Click here to chat</button>
+    	</div>
     
 
-    <div id="chatbot-popup">
-        <div class="input-group text-center">
-            <button class="btn btn-light w-100" type="button" onclick="closeForm()">Get your symptoms checked out!</button>
-        </div>
-        <div class="input-group" style="Display:none" id="chatlog">
-            
-        </div>
-        <div class="input-group">
-            <span class="input-group-text">Message</span>
-            <textarea class="form-control" aria-label="With textarea" name="textbox" id="usertext" rows="4" placeholder="Shift + Enter to create new line"></textarea>
-            <button type="button" class="btn btn-light " onclick="message()" id="send"> Send </button> 
-        </div>
-        
-    </div>
+    	<div id="chatbot-popup">
+		<div class="input-group">
+		    <button class="btn btn-light w-100" type="button" onclick="closeForm()">Send me a description of your symptoms!</button>
+		</div>
+		<div class="input-group" style="Display:none" id="chatlog">
+		    
+		</div>
+		<div class="input-group" id="usertext" >
+		    <span class="input-group-text">Message</span>
+		    <textarea class="form-control" aria-label="With textarea" name="textbox" rows="4" placeholder="Shift + Enter to create new line" id="textsubmit"></textarea>
+		    <button type="button" class="btn btn-light " onclick="message()" id="send"> Send </button> 
+		</div>
+   	</div>
 
 	<!-- JavaScripts
 	============================================= -->
