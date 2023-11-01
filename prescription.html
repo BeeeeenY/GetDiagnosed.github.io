@@ -152,70 +152,95 @@
         <h1 class="display-5">Your Consultation has Ended</h1>
     </div>
 
-    <div class="container">
+    <div class="container ">
         <div class="row justify-content-between mt-3 mb-6">
-            <div class="col-lg-12">
-                <div class="opening-table bg-light bg-gradient">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="opening-table bg-light">
                     <div class="heading-block mb-4 border-bottom-0">
                         <h4>Your Prescription</h4>
                         <span>You may refer this prescription to any local pharmacies. Thank you and have a nice day!</span>
+                        <br>
+                        <p><strong>Patient ID: 69696 <br> Consulted by: Doctor Balakrishnan</strong></p>
+
+
+
+                        <p id="dateandtime"></p>
+                        
                     </div>
-                    <div class="time-table-wrap">
+                    <div class="time-table-wrap">                
+                    
                         <div class="row time-table">
-                            <p class="col-lg-5"><strong>Patient ID: 69696</strong></p>
-                            <p class="col-lg-7"><strong>Consulted by Doctor Balakrishnan</strong></p>
-
+                            <div class="col-lg-3"></div>
+                            <h5 class="col-lg-3">Medicine Name</h5>
+                            <h5 class="col-lg-3">Instructions</h5>
+                            <div class="col-lg-3"></div>
                         </div>
                         <div class="row time-table">
-                            <h5 class="col-lg-5">Medicine Name</h5>
-                            <h5 class="col-lg-7">Instructions</h5>
-
+                            <div class="col-lg-3"></div>
+                            <h5 class="col-lg-3">1) TAB, DEMO MEDICINE 1</h5>
+                            <span class="col-lg-3">1 Morning, 1 Night (Before Food)</span>
+                            <div class="col-lg-3"></div>
                         </div>
                         <div class="row time-table">
-                            <h5 class="col-lg-5">1) TAB, DEMO MEDICINE 1</h5>
-                            <span class="col-lg-7">1 Morning, 1 Night (Before Food)</span>
+                            <div class="col-lg-3"></div>
+                            <h5 class="col-lg-3">2) TAB, DEMO MEDICINE 2</h5>
+                            <span class="col-lg-3">1 Morning, 1 Night (Before Food)</span>
+                            <div class="col-lg-3"></div>
                         </div>
                         <div class="row time-table">
-                            <h5 class="col-lg-5">2) TAB, DEMO MEDICINE 1</h5>
-                            <span class="col-lg-7">1 Morning, 1 Night (Before Food)</span>
+                            <div class="col-lg-3"></div>
+                            <h5 class="col-lg-3">3) TAB, DEMO MEDICINE 3</h5>
+                            <span class="col-lg-3">1 Morning, 1 Night (Before Food)</span>
+                            <div class="col-lg-3"></div>
                         </div>
                         <div class="row time-table">
-                            <h5 class="col-lg-5">3) TAB, DEMO MEDICINE 1</h5>
-                            <span class="col-lg-7">1 Morning, 1 Night (Before Food)</span>
+                            <div class="col-lg-3"></div>
+                            <h5 class="col-lg-3">4) TAB, DEMO MEDICINE 4</h5>
+                            <span class="col-lg-3">1 Morning, 1 Night (Before Food)</span>
+                            <div class="col-lg-3"></div>
                         </div>
                         <div class="row time-table">
-                            <h5 class="col-lg-5">3) TAB, DEMO MEDICINE 1</h5>
-                            <span class="col-lg-7">1 Morning, 1 Night (Before Food)</span>
+                            <div class="col-lg-3"></div>
+                            <h5 class="col-lg-3">5) TAB, DEMO MEDICINE 5</h5>
+                            <span class="col-lg-3">1 Morning, 1 Night (Before Food)</span>
+                            <div class="col-lg-3"></div>
                         </div>
+                    
                         <div class="row time-table">
-                            <h5 class="col-lg-5">4) TAB, DEMO MEDICINE 1</h5>
-                            <span class="col-lg-7">1 Morning, 1 Night (Before Food)</span>
-                        </div>
-                        <div class="row time-table">
-                            <h5 class="col-lg-5">5) TAB, DEMO MEDICINE 1</h5>
-                            <span class="col-lg-7">1 Morning, 1 Night (Before Food)</span>
-                        </div>
-                        <div class="row time-table">
-                            <h5 class="col-lg-5">6) TAB, DEMO MEDICINE 1</h5>
-                            <span class="col-lg-7">1 Morning, 1 Night (Before Food)</span>
-                        </div>
-                        <div class="row time-table">
-                            <div class="col-lg-4"></div>
-                            <div class="col-lg-8 mt-4">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6 mt-4">
                             <a href="locator.html">
                             <button class="btn bg-color btn-lg text-light" id="locator">Find your nearest pharmacy now!</button>
                             </a>
                             </div>
+                            <div class="col-lg-3"></div>
+
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-2"></div>
         </div>
     </div>
         
 
    
+<script>
 
+const date_time = new Date();
+const time = date_time.toLocaleTimeString()
+const date = date_time.toLocaleDateString()
+console.log(time, date)
+
+str =  `Date of Consultation: ${date} <br>
+        Time of Consultation: ${time}
+
+`
+document.getElementById("dateandtime").innerHTML = str
+
+
+</script>
         
 
     
@@ -224,10 +249,8 @@
 
 
 
-<script src="js/consult.js"></script>
 <script src="js/plugins.min.js"></script>
 <script src="js/functions.bundle.js"></script>
 <script src="js/custom.js"></script>
-<script src="js/vue_custom.js"></script>
 </body>
 </html>
