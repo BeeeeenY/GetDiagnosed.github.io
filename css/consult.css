@@ -52,11 +52,11 @@ button:hover{
 }
 
 #stream-wrapper{
-    display: none;
+    display: block;
 }
 
 #stream-controls{
-    display: none;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 50px;

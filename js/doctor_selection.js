@@ -106,10 +106,13 @@ async function filter_specialty(){
                 is_avial=item_snapshot.val().available
                 let settext=''
                 if(is_avial.toUpperCase() ==='T'){
-                    settext=`<span style="background-color: yellowgreen;"><a href="consult.html">Available</a></span>`
+                    settext=`
+                    <input class="btn btn-primary btn-sm" type="submit" value="Available" onclick="warningMsg()" data-bs-toggle="modal" data-bs-target="#warningModal" id="">
+                    `
                 }
                 else{
-                    settext=` <span style="background-color: red;">Not Available</span>`
+                    settext=`<input class="btn btn-danger btn-sm" type="submit" value="Unavailable" " >
+                    `
                 }
                 
                 //Add data to the new elements.
