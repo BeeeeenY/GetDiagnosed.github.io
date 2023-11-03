@@ -42,12 +42,11 @@ function validateregister(){
     var month = document.getElementById("month").value
     var year = document.getElementById("year").value
 
-
     var errormessage = []
+    
     if(username.length < 8){
         errormessage.push("Username must have more than 8 characters!")
     }
-
     if(password != confpassword){
         errormessage.push("Passwords do not match!")
     }
@@ -81,11 +80,11 @@ function validateregister(){
     if(!document.getElementById("registration").checkValidity()){
         errormessage.push("Please fill in required fields!")
     }
-    if(errormessage != []){
+    if(errormessage.length > 0){
         var text = document.getElementById("errormessage")
         var str = `Please change accordingly :D<br>
         `
-        console.log(errormessage)
+        console.log(errormessage != [])
         
         for(i=0;i<errormessage.length;i++){
             str += `${i+1}. ${errormessage[i]} <br>`
@@ -101,35 +100,9 @@ function validateregister(){
         title.innerHTML = "Successful Registration"
         document.getElementById("tologin").href= "login_patient.html"
         document.getElementById("registration").reset()
-        
     }
 }
 
-function validatelogin(){
-    var username = document.getElementById("username").value
-    var password = document.getElementById("password").value
-    errormessage = []
-
-    login(username,password).then(function(result){
-    console.log(result)
-    if(result == false){
-        var text = document.getElementById("errormessage")
-        var str = `Wrong Username or Password
-        `
-        text.innerHTML = str
-    }
-    else{
-        var text = document.getElementById("errormessage")
-        text.innerHTML = "Do click on the Close button to get started!"
-        var title = document.getElementById("staticBackdropLabel")
-        title.innerHTML = "Successfully Logged In"
-        
-        document.getElementById("tologin").href= "homelogin.html"
-        document.getElementById("registration").reset()
-    }
-    })
-    
-}
 function containsSpecialChars(str) {
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     return specialChars.test(str);
