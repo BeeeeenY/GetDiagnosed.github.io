@@ -42,8 +42,7 @@
                     <h2 id="desc">New here?</h2>
                     <p id="message">Sign up for quality and easily accessed healthcare</p>
                     <p>
-                        <button class="btn btn-secondary" onclick="transition()" id="register">Sign Up here</button>
-                        <button class="btn btn-secondary" onclick="closebox()" id="closebox">Login here</button>
+                        <a class="btn btn-secondary" href="register_patient.html" id="register">Sign Up here</a>
                     </p>
                 </div>
                 
@@ -75,57 +74,6 @@
                         <a id="forgotpassword" href="forgotpassword.html" style="display:inline">forgot password?</a>
                     </span>
 
-                    <div id="accdetails" style="display:none">
-                        <hr>
-
-                        <h3>Account Details</h3>
-
-                        <p>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="First Name" id="firstname">
-                                <input type="text" class="form-control" placeholder="Last Name" id="lastname">
-                            </div>
-                        </p>
-                        <p>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Email" id="email">
-                            </div>
-                        </p>
-                        <p>
-                            <div class="input-group">
-                                <span class="input-group-text">Gender</span>
-                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" id="gender">Male</button>
-                                <ul class="dropdown-menu dropdown-menu-end" id="genderlist">
-                                    <li>
-                                        <button class="dropdown-item" id="male">Male</button>
-                                    </li>
-                                    <li>
-                                        <button class="dropdown-item" id="female">Female</button>
-                                    </li>
-                                </ul>
-    
-                                <input type="text" class="form-control" placeholder="Country" id="country">
-                            </div>
-                        </p>
-                        <p>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="+ (Country Code)" id="code">
-                                <input type="text" class="form-control" placeholder="Contact Number" id="number">
-                            </div>
-                        </p>
-                        <p>     
-                            <div class="input-group">
-                                <span class="input-group-text">Date of Birth (in numbers)</span>
-                                <input type="text" class="form-control" placeholder="Day" id="day">
-                                <input type="text" class="form-control" placeholder="Month" id="month" >
-                                <input type="text" class="form-control" placeholder="Year" id="year">
-                            </div>
-                        </p>
-                        <p>
-                            <input type="text" class="form-control" placeholder="Address" id="address">
-                        </p>
-                    </div>
-
                      <!-- Modal -->
                      <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -144,7 +92,6 @@
                     </div>
                     <p id="right">
                         <input class="btn btn-secondary" type="submit" value="Login" onclick="validatelogin()" data-bs-toggle="modal" data-bs-target="#loginModal"  id="loginbutton">
-                        <input class="btn btn-secondary" type="submit" value="Register" onclick="validateregister()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="registerbutton" style="display:none">
                     </p>                        
                 </form>
             </div>
