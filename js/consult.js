@@ -30,10 +30,8 @@ let joinAndDisplayLocalStream = async () => {
 let joinStream = async () => {
     await joinAndDisplayLocalStream()
    
-    document.getElementById("welcome").innerHTML = '<h1 class="display-5">You are currently talking to Doctor Balakrishnan</h1>'
+    document.getElementById("welcome").innerHTML = '<h1 class="display-5">You are currently talking to Doctor Ji Sung</h1>'
     document.getElementById("join-btn").style.display = 'none'
-    document.getElementById("stream-controls").style.display = 'flex' 
-    document.getElementById('stream-wrapper').style.display = 'block'
 }
 
 let handleUserJoined = async (user, mediaType) => {
@@ -107,7 +105,7 @@ function warning(){
     alert("You are leaving the call")
 }
 
-document.getElementById('join-btn').addEventListener('click',joinStream)
+window.addEventListener('load',joinStream)
 document.getElementById('leave-btn').addEventListener('click', leaveAndRemoveLocalStream)
 document.getElementById('mic-btn').addEventListener('click', toggleMic)
 document.getElementById('camera-btn').addEventListener('click', toggleCamera)

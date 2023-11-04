@@ -18,11 +18,10 @@
 	<!-- Font Icons -->
 	<link rel="stylesheet" href="css/medical-icons.css">
 
-	<!-- Niche Demos -->
+	<!-- css -->
 	<link rel="stylesheet" href="css/medical.css">
 
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/general.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Bootstrap Icons -->
@@ -34,8 +33,6 @@
 	<!-- Fontawesome -->
 	<script src="https://kit.fontawesome.com/7fab40c677.js" crossorigin="anonymous"></script>
 
-	<!-- Medical Icons -->
-	<link rel="stylesheet" href="css/wfmi-style.css">
 	
 	<!-- Plugins/Components CSS -->
 	<link rel="stylesheet" href="css/swiper.css">
@@ -148,6 +145,27 @@
                     </tbody>
                 </table>
             </div>
+            <div id="warningModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                 <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">You Are About To Enter a Call</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please proceed to click on the button below to start your consultation. Have a nice day!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="consult.html">
+                        <button type="button" class="btn btn-default btn-success" data-dismiss="modal">Join Call</button>
+                    </a>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
         </div>
 
         <!-- Footer
@@ -239,7 +257,6 @@
     
 
 <script src="/js/client_consult.js"></script>
-<script src="js/plugins.min.js"></script>
 <script src="js/functions.bundle.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/doctor_selection.js"></script>

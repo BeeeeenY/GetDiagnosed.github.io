@@ -31,110 +31,6 @@ form.addEventListener('submit', function (e) {
 });
 
 
-function transit() {
-    var box1 = document.querySelector('#newbox');
-    var box2 = document.querySelector('#loginbox')
-    var button = document.getElementById('register');
-    var close = document.getElementById('closebox');
-    var desc = document.getElementById('desc');
-    var message = document.getElementById('message');
-    var forgotpw = document.getElementById("forgotpassword")
-    var formtitle = document.getElementById("formtitle");
-    var togglePassword2 = document.getElementById("togglePassword2");
-    var accdetails = document.getElementById("accdetails");
-    var text = document.getElementById("text");
-    var main = document.getElementById("main");
-    var registerbutton = document.getElementById("registerbutton");
-    var loginbutton = document.getElementById("loginbutton");
-    var confpw = document.getElementById("confirmpassword");
-    var fname = document.getElementById("firstname")
-    var lname = document.getElementById("lastname")
-    var email = document.getElementById("email")
-    var code = document.getElementById("code")
-    var number = document.getElementById("number")
-    var day = document.getElementById("day")
-    var month = document.getElementById("month")
-    var year = document.getElementById("year")
-
-    // Slide the red box to the left (take over the blue box)
-    box1.style.transform = 'translateX(+100%)';
-    box2.style.transform = 'translateX(-100%)';
-    button.style.display = 'none';
-    close.style.display = 'inline';
-    desc.innerHTML = "New here?";
-    message.innerHTML = "Sign up for quality and easily accessed healthcare"
-    formtitle.innerHTML = "Login";
-    confpw.style.display = "none";
-    togglePassword2.style.display = "none";
-    accdetails.style.display = "none";
-    text.style.marginTop = "20%";
-    forgotpw.style.display = "inline";
-    registerbutton.style.display = "none";
-    loginbutton.style.display = "block";
-    confpw.required = false;
-    fname.required = false;
-    lname.required = false;
-    email.required = false;
-    code.required = false;
-    number.required = false;
-    day.required = false;
-    month.required = false;
-    year.required = false;
-    
-}
-function closebox() {
-    var box1 = document.querySelector('#newbox');
-    var box2 = document.querySelector('#loginbox')
-    var button = document.getElementById('register');
-    var close = document.getElementById('closebox');
-    var desc = document.getElementById('desc');
-    var message = document.getElementById('message');
-    var forgotpw = document.getElementById("forgotpassword")
-    var formtitle = document.getElementById("formtitle");
-    var togglePassword2 = document.getElementById("togglePassword2");
-    var accdetails = document.getElementById("accdetails");
-    var text = document.getElementById("text");
-    var main = document.getElementById("main");
-    var registerbutton = document.getElementById("registerbutton");
-    var loginbutton = document.getElementById("loginbutton");
-    var confpw = document.getElementById("confirmpassword");
-    var fname = document.getElementById("firstname")
-    var lname = document.getElementById("lastname")
-    var email = document.getElementById("email")
-    var code = document.getElementById("code")
-    var number = document.getElementById("number")
-    var day = document.getElementById("day")
-    var month = document.getElementById("month")
-    var year = document.getElementById("year")
-
-    // Slide the red box to the left (take over the blue box)
-    box1.style.transform = 'none';
-    box2.style.transform = 'none';
-    button.style.display = 'inline';
-    close.style.display = 'none';
-    desc.innerHTML = "Returning User?";
-    message.innerHTML = "Welcome Back! We hope to heal you :D Click button below to Log In"
-    formtitle.innerHTML = "Registration";
-    confpw.style.display = "initial";
-    togglePassword2.style.display = "initial";
-    accdetails.style.display = "initial";
-    text.style.marginTop = "50%";
-    forgotpw.style.display = "none";
-    registerbutton.style.display = "block";
-    loginbutton.style.display = "none";
-    confpw.required = true;
-    fname.required = true;
-    lname.required = true;
-    email.required = true;
-    code.required = true;
-    number.required = true;
-    day.required = true;
-    month.required = true;
-    year.required = true;
-    
-}
-// END OF PASSWORD FUNCTIONS
-
 function validateregister(){
     var username = document.getElementById("username").value
     var password = document.getElementById("password").value
@@ -146,12 +42,11 @@ function validateregister(){
     var month = document.getElementById("month").value
     var year = document.getElementById("year").value
 
-
     var errormessage = []
+    
     if(username.length < 8){
         errormessage.push("Username must have more than 8 characters!")
     }
-
     if(password != confpassword){
         errormessage.push("Passwords do not match!")
     }
@@ -185,11 +80,11 @@ function validateregister(){
     if(!document.getElementById("registration").checkValidity()){
         errormessage.push("Please fill in required fields!")
     }
-    if(errormessage != []){
+    if(errormessage.length > 0){
         var text = document.getElementById("errormessage")
         var str = `Please change accordingly :D<br>
         `
-        console.log(errormessage)
+        console.log(errormessage != [])
         
         for(i=0;i<errormessage.length;i++){
             str += `${i+1}. ${errormessage[i]} <br>`
@@ -205,35 +100,9 @@ function validateregister(){
         title.innerHTML = "Successful Registration"
         document.getElementById("tologin").href= "login_patient.html"
         document.getElementById("registration").reset()
-        
     }
 }
 
-function validatelogin(){
-    var username = document.getElementById("username").value
-    var password = document.getElementById("password").value
-    errormessage = []
-
-    login(username,password).then(function(result){
-    console.log(result)
-    if(result == false){
-        var text = document.getElementById("errormessage")
-        var str = `Wrong Username or Password
-        `
-        text.innerHTML = str
-    }
-    else{
-        var text = document.getElementById("errormessage")
-        text.innerHTML = "Do click on the Close button to get started!"
-        var title = document.getElementById("staticBackdropLabel")
-        title.innerHTML = "Successfully Logged In"
-        
-        document.getElementById("tologin").href= "homelogin.html"
-        document.getElementById("registration").reset()
-    }
-    })
-    
-}
 function containsSpecialChars(str) {
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     return specialChars.test(str);

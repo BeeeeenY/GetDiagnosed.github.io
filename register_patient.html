@@ -8,53 +8,53 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/general.css">
     <script src="https://unpkg.com/vue@next"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
 
     <!-- This is the API from Firebase Realtime Database -->
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script> 
-    
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <style>
+        body {
+            background-color: #f7f7f7; /* Add your desired background color */
+        }
+    </style>
 </head>
 
 <body id="overbackground">
     <!-- [START] TOP OF PAGE -->
-    <div>
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="col-3">
-                </div>
-                <div class="col-6">
-                    <a href="index.html"><img src="images/logo.png" width="300"></a>
-                </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-6 col-lg-3 text-center">
+                <a href="index.html"><img src="images/logo.png" class="img-fluid" alt="Logo"></a>
             </div>
         </div>
     </div>
     <!-- [END] TOP OF PAGE -->
 
     <!-- [START] MIDDLE OF PAGE -->
-
-    <div id="main">
-        <div class="row mt-5 justify-content-md-center">
-            <div class="col col-lg-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded text-center" id="newbox">
+    <div class="container">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-12 col-lg-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded text-center" id="newbox">
                 <div id="text">
                     <h2 id="desc">Returning User?</h2>
-                    <p id="message">Welcome Back! We hope to heal you :D Click button below to Log In</p>
+                    <p id="message">Welcome Back! We hope to heal you :D Click the button below to Log In</p>
                     <p>
-                        <button class="btn btn-secondary" onclick="transit()" id="register">Login here</button>
-                        <button class="btn btn-secondary" onclick="closebox()" id="closebox">Sign Up here</button>
+                        <a class="btn btn-secondary" href="login_patient.html" id="register">Login Here</a>
                     </p>
                 </div>
             </div>
-            <div class="col col-lg-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="loginbox">
-                <h2 class="text-center" id="formtitle"> Registration </h2> 
+            <div class="col-12 col-lg-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="loginbox">
+                <h2 class="text-center" id="formtitle">Registration</h2>
                 <hr>
 
                 <h3>Login Credentials</h3>
-                <form action="login_patient.html" id="registration" method="GET"> 
-                    <p>
+                <form action="login_patient.html" id="registration" method="GET">
+                    <!-- Your form elements here -->
+					<p>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Username" id="username" required>
                         </div>
@@ -75,12 +75,9 @@
                         <a id="forgotpassword" href="forgotpassword.html">forgot password?</a>
                     </span>
 
-                    
-
                     <div id="accdetails">
                         <hr>
                         <h3>Account Details</h3>
-
                         <p>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="First Name" id="firstname" required>
@@ -127,7 +124,6 @@
                         </p>
                     </div>
 
-
                     <!-- Modal -->
                     <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -147,7 +143,6 @@
 
                     <p id="right">
                         <input class="btn btn-secondary" type="submit" value="Register" onclick="validateregister()" data-bs-toggle="modal" data-bs-target="#registerModal" id="registerbutton">
-                        <input class="btn btn-secondary" type="submit" value="Login" onclick="validatelogin()" data-bs-toggle="modal" data-bs-target="#loginModal" style="display:none" id="loginbutton">
                     </p> 
                 </form>
             </div>
@@ -156,10 +151,7 @@
 
     <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
+
     <script src="js/register_patient.js"></script>
-
 </body>
-
-
 </html>

@@ -17,11 +17,10 @@
 	<!-- Font Icons -->
 	<link rel="stylesheet" href="css/medical-icons.css">
 
-	<!-- Niche Demos -->
+	<!-- css -->
 	<link rel="stylesheet" href="css/medical.css">
 
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/general.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Bootstrap Icons -->
@@ -33,8 +32,6 @@
 	<!-- Fontawesome -->
 	<script src="https://kit.fontawesome.com/7fab40c677.js" crossorigin="anonymous"></script>
 
-	<!-- Medical Icons -->
-	<link rel="stylesheet" href="css/wfmi-style.css">
 	
 	<!-- Plugins/Components CSS -->
 	<link rel="stylesheet" href="css/swiper.css">
@@ -44,6 +41,14 @@
 	<!-- Bootstrap v5.3.2 (for profile) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+	<!-- Swiper CDN -->
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+	/>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 	<title>GetDiagnosed</title>
 
@@ -392,55 +397,95 @@
 						<h3>Meet our Team of Specialists<span>.</span></h3>
 						<span>We make sure that your Life are in Good Hands.</span>
 					</div>
-
-					<div id="oc-team" class="owl-carousel team-carousel carousel-widget" data-margin="30" data-nav="true" data-pagi="true" data-items-xs="1" data-items-sm="2" data-items-lg="3" data-items-xl="4">
-
-						<div class="team">
-							<div class="team-image">
-								<img src="images/doctors/1.1.jpg">
+					<div id="doctorCarousel" class="carousel slide  " data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="row">
+									<div class="col-2">
+									</div>
+									<div class="col-8">
+										<div class="row">
+											<div class="col d-flex justify-content-center">
+												<div class="card" style="width: 16rem;">
+													<img src="images/doctors/1.jpg" class="card-img-top" id="sizing">
+													<div class="card-body text-center">
+														<h4 class="card-title">Dr. Kim Tae Pyung</h4>
+														<p class="card-text">General Practitioner</p>
+													</div>
+												</div>
+											</div>
+											<div class="col d-flex justify-content-center">
+												<div class="card" style="width: 16rem;">
+													<img src="images/doctors/2.jpg" class="card-img-top" id="sizing">
+													<div class="card-body  text-center">
+														<h4 class="card-title">Dr. Park Shin Hye</h4>
+														<p class="card-text">Pediatrics</p>
+													</div>
+												</div>
+											</div>
+											<div class="col d-flex justify-content-center">
+												<div class="card" style="width: 16rem;">
+													<img src="images/doctors/3.jpg" class="card-img-top" id="sizing">
+													<div class="card-body text-center">
+														<h4 class="card-title">Dr. Lee Jong Suk</h4>
+														<p class="card-text">Cardiology</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								<!-- Repeat this structure for other doctors in the first "item" -->
+								</div>
 							</div>
-							<div class="team-desc">
-								<div class="team-title"><h4>Dr. Ji Sung</h4><span>General Practitioner</span></div>
+							<div class="carousel-item">
+								<div class="row">
+									<div class="col-2">
+									</div>
+									<div class="col-8">
+										<div class="row">
+											<div class="col d-flex justify-content-center">
+												<div class="card" style="width: 16rem;">
+													<img src="images/doctors/4.jpg" class="card-img-top" id="sizing">
+													<div class="card-body text-center">
+														<h4 class="card-title">Dr. Song Joong Ki</h4>
+														<p class="card-text">Emergency Medicine</p>
+													</div>
+												</div>
+											</div>
+											<div class="col d-flex justify-content-center">
+												<div class="card" style="width: 16rem;">
+													<img src="images/doctors/5.jpg" class="card-img-top" id="sizing">
+													<div class="card-body text-center">
+														<h4 class="card-title">Dr. Lee Sung-Kyong</h4>
+														<p class="card-text">WAD 2 Expert</p>
+													</div>
+												</div>
+											</div>
+											<div class="col d-flex justify-content-center">
+												<div class="card" style="width: 16rem;">
+													<img src="images/doctors/6.jpg" class="card-img-top" id="sizing">
+													<div class="card-body text-center">
+														<h4 class="card-title">Dr. Ji Sung</h4>
+														<p class="card-text">Orthopedics</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								<!-- Repeat this structure for other doctors in the first "item" -->
+								</div>
 							</div>
-						</div>
-
-						<div class="team">
-							<div class="team-image">
-								<img src="images/doctors/2.jpg">
-							</div>
-							<div class="team-desc">
-								<div class="team-title"><h4>Dr. Park Shin Hye</h4><span>Dermatologist</span></div>
-							</div>
-						</div>
-
-						<div class="team">
-							<div class="team-image">
-								<img src="images/doctors/3.jpg">
-							</div>
-							<div class="team-desc">
-								<div class="team-title"><h4>Dr. Lee Jong-Suk</h4><span>Cardiology</span></div>
-							</div>
-						</div>
-
-						<div class="team">
-							<div class="team-image">
-								<img src="images/doctors/4.jpg">
-							</div>
-							<div class="team-desc">
-								<div class="team-title"><h4>Dr. Song Joong-Ki</h4><span>Emergency Medicine</span></div>
-							</div>
-						</div>
-
-						<div class="team">
-							<div class="team-image">
-								<img src="images/doctors/5.jpg">
-							</div>
-							<div class="team-desc">
-								<div class="team-title"><h4>Dr. Kim So Hee</h4><span>Cardiologist</span></div>
-							</div>
+							<!-- Add more carousel items with additional doctors in a similar structure -->
+							<a class="carousel-control-prev" href="#doctorCarousel" role="button" data-bs-slide="prev" style="background-color: black;">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#doctorCarousel" role="button" data-bs-slide="next" style="background-color: black;">
+								<span class="carousel-control-next-icon" aria-hidden="true" ></span>
+								<span class="visually-hidden">Next</span>
+							</a>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</section><!-- #content end -->
@@ -559,7 +604,6 @@
 
 	<!-- JavaScripts
 	============================================= -->
-	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
 	<script src="js/custom.js"></script>
 

@@ -1,16 +1,3 @@
-/* ----------------------------------------------------------------
-	Custom CSS
-
-	Add all your Custom Styled CSS here for New Styles or
-	Overwriting Default Theme Styles for Better Handling Updates
------------------------------------------------------------------*/
-
-/* ----------------------------------------------------------------
-	Custom CSS
-
-	Add all your Custom Styled CSS here for New Styles or
-	Overwriting Default Theme Styles for Better Handling Updates
------------------------------------------------------------------*/
 
 /* About Us Box */
 #translucent{
@@ -40,7 +27,7 @@
     right: 30px;
     bottom: 20px;
     z-index: 9999;
-    width: 450px; /* Set the desired fixed width */
+    width: 345px; /* Set the desired fixed width */
   }
   
   #usertext {
@@ -130,4 +117,7 @@ form i{
 
 #country{
     border-radius: 5px;
+}
+#sizing{
+    height:200px;
 }
