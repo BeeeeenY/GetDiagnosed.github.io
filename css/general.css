@@ -121,9 +121,7 @@ form i{
 #sizing{
     height:200px;
 }
-
-/* Header CSS */
-/* Default styles for larger screens */
+/* TOPBAR CSS */
 #topbar {
     font-size: 14px;
     top: 0;
@@ -131,33 +129,72 @@ form i{
     right: 0;
     z-index: 1000;
     background-color: white;
-    height: 40px; /* Reduce the height */
+    height: 40px;
 }
+
 #top-link ul li {
     display: inline;
 }
 
-#top-link-end{
+#top-link-end {
     display: flex;
     justify-content: end;
     align-items: center;
     height: 100%;
     padding: 0;
-    margin:0;
+    margin: 0;
 }
-#top-link-start{
+
+#top-link-start {
     display: flex;
     justify-content: start;
     align-items: center;
     height: 100%;
     padding: 0;
 }
-#top-link ul li a{
+
+#top-link ul li a {
     background-color: #de6262;
     padding: 10px 15px;
-    color:white;
-    font-weight:bold;
+    color: white;
+    font-weight: bold;
 }
+
+/* Media Query for screens smaller than 568px */
+@media (max-width: 568px) {
+    #topbar {
+        height: auto; /* Allow the height to adjust as needed */
+    }
+    
+    #top-link {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    #top-link ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    #top-link ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #top-link ul li a {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 15px;
+        background-color: #de6262;
+        color: white;
+        font-weight: bold;
+    }
+}
+/* END OF TOPBAR CSS */
+/* HEADER CSS  */
 #menu-link ul {
     display: flex;
     justify-content: center;
