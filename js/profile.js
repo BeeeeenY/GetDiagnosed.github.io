@@ -1,4 +1,4 @@
-function edit_profile(){
+function profile(){
 
     var button_content1 = document.getElementById("edit_profile_btn")
     button_content1.innerHTML = 
@@ -28,13 +28,6 @@ function edit_profile(){
         <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Past Prescriptions</button>
     `
 
-    var button_content6 = document.getElementById("bill_payment_btn")
-
-    button_content6.innerHTML = 
-    `   
-        <img src="https://cdn-icons-png.flaticon.com/256/2941/2941461.png" alt="personal_icon" class="img-fluid align-middle" style="height: 40px; width: 40px; margin-right: 10px;">
-        <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Billing and Payment</button>
-    `
 
     var change_content = document.getElementById("change_content")
     change_content.innerHTML = 
@@ -189,13 +182,7 @@ function consults(){
         <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Past Prescriptions</button>
     `
 
-    var button_content6 = document.getElementById("bill_payment_btn")
-
-    button_content6.innerHTML = 
-    `   
-        <img src="https://cdn-icons-png.flaticon.com/256/2941/2941461.png" alt="personal_icon" class="img-fluid align-middle" style="height: 40px; width: 40px; margin-right: 10px;">
-        <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Billing and Payment</button>
-    `
+    
 
     var change_content = document.getElementById("change_content")
     change_content.innerHTML =
@@ -239,12 +226,6 @@ function medical_history(){
         <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Past Prescriptions</button>
     `
 
-    var button_content6 = document.getElementById("bill_payment_btn")
-    button_content6.innerHTML = 
-    `   
-        <img src="https://cdn-icons-png.flaticon.com/256/2941/2941461.png" alt="personal_icon" class="img-fluid align-middle" style="height: 40px; width: 40px; margin-right: 10px;">
-        <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Billing and Payment</button>
-    `
 
     var change_content = document.getElementById("change_content")
     change_content.innerHTML =
@@ -287,14 +268,6 @@ function past_prescriptions(){
         <button type="button" class="btn btn-danger border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Past Prescriptions</button>
     `
 
-    var button_content6 = document.getElementById("bill_payment_btn")
-
-    button_content6.innerHTML = 
-    `   
-        <img src="https://cdn-icons-png.flaticon.com/256/2941/2941461.png" alt="personal_icon" class="img-fluid align-middle" style="height: 40px; width: 40px; margin-right: 10px;">
-        <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Billing and Payment</button>
-    `
-
     var change_content = document.getElementById("change_content")
     change_content.innerHTML =
     `
@@ -306,50 +279,4 @@ function past_prescriptions(){
 }
 
 
-function bill_payment(){
 
-    var button_content1 = document.getElementById("edit_profile_btn")
-    button_content1.innerHTML = 
-    `
-        <img src="https://cdn-icons-png.flaticon.com/512/4751/4751751.png" alt="personal_icon" class="img-fluid align-middle" style="height: 40px; width: 40px; margin-right: 10px;">
-        <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Edit Profile</button>
-    `
-
-    var button_content2 = document.getElementById("consults_btn")
-    button_content2.innerHTML = 
-    `
-        <img src="https://cdn-icons-png.flaticon.com/512/5351/5351119.png" alt="personal_icon" class="img-fluid align-middle" style="height: 40px; width: 40px; margin-right: 10px;">
-        <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Consults</button>
-    `
-
-    var button_content3 = document.getElementById("med_hist_btn")
-    button_content3.innerHTML = 
-    `   
-        <img src="https://cdn-icons-png.flaticon.com/512/10299/10299454.png" alt="personal_icon" class="img-fluid align-middle" style="height: 40px; width: 40px; margin-right: 10px;">
-        <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Medical History</button>
-    `
-    
-    var button_content5 = document.getElementById("past_prescriptions_btn")
-    button_content5.innerHTML = 
-    `   
-        <img src="https://cdn-icons-png.flaticon.com/512/6599/6599288.png" alt="personal_icon" class="img-fluid align-middle" style="height: 40px; width: 40px; margin-right: 10px;">
-        <button type="button" class="btn btn-white border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Past Prescriptions</button>
-    `
-
-    var button_content6 = document.getElementById("bill_payment_btn")
-
-    button_content6.innerHTML = 
-    `   
-        <img src="https://cdn-icons-png.flaticon.com/256/2941/2941461.png" alt="personal_icon" class="img-fluid align-middle" style="height: 40px; width: 40px; margin-right: 10px;">
-        <button type="button" class="btn btn-danger border border-0 btn-block m-0 p-2" style="width:auto; font-size:18px; text-align: left;">Billing and Payment</button>
-    `
-
-    var change_content = document.getElementById("change_content")
-    change_content.innerHTML =
-    `
-        <div class="row g-3 mx-3 mt-3">
-            <h1 style="margin-bottom: 10px;" id="content_header">Billing and Payment</h1>
-            <p> Edit the rest below </p>
-        </div>
-    `
-}
