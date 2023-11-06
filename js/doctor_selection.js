@@ -107,7 +107,7 @@ async function filter_specialty(){
                 let settext=''
                 if(is_avial.toUpperCase() ==='T'){
                     settext=`
-                    <input class="btn btn-primary btn-sm" type="submit" value="Available" onclick="warningMsg()" data-bs-toggle="modal" data-bs-target="#warningModal" id="">
+                    <input class="btn btn-primary btn-sm" type="submit" value="Available" data-bs-toggle="modal" data-bs-target="#warningModal" id="">
                     `
                 }
                 else{
