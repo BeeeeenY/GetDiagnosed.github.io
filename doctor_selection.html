@@ -21,8 +21,10 @@
 	<!-- css -->
 	<link rel="stylesheet" href="css/medical.css">
 
-	<link rel="stylesheet" href="css/general.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/general2.css">
+    
+    <!-- Menu-Link Font -->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	
 	<!-- Bootstrap Icons -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -49,88 +51,48 @@
 </head>
 <body onload="filter_specialty()" class="stretched" data-loader-html="<div id='css3-spinner-svg-pulse-wrapper'><svg id='css3-spinner-svg-pulse' version='1.2' height='210' width='550' xmlns='https://www.w3.org/2000/svg' viewport='0 0 60 60' xmlns:xlink='https://www.w3.org/1999/xlink'><path id='css3-spinner-pulse' stroke='#DE6262' fill='none' stroke-width='2' stroke-linejoin='round' d='M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210'></svg></div>">
     <div id="wrapper">
-        <div id="top-bar">
-			<div class="container">
-
-				<div class="row justify-content-between">
-					<div class="col-12 col-md-auto d-none d-md-flex">
-
-						<!-- Top Links
-						============================================= -->
-						<div class="top-links">
-							<ul class="top-links-container">
-								<li class="top-links-item"><a href="#"><i class="bi-telephone"></i> +65 98765432</a></li>
-								<li class="top-links-item"><a href="#" class="text-transform-none"><i class="bi-envelope"></i> GetDiagnosed@medical.com</a></li>
-							</ul>
-						</div><!-- .top-links end -->
-
+        <!-- Header -->
+        <header>
+			<div class="container-fluid">
+				<div class="row d-flex justify-content-center">
+					<div class="col-sm-12 col-lg-3">
+						<div class="row">
+							<div class="col-lg-3">
+							</div>
+							<div class="col-lg-9">
+								<div id="logo-container">
+									<a href="homelogin.html"><img src="images/logo.png" width="235px"></a>
+									<i class="bi bi-list" id="closemenu"></i>
+								</div>
+							</div>
+						</div>
 					</div>
-
-					<div class="col-12 col-md-auto">
-
-						<!-- Top Links
-						============================================= -->
-						<div class="top-links">
-							<ul class="top-links-container">
-								
-								<li class="top-links-item"><a href="client_consultlogin.html" class="bg-color text-white">See a Doctor</a></li>
+		
+					<div class="col-3">  
+					</div>
+					
+					<div class="col-lg-6 d-flex justify-content-center">
+						<div class="text-center" id="menu-link">
+							<ul>
+								<li><a href="homelogin.html" class="menufont linkhover" ><span>HOME</span></a></li>
+								<li><a href="about-uslogin.html" class="menufont linkhover"><span>ABOUT US</span></a></li>
+								<li class="highlight"><a href="client_consultlogin.html" class="menufont"  style="color:white;"><span>CONSULT</span></a></li>
+								<li><a href="locatorlogin.html" class="menufont linkhover"><span>NEAREST CLINIC</span></a></li>
+								<li class="menufont linkhover dropdown">
+                                    <a href="profile.html">HYUNBINHUBBY</a>
+									<div class="dropdown-content">
+										<a href="index.html">Logout</a>
+									</div>
+								</li>
 							</ul>
-						</div><!-- .top-links end -->
-
+						</div>
+						
 					</div>
 				</div>
-
 			</div>
-		</div><!-- #top-bar end -->
-
-        <!-- Header
-        ============================================= -->
-        <header id="header" data-menu-padding="28" data-sticky-menu-padding="8">
-            <div id="header-wrap">
-                <div class="container">
-                    <div class="header-row">
-
-                        <!-- Logo
-                        ============================================= -->
-                        <div id="logo">
-                            <a href="index.html">
-                                <img class="logo-default" src="images/logo.png">
-                            </a>
-                        </div><!-- #logo end -->
-
-                        <div class="primary-menu-trigger">
-                            <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
-                                <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
-                            </button>
-                        </div>
-
-                        <!-- Primary Navigation
-                        ============================================= -->
-                        <nav class="primary-menu style-3 menu-spacing-margin">
-
-                            <ul class="menu-container">
-                                <li class="menu-item"><a class="menu-link" href="homelogin.html"><div>Home</div></a></li>
-                                <li class="menu-item"><a class="menu-link" href="about-uslogin.html"><div>About Us</div></a></li>
-                                <li class="menu-item current"><a class="menu-link" href="client_consultlogin.html"><div>Consult</div></a></li>
-                                <li class="menu-item"><a class="menu-link" href="locator.html"><div>Nearest Clinic</div></a></li>
-                                <li class="menu-item"><a class="menu-link" href="profile.html"><div>Hyunbinhubby</div></a>
-                                    <ul class="sub-menu-container">
-                                        <li class="menu-item"><a class="menu-link" href="index.html"><div>Logout</div></li></a>
-                                        <!-- <li class="menu-item"><a class="menu-link" href="register_patient.html"><div>Register Patient</div></a></li>
-                                        <li class="menu-item"><a class="menu-link" href="login_patient.html"><div>Login Patient</div></a></li>
-                                        <li class="menu-item"><div>Doctor</div></li>
-                                        <li class="menu-item"><a class="menu-link" href=""><div>Login Doctor</div></a></li> -->
-                                    </ul>
-                                </li>
-                            </ul>
-
-                        </nav><!-- #primary-menu end -->
-
-                    </div>
-                </div>
-            </div>
-            <div class="header-wrap-clone"></div>
-        </header>
+		</header>
+		<!-- End of Header -->
+        
         <!--Datatable STARTS HERE -->
         <div id="welcome" >
             <h1 class="display-2">Welcome Hyunbinhubby</h1>
@@ -252,12 +214,13 @@
                 </div><!-- #copyrights end -->
             </footer><!-- #footer end -->
     </div>
-    
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-<script src="js/custom.js"></script> 
-<script src="js/doctor_selection.js"></script>
-<script src="js/functions.bundle.js"></script>
+    <script src="js/functions.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/doctor_selection.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 </html>

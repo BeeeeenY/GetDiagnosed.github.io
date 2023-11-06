@@ -1,4 +1,4 @@
-`<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
@@ -6,7 +6,9 @@
     <title>GetDiagnosed</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/client_consult.css'>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   
     <!-- Font Imports -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +23,10 @@
 	<!-- css -->
 	<link rel="stylesheet" href="css/medical.css">
 
-	<link rel="stylesheet" href="css/general.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/general2.css">
+	
+	<!-- Menu-Link Font -->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	
 	<!-- Bootstrap Icons -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -33,14 +37,8 @@
 	<!-- Fontawesome -->
 	<script src="https://kit.fontawesome.com/7fab40c677.js" crossorigin="anonymous"></script>
 
-	
-	<!-- Plugins/Components CSS -->
-	<link rel="stylesheet" href="css/swiper.css">
-
     <!-- Vue.js 3 CDN -->
     <script src="https://unpkg.com/vue@next"></script>
-    <!-- Plugins/Components CSS -->
-	<link rel="stylesheet" href="css/swiper.css">
 
 	 <!-- Bootstrap v5.3.2 -->
 	 <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
@@ -51,178 +49,109 @@
 </head>
 <body class="stretched" data-loader-html="<div id='css3-spinner-svg-pulse-wrapper'><svg id='css3-spinner-svg-pulse' version='1.2' height='210' width='550' xmlns='https://www.w3.org/2000/svg' viewport='0 0 60 60' xmlns:xlink='https://www.w3.org/1999/xlink'><path id='css3-spinner-pulse' stroke='#DE6262' fill='none' stroke-width='2' stroke-linejoin='round' d='M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210'></svg></div>">
     <div id="wrapper">
-        
-
-    <!-- Header
-    ============================================= -->
-    <header id="header" data-menu-padding="28" data-sticky-menu-padding="8">
-        <div id="header-wrap">
-            <div class="container">
-                <div class="header-row">
-
-                    <!-- Logo
-                    ============================================= -->
-                    <div id="logo">
-                        <a href="index.html">
-                            <img class="logo-default" src="images/logo.png">
-                        </a>
-                    </div><!-- #logo end -->
-
-                    <div class="primary-menu-trigger">
-                        <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
-                            <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
-                        </button>
-                    </div>
-
-                    <!-- Primary Navigation
-                    ============================================= -->
-                    <nav class="primary-menu style-3 menu-spacing-margin">
-
-                        <ul class="menu-container">
-                            <li class="menu-item"><a class="menu-link" href="homelogin.html"><div>Home</div></a></li>
-                            <li class="menu-item"><a class="menu-link" href="about-uslogin.html"><div>About Us</div></a></li>
-                            <li class="menu-item current"><a class="menu-link" href="client_consultlogin.html"><div>Consult</div></a></li>
-                            <li class="menu-item"><a class="menu-link" href="locatorlogin.html"><div>Nearest Clinic</div></a></li>
-                            <li class="menu-item"><a class="menu-link" href="profile.html"><div>Hyunbinhubby</div></a>
-                                <ul class="sub-menu-container">
-                                    <li class="menu-item"><a class="menu-link" href="index.html"><div>Logout</div></li></a>
-                                    <!-- <li class="menu-item"><a class="menu-link" href="register_patient.html"><div>Register Patient</div></a></li>
-                                    <li class="menu-item"><a class="menu-link" href="login_patient.html"><div>Login Patient</div></a></li>
-                                    <li class="menu-item"><div>Doctor</div></li>
-                                    <li class="menu-item"><a class="menu-link" href=""><div>Login Doctor</div></a></li> -->
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </nav><!-- #primary-menu end -->
-
-                </div>
-            </div>
-        </div>
-        <div class="header-wrap-clone"></div>
-    </header>
+        <header>
+			<div class="container-fluid">
+				<div class="row d-flex justify-content-center">
+					<div class="col-sm-12 col-lg-3">
+						<div class="row">
+							<div class="col-lg-3">
+							</div>
+							<div class="col-lg-9">
+								<div id="logo-container">
+									<a href="homelogin.html"><img src="images/logo.png" width="235px"></a>
+									<i class="bi bi-list" id="closemenu"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+		
+					<div class="col-3">  
+					</div>
+					
+					<div class="col-lg-6 d-flex justify-content-center">
+						<div class="text-center" id="menu-link">
+							<ul>
+								<li><a href="homelogin.html" class="menufont linkhover" ><span>HOME</span></a></li>
+								<li><a href="about-uslogin.html" class="menufont linkhover"><span>ABOUT US</span></a></li>
+								<li class="highlight"><a href="client_consultlogin.html" class="menufont"  style="color:white;"><span>CONSULT</span></a></li>
+								<li><a href="locatorlogin.html" class="menufont linkhover"><span>NEAREST CLINIC</span></a></li>
+								<li class="menufont linkhover dropdown">
+                                    <a href="profile.html">HYUNBINHUBBY</a>
+									<div class="dropdown-content">
+										<a href="index.html">Logout</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- End of Header -->
 <!--FORM STARTS HERE -->
-<div id="welcome">
-    <h1 class="display-5">Welcome Hyunbinhubby</h1>
-</div>
-
-<div class="section row p-0 align-items-stretch dark mt-4">
-    
-    <div id="patient_form" class="col-lg-12 p-0">
-        <div class="bg-color form-widget col-padding " data-loader="button">
-            <h2 class="text-center">Take the first step</h2>
-            <div class="form-result"></div>
-            <form class="row mb-0" id="consult-form" name="consult-form" action="doctor_selection.html" method="get">
-                <div class="form-process">
-                    <div class="css3-spinner">
-                        <div class="css3-spinner-scaler"></div>
-                    </div>
-                </div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4 form-group">
-                    <label for="specialisation">Specialisation Required</label>
-                    <select class="form-select not-dark" name="specialisation" id="specialisation"  v-model="selected_specialisation">
-                        <option value="">-----Select-----</option>
-                        <option v-for="spec of specialty_list" :key="spec" :value="spec">{{spec}}</option>
-                    </select>
-                </div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4 form-group">
-                    <label for="allergies">Drug Allergies</label>
-                    <input type="text" id="allergies" name="allergies" class="form-control not-dark required" value="" placeholder="None">
-                </div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    
-                            <label for="preconditions">Pre Existing Conditions</label>
-                            <input type="text" id="preconditions" name="preconditions" class="form-control not-dark required" value="" placeholder="None">
-                        
-                </div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4 form-group mt-3">
-                    <label for="hehe"> How are you feeling?</label>
-
-                    <textarea id="hehe" name="comments" class="form-control not-dark required" cols="30" rows="5"></textarea>
-                </div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4"></div>
-                
-                
-                <div class="col-4 form-group text-end">
-                    <button class="button button-white button-light button-rounded m-0" type="submit" value="submit">Find a Doctor Now</button>
-                    
-                </div>
-                <div class="col-md-4"></div>
-                
-                <input type="hidden" name="prefix" value="template-medical-">
-            </form>
-
-        </div>
+    <div id="welcome">
+        <h1 class="display-5">Welcome Hyunbinhubby</h1>
     </div>
-</div>
 
-
-
-
-<!-- THIS IS OLD CODE FOR REFERENCE -->
-
-<!-- <div id="before" class="container">
-    <form method="get" action="doctor_selection.html">
-        <div id="inputs" class="row">
-            <div class="col-2"></div>
-            <div class="col-8 justify-content-center">
-                <p>
-                    <label for="fullname">Fullname </label>
-                    <input type="text" name="Fullname" id="fullname" value="">
-                </p>
-                
-                    <label for="reason">Reason For Consult </label>
-                    <textarea name="reason" id="reason" cols="30" rows="10"></textarea>
-                </p>
-                <p>
-                    <label for="specialisation">Specialisation Required </label>
-                    
-                    <div class="select-container">
-                        <select class="select-box" name="" id="">
-                            <option value="first">First</option>
-                            <option value="second">Second</option>
-                            <option value="third">Third</option>
-                            <option value="fourth">Fourth</option>
-                            
+    <div class="section row p-0 align-items-stretch dark mt-4">
+        
+        <div id="patient_form" class="col-lg-12 p-0">
+            <div class="bg-color form-widget col-padding " data-loader="button">
+                <h2 class="text-center">Take the first step</h2>
+                <div class="form-result"></div>
+                <form class="row mb-0" id="consult-form" name="consult-form" action="doctor_selection.html" method="get">
+                    <div class="form-process">
+                        <div class="css3-spinner">
+                            <div class="css3-spinner-scaler"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 form-group">
+                        <label for="specialisation">Specialisation Required</label>
+                        <select class="form-select not-dark" name="specialisation" id="specialisation"  v-model="selected_specialisation">
+                            <option value="">-----Select-----</option>
+                            <option v-for="spec of specialty_list" :key="spec" :value="spec">{{spec}}</option>
                         </select>
                     </div>
-                </p>
-        
-                <p>
-                    <label for="preconditions">Pre-Existing Conditions </label>
-                    <input type="text" name="preconditions" id="preconditions" required>
-                </p>
-        
-                <p>
-                    <label for="allergies">Drug Allergies (If Any) </label>
-                    <input type="text" name="Allergies" id="allergies" required>
-                </p>
-           
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 form-group">
+                        <label for="allergies">Drug Allergies</label>
+                        <input type="text" id="allergies" name="allergies" class="form-control not-dark required" value="" placeholder="None">
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        
+                                <label for="preconditions">Pre Existing Conditions</label>
+                                <input type="text" id="preconditions" name="preconditions" class="form-control not-dark required" value="" placeholder="None">
+                            
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 form-group mt-3">
+                        <label for="hehe"> How are you feeling?</label>
+
+                        <textarea id="hehe" name="comments" class="form-control not-dark required" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                    
+                    
+                    <div class="col-4 form-group text-end">
+                        <button class="button button-white button-light button-rounded m-0" type="submit" value="submit">Find a Doctor Now</button>
+                        
+                    </div>
+                    <div class="col-md-4"></div>
+                    
+                    <input type="hidden" name="prefix" value="template-medical-">
+                </form>
+
             </div>
         </div>
-
-            <div class="d-flex justify-content-center">
-                
-                    <button type="submit" id="submit-btn" >Find a Doctor</button>
-                
-            </div>
-
-            
-            
-        </div>
-       
-    </form>
-</div> -->
-
-<!-- Footer
+    </div>
+    <!-- Footer
 		============================================= -->
 		<footer id="footer" class="bg-contrast-100" style="border-top: 2px solid rgba(var(--cnvs-contrast-rgb),0.06);">
 			<div class="container" style="border-bottom: 1px solid rgba(var(--cnvs-contrast-rgb),0.06);">
@@ -308,11 +237,12 @@
 
 </div> <!-- wrapper ends here -->
 
-    
-
-<script src="/js/client_consult.js"></script>
 <script src="js/functions.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/header.js"></script>
 <script src="js/vue_custom.js"></script>
+<script src="js/client_consult.js"></script>
+
 </body>
 </html>

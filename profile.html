@@ -21,7 +21,9 @@
 	<link rel="stylesheet" href="css/medical.css">
 
 	<link rel="stylesheet" href="css/general.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Menu-Link Font -->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	
 	<!-- Bootstrap Icons -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -31,10 +33,6 @@
 
 	<!-- Fontawesome -->
 	<script src="https://kit.fontawesome.com/7fab40c677.js" crossorigin="anonymous"></script>
-
-	
-	<!-- Plugins/Components CSS -->
-	<link rel="stylesheet" href="css/swiper.css">
 
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -53,88 +51,71 @@
 	============================================= -->
 	<div id="wrapper">
 		
-		<!-- Top Bar
-		============================================= -->
-		<div id="top-bar">
-			<div class="container">
-
-				<div class="row justify-content-between">
-					<div class="col-12 col-md-auto d-none d-md-flex">
-
-						<!-- Top Links
-						============================================= -->
-						<div class="top-links">
-							<ul class="top-links-container">
-								<li class="top-links-item"><a href="#"><i class="bi-telephone"></i> +65 98765432</a></li>
-								<li class="top-links-item"><a href="#" class="text-transform-none"><i class="bi-envelope"></i> GetDiagnosed@medical.com</a></li>
-							</ul>
-						</div><!-- .top-links end -->
-
-					</div>
-
-					<div class="col-12 col-md-auto">
-
-						<!-- Top Links
-						============================================= -->
-						<div class="top-links">
-							<ul class="top-links-container">
-								
-								<li class="top-links-item"><a href="client_consultlogin.html" class="bg-color text-white">See a Doctor</a></li>
-							</ul>
-						</div><!-- .top-links end -->
-
-					</div>
-				</div>
-
-			</div>
-		</div><!-- #top-bar end -->
-
-		<!-- Header
-		============================================= -->
-		<header id="header" data-menu-padding="28" data-sticky-menu-padding="8">
-			<div id="header-wrap">
-				<div class="container">
-					<div class="header-row">
-
-						<!-- Logo
-						============================================= -->
-						<div id="logo">
-							<a href="index.html">
-								<img class="logo-default" src="images/logo.png">
-							</a>
-						</div><!-- #logo end -->
-
-						<div class="primary-menu-trigger">
-							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
-								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
-							</button>
+		<!-- Top Bar -->
+		<div class="container-fluid" id="topbar">
+            <div class="row">
+                <div class="col-3 border-bottom" id="top-link">
+                    <ul id="top-link-end">
+                        <li><i class="bi-telephone"></i> +65 98765432</li>
+                    </ul>
+                </div>
+                
+                <div class="col-6 border-start border-bottom" id="top-link">
+                    <ul id="top-link-start">
+                        <li><i class="bi-envelope"></i> GetDiagnosed@medical.com</li>
+                    </ul>
+                </div>
+    
+                <div class="col-3 border-bottom" id="top-link">
+                    <ul id="top-link-start">
+                        <li><a href="client_consultlogin.html">See a Doctor</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+		<!-- End of Top Bar -->
+		
+		<!-- Header -->
+        <header>
+			<div class="container-fluid">
+				<div class="row d-flex justify-content-center">
+					<div class="col-sm-12 col-lg-3">
+						<div class="row">
+							<div class="col-lg-3">
+							</div>
+							<div class="col-lg-9">
+								<div id="logo-container">
+									<a href="homelogin.html"><img src="images/logo.png" width="235px"></a>
+									<i class="bi bi-list" id="closemenu"></i>
+								</div>
+							</div>
 						</div>
-
-						<!-- Primary Navigation
-						============================================= -->
-						<nav class="primary-menu style-3 menu-spacing-margin">
-
-							<ul class="menu-container">
-								<li class="menu-item"><a class="menu-link" href="homelogin.html"><div>Home</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="about-uslogin.html"><div>About Us</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="client_consultlogin.html"><div>Consult</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="locatorlogin.html"><div>Nearest Clinic</div></a></li>
-								<li class="menu-item current"><a class="menu-link" href="profile.html"><div>Hyunbinhubby</div></a>
-									<ul class="sub-menu-container">
-										<li class="menu-item"><a class="menu-link" href="index.html"><div>Logout</div></li></a>
-									</ul>
+					</div>
+		
+					<div class="col-3">  
+					</div>
+					
+					<div class="col-lg-6 d-flex justify-content-center">
+						<div class="text-center" id="menu-link">
+							<ul>
+								<li><a href="homelogin.html" class="menufont linkhover" ><span>HOME</span></a></li>
+								<li><a href="about-uslogin.html" class="menufont  linkhover" ><span>ABOUT US</span></a></li>
+								<li><a href="client_consultlogin.html" class="menufont linkhover"><span>CONSULT</span></a></li>
+								<li><a href="locatorlogin.html" class="menufont linkhover"><span>NEAREST CLINIC</span></a></li>
+								<li class="highlight menufont dropdown">
+                                    <a href="profile.html" style="color:white;">HYUNBINHUBBY</a>
+									<div class="dropdown-content">
+										<a href="index.html">Logout</a>
+									</div>
 								</li>
 							</ul>
-
-						</nav><!-- #primary-menu end -->
-
+						</div>
+						
 					</div>
 				</div>
 			</div>
-			<div class="header-wrap-clone"></div>
 		</header>
-		<!-- #header end -->
-
+		<!-- End of Header -->
 
 		<!-- Content
 		============================================= -->
@@ -368,7 +349,9 @@
 	<!-- JavaScripts
 	============================================= -->
 	<script src="js/functions.bundle.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/header.js"></script>
 	<script src="js/profile.js"></script>
 
 </body>
