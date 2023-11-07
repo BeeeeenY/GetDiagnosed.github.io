@@ -1,0 +1,3651 @@
+@charset "UTF-8";
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-primary-text-emphasis: #052c65;
+  --bs-secondary-text-emphasis: #2b2f32;
+  --bs-success-text-emphasis: #0a3622;
+  --bs-info-text-emphasis: #055160;
+  --bs-warning-text-emphasis: #664d03;
+  --bs-danger-text-emphasis: #58151c;
+  --bs-light-text-emphasis: #495057;
+  --bs-dark-text-emphasis: #495057;
+  --bs-primary-bg-subtle: #cfe2ff;
+  --bs-secondary-bg-subtle: #e2e3e5;
+  --bs-success-bg-subtle: #d1e7dd;
+  --bs-info-bg-subtle: #cff4fc;
+  --bs-warning-bg-subtle: #fff3cd;
+  --bs-danger-bg-subtle: #f8d7da;
+  --bs-light-bg-subtle: #fcfcfd;
+  --bs-dark-bg-subtle: #ced4da;
+  --bs-primary-border-subtle: #9ec5fe;
+  --bs-secondary-border-subtle: #c4c8cb;
+  --bs-success-border-subtle: #a3cfbb;
+  --bs-info-border-subtle: #9eeaf9;
+  --bs-warning-border-subtle: #ffe69c;
+  --bs-danger-border-subtle: #f1aeb5;
+  --bs-light-border-subtle: #e9ecef;
+  --bs-dark-border-subtle: #adb5bd;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-bg: #fff;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-emphasis-color: #000;
+  --bs-emphasis-color-rgb: 0, 0, 0;
+  --bs-secondary-color: rgba(33, 37, 41, 0.75);
+  --bs-secondary-color-rgb: 33, 37, 41;
+  --bs-secondary-bg: #e9ecef;
+  --bs-secondary-bg-rgb: 233, 236, 239;
+  --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+  --bs-tertiary-color-rgb: 33, 37, 41;
+  --bs-tertiary-bg: #f8f9fa;
+  --bs-tertiary-bg-rgb: 248, 249, 250;
+  --bs-heading-color: inherit;
+  --bs-link-color: #0d6efd;
+  --bs-link-color-rgb: 13, 110, 253;
+  --bs-link-decoration: underline;
+  --bs-link-hover-color: #0a58ca;
+  --bs-link-hover-color-rgb: 10, 88, 202;
+  --bs-code-color: #d63384;
+  --bs-highlight-color: #212529;
+  --bs-highlight-bg: #fff3cd;
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  --bs-border-color: #dee2e6;
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-radius: 0.375rem;
+  --bs-border-radius-sm: 0.25rem;
+  --bs-border-radius-lg: 0.5rem;
+  --bs-border-radius-xl: 0.4rem;
+  --bs-border-radius-xxl: 0.5rem;
+  --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+  --bs-border-radius-pill: 50rem;
+  --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  --bs-focus-ring-width: 0.25rem;
+  --bs-focus-ring-opacity: 0.25;
+  --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+  --bs-form-valid-color: #198754;
+  --bs-form-valid-border-color: #198754;
+  --bs-form-invalid-color: #dc3545;
+  --bs-form-invalid-border-color: #dc3545;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+ul {
+  padding-left: 2rem;
+}
+
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+ul ul {
+  margin-bottom: 0;
+}
+
+a {
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  text-decoration: underline;
+}
+a:hover {
+  --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+code {
+  font-family: var(--bs-font-monospace);
+  font-size: 1em;
+}
+
+code {
+  font-size: 0.875em;
+  color: var(--bs-code-color);
+  word-wrap: break-word;
+}
+a > code {
+  color: inherit;
+}
+
+img {
+  vertical-align: middle;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+
+button {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  text-transform: none;
+}
+
+button,
+[type=button] {
+  -webkit-appearance: button;
+}
+button:not(:disabled),
+[type=button]:not(:disabled) {
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::file-selector-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+
+.container-fluid {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+:root {
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+@media (min-width: 576px) {
+  .col-sm-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .col-lg-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+}
+
+.btn {
+  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-padding-y: 0.375rem;
+  --bs-btn-font-family: ;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-color: var(--bs-body-color);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-width: var(--bs-border-width);
+  --bs-btn-border-color: transparent;
+  --bs-btn-border-radius: var(--bs-border-radius);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  --bs-btn-disabled-opacity: 0.65;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+  display: inline-block;
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+  font-family: var(--bs-btn-font-family);
+  font-size: var(--bs-btn-font-size);
+  font-weight: var(--bs-btn-font-weight);
+  line-height: var(--bs-btn-line-height);
+  color: var(--bs-btn-color);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border-radius: var(--bs-btn-border-radius);
+  background-color: var(--bs-btn-bg);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+.btn:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}
+.btn:focus-visible {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+  outline: 0;
+  box-shadow: var(--bs-btn-focus-box-shadow);
+}
+ :not(.btn-check) + .btn:active, .btn:first-child:active {
+  color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg);
+  border-color: var(--bs-btn-active-border-color);
+}
+ :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible {
+  box-shadow: var(--bs-btn-focus-box-shadow);
+}
+.btn:disabled {
+  color: var(--bs-btn-disabled-color);
+  pointer-events: none;
+  background-color: var(--bs-btn-disabled-bg);
+  border-color: var(--bs-btn-disabled-border-color);
+  opacity: var(--bs-btn-disabled-opacity);
+}
+
+.btn-light {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #f8f9fa;
+  --bs-btn-border-color: #f8f9fa;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #d3d4d5;
+  --bs-btn-hover-border-color: #c6c7c8;
+  --bs-btn-focus-shadow-rgb: 211, 212, 213;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #c6c7c8;
+  --bs-btn-active-border-color: #babbbc;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #f8f9fa;
+  --bs-btn-disabled-border-color: #f8f9fa;
+}
+
+.btn-lg {
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-font-size: 1.25rem;
+  --bs-btn-border-radius: var(--bs-border-radius-lg);
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+@keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem;
+  }
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg) /* rtl:ignore */;
+  }
+}
+
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes placeholder-glow {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes placeholder-wave {
+  100% {
+    -webkit-mask-position: -200% 0%;
+            mask-position: -200% 0%;
+  }
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* rtl:begin:remove */
+
+/* rtl:end:remove */
+:root {
+  --cnvs-themecolor:	#1abc9c;
+  --cnvs-themecolor-rgb:	26, 188, 156;
+  --bs-link-color:	var(--cnvs-themecolor);
+  --bs-link-color-rgb:	var(--cnvs-themecolor-rgb);
+  --bs-link-hover-color:	var(--cnvs-heading-color);
+  --cnvs-white:	#fff;
+  --cnvs-black:	#000;
+  --cnvs-body-bg:	var(--bs-body-bg);
+  --cnvs-body-bg-boxed:	var(--cnvs-contrast-0);
+  --cnvs-headings-font-weight:	600;
+  /* Font Families */
+  --cnvs-body-font:	"Inter", sans-serif;
+  --cnvs-primary-font:	"Inter", sans-serif;
+  --cnvs-secondary-font:	"Playfair Display", serif;
+  --cnvs-line-height-base:	1.5;
+  --cnvs-line-height-content:	1.65;
+  /* Margins */
+  --cnvs-margin-base:	3rem;
+  --cnvs-margin-sm:	2rem;
+  --cnvs-margin-lg:	5rem;
+  --cnvs-content-padding:	5rem;
+  --cnvs-section-margin:	4rem;
+  --cnvs-section-padding:	var(--cnvs-section-margin);
+  --cnvs-col-padding:	var(--cnvs-section-padding);
+  --cnvs-box-shadow-sm:	0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --cnvs-box-shadow:	0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --cnvs-box-shadow-lg:	0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --cnvs-copyrights-font-size: 0.875rem;
+  --bs-bg-opacity:	1;
+  /* Header Height */
+  --cnvs-header-height:	100px;
+  --cnvs-header-height-sm:	60px;
+  --cnvs-header-height-md:	80px;
+  --cnvs-header-height-lg:	120px;
+  --cnvs-header-height-shrink:	60px;
+  --cnvs-side-header-width:	260px;
+  --cnvs-side-header-padding-gutters:	30px;
+  --cnvs-side-panel-size:	300px;
+  --cnvs-side-panel-padding:	50px 70px 50px 40px;
+  --cnvs-side-panel-widget-padding:	40px;
+  --cnvs-transitions:	0.5s ease;
+  /* Social Colors */
+  --cnvs-color-facebook:	#3b5998;
+  --cnvs-color-whatsapp:	#25d366;
+  --cnvs-color-delicious:	#205cc0;
+  --cnvs-color-paypal:	#00588b;
+  --cnvs-color-waze:	#05c8f7;
+  --cnvs-color-android:	#a4c639;
+  --cnvs-color-googledrive:	#1FA463;
+  --cnvs-color-wikipedia:	#333;
+  --cnvs-color-stumbleupon:	#f74425;
+  --cnvs-color-foursquare:	#25a0ca;
+  --cnvs-color-call:	#444;
+  --cnvs-color-ninetyninedesigns:	#f26739;
+  --cnvs-color-forrst:	#5b9a68;
+  --cnvs-color-digg:	#191919;
+  --cnvs-color-spotify:	#1DB954;
+  --cnvs-color-reddit:	#c6c6c6;
+  --cnvs-color-blogger:	#fc4f08;
+  --cnvs-color-cc:	#688527;
+  --cnvs-color-dribbble:	#ea4c89;
+  --cnvs-color-evernote:	#5ba525;
+  --cnvs-color-flickr:	#ff0084;
+  --cnvs-color-google:	#4885ed;
+  --cnvs-color-salesforce:	#1798c1;
+  --cnvs-color-cloudflare:	#f38020;
+  --cnvs-color-linkedin:	#0e76a8;
+  --cnvs-color-vk:	#2b587a;
+  --cnvs-color-rss:	#ee802f;
+  --cnvs-color-skype:	#00aff0;
+  --cnvs-color-twitter:	#00acee;
+  --cnvs-color-x-twitter:	#010101;
+  --cnvs-color-youtube:	#c4302b;
+  --cnvs-color-vimeo:	#86c9ef;
+  --cnvs-color-slack:	#ECB22E;
+  --cnvs-color-yahoo:	#720e9e;
+  --cnvs-color-email3:	#6567a5;
+  --cnvs-color-macstore:	#333333;
+  --cnvs-color-figma:	#ab7c63;
+  --cnvs-color-podcast:	#e4b21b;
+  --cnvs-color-meetup:	#e51937;
+  --cnvs-color-dropbox:	#3d9ae8;
+  --cnvs-color-ebay:	#89c507;
+  --cnvs-color-github:	#171515;
+  --cnvs-color-googleplay:	#3bccff;
+  --cnvs-color-itunes:	#222;
+  --cnvs-color-periscope:	#52677b;
+  --cnvs-color-meta:	#0668E1;
+  --cnvs-color-soundcloud:	#ff7700;
+  --cnvs-color-tumblr:	#34526f;
+  --cnvs-color-wordpress:	#1e8cbe;
+  --cnvs-color-yelp:	#c41200;
+  --cnvs-color-microsoft:	#f65314;
+  --cnvs-color-trello:	#0079bf;
+  --cnvs-color-scribd:	#666666;
+  --cnvs-color-stripe:	#008cdd;
+  --cnvs-color-print:	#111;
+  --cnvs-color-btc:	#f2a900;
+  --cnvs-color-weibo:	#DF2029;
+  --cnvs-color-acrobat:	#d3222a;
+  --cnvs-color-drupal:	#27537a;
+  --cnvs-color-buffer:	#333333;
+  --cnvs-color-pocket:	#ee4056;
+  --cnvs-color-bitbucket:	#0e4984;
+  --cnvs-color-stackoverflow:	#ef8236;
+  --cnvs-color-hackernews:	#ff6600;
+  --cnvs-color-xing:	#126567;
+  --cnvs-color-instagram:	#8a3ab9;
+  --cnvs-color-quora:	#a82400;
+  --cnvs-color-openid:	#e16309;
+  --cnvs-color-steam:	#111;
+  --cnvs-color-amazon:	#e47911;
+  --cnvs-color-line:	#00b900;
+  --cnvs-color-kickstarter:	#87c442;
+  --cnvs-color-appstore:	#000;
+  --cnvs-color-pinterest:	#c8232c;
+  --cnvs-color-fivehundredpx:	#111;
+  --cnvs-color-tiktok:	#000;
+  --cnvs-color-airbnb:	#FF5A5F;
+  --cnvs-color-gpay:	#6877df;
+  --cnvs-color-unsplash:	#111;
+  --cnvs-color-snapchat:	#fffc00;
+  --cnvs-color-discord:	#7289da;
+  --cnvs-color-twitch:	#6441a5;
+  --cnvs-font-size-body:	var(--bs-body-font-size);
+  --cnvs-font-size-h1:	2.25rem;
+  --cnvs-font-size-h2:	1.875rem;
+  --cnvs-font-size-h3:	1.5rem;
+  --cnvs-font-size-h4:	1.125rem;
+  --cnvs-font-size-h5:	0.875rem;
+  --cnvs-font-size-h6:	0.75rem;
+  --cnvs-font-size-small:	calc(var(--cnvs-font-size-body) * 0.875);
+}
+
+:root {
+  --cnvs-contrast-0: #fff;
+  --cnvs-contrast-100: #f8f9fa;
+  --cnvs-contrast-200: #e9ecef;
+  --cnvs-contrast-300: #dee2e6;
+  --cnvs-contrast-400: #ced4da;
+  --cnvs-contrast-500: #adb5bd;
+  --cnvs-contrast-600: #6c757d;
+  --cnvs-contrast-700: #495057;
+  --cnvs-contrast-800: #343a40;
+  --cnvs-contrast-900: #212529;
+  --cnvs-contrast-1000: #000;
+  --cnvs-invert-contrast-0: #000;
+  --cnvs-invert-contrast-100: #212529;
+  --cnvs-invert-contrast-200: #343a40;
+  --cnvs-invert-contrast-300: #495057;
+  --cnvs-invert-contrast-400: #6c757d;
+  --cnvs-invert-contrast-500: #adb5bd;
+  --cnvs-invert-contrast-600: #ced4da;
+  --cnvs-invert-contrast-700: #dee2e6;
+  --cnvs-invert-contrast-800: #e9ecef;
+  --cnvs-invert-contrast-900: #f8f9fa;
+  --cnvs-invert-contrast-1000: #fff;
+  --cnvs-link-color:	var(--cnvs-themecolor);
+  --cnvs-link-hover-color:	var(--cnvs---cnvs-heading-color);
+  --cnvs-contrast-rgb:	0, 0, 0;
+  --cnvs-invert-contrast-rgb:	255, 255, 255;
+  --cnvs-contrast-bg:	#fff;
+  --cnvs-contrast-bg-offset:	#f8f9fa;
+  --cnvs-topbar-bg: var(--cnvs-contrast-0);
+  --cnvs-topbar-color: var(--cnvs-contrast-700);
+  --cnvs-topbar-border-color: rgba(var(--cnvs-contrast-rgb), 0.1);
+  --cnvs-topbar-social-icon-color: var(--cnvs-contrast-600);
+  --cnvs-header-bg:	var(--cnvs-contrast-0);
+  --cnvs-header-sticky-bg:	var(--cnvs-header-bg);
+  --cnvs-side-header-bg:	var(--cnvs-contrast-0);
+  --cnvs-section-bg:	var(--cnvs-contrast-bg-offset);
+  --cnvs-heading-color:	var(--cnvs-contrast-900);
+  --cnvs-line-color:	rgba(var(--cnvs-contrast-rgb), .1);
+  --cnvs-footer-bg:	var(--cnvs-contrast-bg-offset);
+  --cnvs-bg-overlay-bg-opacity: 0.75;
+  --cnvs-bg-overlay-bg: rgba(var(--cnvs-invert-contrast-rgb), var(--cnvs-bg-overlay-bg-opacity));
+  color: var(--cnvs-contrast-800);
+}
+
+/* ----------------------------------------------------------------
+
+	Layouts.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Bootstrap Adjustments
+-----------------------------------------------------------------*/
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: auto;
+  }
+}
+[class*=col-]:not([class*=sticky-]):not([class*=position-]) {
+  position: relative;
+}
+
+/*	Custom Bootstap Columns */
+
+/* ----------------------------------------------------------------
+	Sections
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Columns & Grids
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+	typography.scss
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Basic
+-----------------------------------------------------------------*/
+ ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+::-moz-selection {
+  background: var(--cnvs-themecolor);
+  color: var(--cnvs-body-bg);
+  text-shadow: none;
+}
+
+::selection {
+  background: var(--cnvs-themecolor);
+  color: var(--cnvs-body-bg);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--cnvs-themecolor);
+  color: var(--cnvs-body-bg);
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  background: var(--cnvs-themecolor);
+  color: var(--cnvs-body-bg);
+  text-shadow: none;
+}
+
+/* ----------------------------------------------------------------
+	Typography
+-----------------------------------------------------------------*/
+body {
+  line-height: 1.5;
+  font-size: var(--cnvs-font-size-body);
+  font-family: var(--cnvs-body-font);
+  background: var(--cnvs-body-bg-boxed);
+}
+
+a {
+  color: var(--cnvs-link-color);
+}
+a:not(.btn-link):not(.text-decoration-underline):not(.more-link) {
+  text-decoration: none !important;
+}
+a:hover {
+  color: var(--cnvs-link-hover-color);
+}
+a img {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ----------------------------------------------------------------
+	Basic Layout Styles
+-----------------------------------------------------------------*/
+
+
+ul {
+  margin-bottom: 30px;
+}
+
+/*-----------------------------------------------------------------------------------
+
+	Utilities.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Helper Classes
+-----------------------------------------------------------------*/
+.line {
+  clear: both;
+  position: relative;
+  width: 100%;
+  margin: var(--cnvs-section-margin) 0;
+  border-top: 1px solid rgba(var(--cnvs-contrast-rgb), 0.1);
+}
+
+.col-padding {
+  padding: 4rem;
+}
+
+/* ----------------------------------------------------------------
+	Text Contrast Color Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	BG Contrast Color Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Border Contrast Color Utility Classes
+-----------------------------------------------------------------*/
+
+.bg-color {
+  background-color: rgba(var(--cnvs-themecolor-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.color {
+  color: rgba(var(--cnvs-themecolor-rgb), var(--bs-text-opacity, 1)) !important;
+}
+
+/* ----------------------------------------------------------------
+	Font Weight Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Letter Spacing Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Text Stroke
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Font Families
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Text Underline Offset
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Image fit Objects
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Image Object & Background Positions
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Background Sizes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Image Scale Utility Classes
+-----------------------------------------------------------------*/
+@keyframes BgAnimated {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 400px;
+  }
+}
+
+/* ----------------------------------------------------------------
+	Opacity Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Text Sizing Utility
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Text Color Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	BG Color Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Gradient Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Bootstrap Utility Classes Extended
+-----------------------------------------------------------------*/
+/*	Gutters */
+/* ----------------------------------------------------------------
+	col-mb-classes & Bootstrap Utility Classes Extended
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Height Utility Classes
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Position Utility Classes Extended
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Lazy Loading
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Borders
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Max-width Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Text Sizes Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	X/Y Positioning Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Square Sizes Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Rotation Utility Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Max-width Utility Classes
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Shadow
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	translate
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Float Animation
+-----------------------------------------------------------------*/
+
+@keyframes cnvsFloat {
+  0% {
+    transform: translate3d(var(--cnvs-float-x-from), var(--cnvs-float-y-from), 0);
+  }
+  50% {
+    transform: translate3d(var(--cnvs-float-x-to), var(--cnvs-float-y-to), 0);
+  }
+  100% {
+    transform: translate3d(var(--cnvs-float-x-from), var(--cnvs-float-y-from), 0);
+  }
+}
+/* ----------------------------------------------------------------
+	z-Index
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	topbar.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Top Bar
+-----------------------------------------------------------------*/
+
+/* Top Links
+---------------------------------*/
+
+/* Top Social
+-----------------------------------------------------------------*/
+
+/* Top Login
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	header.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Header
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-header-border-color: rgba(var(--cnvs-contrast-rgb), .1);
+  --cnvs-header-transparent-border-color: rgba(var(--cnvs-contrast-rgb), .1);
+  --cnvs-header-floating-bg: var(--cnvs-contrast-0);
+  --cnvs-primary-menu-color: var(--cnvs-contrast-900);
+  --cnvs-primary-menu-submenu-bg: var(--cnvs-contrast-0);
+  --cnvs-primary-menu-submenu-color: var(--cnvs-contrast-900);
+  --cnvs-primary-menu-submenu-border: 1px solid rgba(var(--cnvs-contrast-rgb), 0.1);
+  --cnvs-primary-menu-submenu-hover-bg: rgba(var(--cnvs-contrast-rgb), 0.025);
+  --cnvs-header-misc-icons-color: var(--cnvs-primary-menu-color);
+  --cnvs-side-panel-bg: var(--cnvs-contrast-100);
+}
+
+#header {
+  --cnvs-sticky-header-height:	var(--cnvs-header-height);
+  --cnvs-header-border-color:	rgba(var(--cnvs-contrast-rgb), .1);
+  --cnvs-header-transparent-border-color: rgba(var(--cnvs-contrast-rgb), .1);
+  --cnvs-primary-menu-padding-x:	15px;
+  /*  Floating Header */
+  --cnvs-header-floating-top-offset:	60px;
+  --cnvs-header-floating-padding:	30px;
+  /*  Side Header */
+  --cnvs-side-header-padding-gutters:	30px;
+  /*  Primary Menu */
+  --cnvs-primary-menu-color:	var(--cnvs-contrast-900);
+  --cnvs-primary-menu-hover-color: var(--cnvs-themecolor);
+  --cnvs-primary-menu-active-color:	var(--cnvs-primary-menu-hover-color);
+  --cnvs-primary-menu-font:	var(--cnvs-primary-font);
+  --cnvs-primary-menu-font-weight:	700;
+  --cnvs-primary-menu-font-size:	0.8125rem;
+  --cnvs-primary-menu-tt:	uppercase;
+  --cnvs-primary-menu-ls:	1px;
+  --cnvs-primary-menu-icon-size:	1rem;
+  --cnvs-primary-menu-hover-text-decoration: none;
+  --cnvs-primary-menu-hover-text-decoration-offset: 3px;
+  --cnvs-primary-menu-submenu-padding-x: 15px;
+  --cnvs-primary-menu-submenu-padding-y: 10px;
+  --cnvs-primary-menu-submenu-top-border: 2px solid var(--cnvs-themecolor);
+  --cnvs-primary-menu-submenu-width:	240px;
+  --cnvs-primary-menu-submenu-display-speed:	0.45s;
+  --cnvs-primary-menu-submenu-display-offset:	0.5rem;
+  --cnvs-primary-menu-submenu-font:	var(--cnvs-body-font);
+  --cnvs-primary-menu-submenu-font-size:	0.75rem;
+  --cnvs-primary-menu-submenu-font-weight:	600;
+  --cnvs-primary-menu-submenu-hover-font-weight: 700;
+  --cnvs-primary-menu-submenu-tt:	uppercase;
+  --cnvs-primary-menu-submenu-color:	var(--cnvs-contrast-900);
+  --cnvs-primary-menu-submenu-spacing:	0;
+  --cnvs-primary-menu-submenu-border:	1px solid rgba(var(--cnvs-contrast-rgb), 0.1);
+  --cnvs-primary-menu-submenu-hover-bg:	rgba(var(--cnvs-contrast-rgb), 0.025);
+  --cnvs-primary-menu-submenu-hover-color: var(--cnvs-primary-menu-active-color);
+  --cnvs-primary-menu-submenu-hover-padding-offset: 0.25rem;
+  --cnvs-header-misc-icons-size:	1.125rem;
+  --cnvs-header-misc-icons-color:	var(--cnvs-primary-menu-color);
+  --cnvs-mega-menu-width-sm: 400px;
+  --cnvs-mobile-menu-off-canvas-width: 280px;
+  --cnvs-top-search-font-size:	2rem;
+  --cnvs-top-search-placeholder: var(--cnvs-contrast-600);
+  position: relative;
+}
+
+/* ----------------------------------------------------------------
+	Logo
+-----------------------------------------------------------------*/
+#logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  max-height: 100%;
+}
+#logo a {
+  color: #000;
+  font-family: var(--cnvs-primary-font);
+  font-size: 36px;
+  width: 100%;
+}
+#logo a [class^=logo-] {
+  display: none;
+}
+#logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: height 0.4s ease, padding 0.4s ease, margin 0.4s ease, opacity 0.3s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  #logo img {
+    transition: none;
+  }
+}
+
+/* ----------------------------------------------------------------
+	Header Right Area
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Primary Menu
+-----------------------------------------------------------------*/
+
+.menu-link {
+  --cnvs-primary-menu-padding-y: 14px;
+  --cnvs-primary-menu-padding-x: 5px;
+  display: block;
+  line-height: 22px;
+  padding: var(--cnvs-primary-menu-padding-y) var(--cnvs-primary-menu-padding-x);
+  color: var(--cnvs-primary-menu-color);
+  font-weight: var(--cnvs-primary-menu-font-weight);
+  font-size: var(--cnvs-primary-menu-font-size);
+  font-family: var(--cnvs-primary-menu-font);
+  text-transform: var(--cnvs-primary-menu-tt);
+  letter-spacing: var(--cnvs-primary-menu-ls);
+}
+.menu-link span {
+  display: none;
+}
+.menu-link i {
+  position: relative;
+  font-size: var(--cnvs-primary-menu-icon-size);
+  width: var(--cnvs-primary-menu-icon-size);
+  text-align: center;
+  margin-right: 0.625rem;
+  vertical-align: top;
+}
+
+/* ----------------------------------------------------------------
+	Mega Menu
+-----------------------------------------------------------------*/
+
+/* Off Canvas Menu
+-----------------------------------------------------------------*/
+
+/* Off Canvas Menu
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Top Search
+-----------------------------------------------------------------*/
+
+/* Top Search Animation */
+
+/* ----------------------------------------------------------------
+	Top Cart
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Page Menu
+-----------------------------------------------------------------*/
+
+/* Page Menu - Dots Style
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	One Page
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Side Push Panel
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	slider.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Flex Slider
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-slider-caption-font-color: var(--cnvs-contrast-800);
+  --cnvs-slider-arrows-bg-color: rgba(0, 0, 0, 0.3);
+  --cnvs-slider-arrows-bg-hover-color: rgba(0, 0, 0, 0.6);
+  --cnvs-slider-arrow-color: var(--bs-gray-100);
+  --cnvs-owl-dots-slider-color: #fff;
+}
+
+:root {
+  --cnvs-fslider-dots-position-top: 14px;
+  --cnvs-fslider-dots-position-right: 10px;
+  --cnvs-fslider-dots-size: 0.625rem;
+  --cnvs-fslider-dots-border-color: #fff;
+  --cnvs-fslider-dots-border-radius: 50%;
+  --cnvs-fslider-thumbs-gutters: 2px;
+  --cnvs-fslider-thumbs-width: 100px;
+  --cnvs-canvas-slider-dots-size: 0.625rem;
+  --cnvs-slider-pagination-gutters: 4px;
+  --cnvs-slider-pagination-rounded: 50%;
+  --cnvs-swiper-dots-position-bottom: 20px;
+  --cnvs-slider-caption-width: 550px;
+  --cnvs-slider-caption-font-size: 1.375rem;
+  --cnvs-slider-caption-font-weight: 300;
+  --cnvs-slider-caption-transition: top 0.3s ease;
+  --cnvs-slider-caption-p-size: 1.5rem;
+  --cnvs-slider-caption-offset: 50px;
+  --cnvs-slider-caption-bg-light: rgba(255, 255, 255, 0.8);
+  --cnvs-slider-caption-bg-dark: rgba(0, 0, 0, 0.6);
+  --cnvs-slider-caption-bg-radius: 2px;
+  --cnvs-slider-caption-bg-padding: 5px 12px;
+  --cnvs-slider-arrows-size: 52px;
+  --cnvs-slider-arrows-sm-size: calc(var(--cnvs-slider-arrows-size) - 20px);
+  --cnvs-slider-arrows-border-radius: 0.25rem;
+  --cnvs-slider-arrow-sm-offset: 20px;
+  --cnvs-owl-dots-slider-position: top auto bottom 15px;
+}
+
+/* ----------------------------------------------------------------
+	Slider
+-----------------------------------------------------------------*/
+/* Boxed Slider
+-----------------------------------------------------------------*/
+
+/* Swiper Slider
+-----------------------------------------------------------------*/
+
+/* Video Overlay
+-----------------------------------------------------------------*/
+
+/* Slider Caption
+-----------------------------------------------------------------*/
+
+/* Slider Arrows
+-----------------------------------------------------------------*/
+
+/* Slide Number
+-----------------------------------------------------------------*/
+
+/* Pagination
+-----------------------------------------------------------------*/
+
+/* Flex Slider - Navigation
+-----------------------------------------------------------------*/
+
+/* Flex Slider - Pagination & Thumbs
+-----------------------------------------------------------------*/
+
+/* Flex Slider: Pagination Positions
+-----------------------------------------------------------------*/
+
+/* Flex Slider: Thumbs
+-----------------------------------------------------------------*/
+
+/* FlexSlider: Thumbs - Flexible
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	pagetitle.scss
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Page Title
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-page-title-bg: var(--cnvs-contrast-bg-offset);
+  --cnvs-page-title-color: var(--cnvs-contrast-900);
+  --cnvs-page-title-border-color: rgba(var(--cnvs-contrast-rgb), 0.1);
+}
+/* ----------------------------------------------------------------
+
+	content.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Content
+-----------------------------------------------------------------*/
+#content {
+  position: relative;
+  background-color: var(--cnvs-body-bg);
+}
+
+/* ----------------------------------------------------------------
+
+	portfolio.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Portfolio
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-grid-filter-border-color: rgba(var(--cnvs-contrast-rgb), 0.1);
+  --cnvs-portfolio-meta-color: var(--cnvs-contrast-600);
+  --cnvs-portfolio-meta-row-1-color: var(--cnvs-heading-color);
+}
+
+/* Grid - Filter
+-----------------------------------------------------------------*/
+
+/* Portfolio - Shuffle Icon
+-----------------------------------------------------------------*/
+
+/* Portfolio - Items
+-----------------------------------------------------------------*/
+/* Portfolio - Item Title
+-----------------------------------------------------------------*/
+
+/* Portfolio - Parallax
+-----------------------------------------------------------------*/
+
+/* Portfolio Single - Image
+-----------------------------------------------------------------*/
+
+/* Masonry Thumbs
+-----------------------------------------------------------------*/
+
+/* Portfolio Single - Content
+-----------------------------------------------------------------*/
+
+/* Portfolio Single - Meta
+-----------------------------------------------------------------*/
+
+/* Portfolio Single Navigation
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	blog.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Blog
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-post-title-font-color: var(--cnvs-heading-color);
+  --cnvs-post-meta-color: var(--cnvs-contrast-600);
+  --cnvs-post-entry-link-bg: var(--cnvs-contrast-100);
+  --cnvs-post-entry-link-color: var(--cnvs-heading-color);
+  --cnvs-post-timeline-border-color: var(--cnvs-contrast-400);
+  --cnvs-post-timeline-date-border-color: var(--cnvs-contrast-400);
+}
+
+/* Blog - Grid
+-----------------------------------------------------------------*/
+
+/* Blog - Timeline
+-----------------------------------------------------------------*/
+
+@media (min-width: 992px) {
+  /* Blog - Timeline - Sidebar
+  -----------------------------------------------------------------*/
+}
+
+/* ----------------------------------------------------------------
+	Comments List
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Comment Form
+-----------------------------------------------------------------*/
+
+/* Post Elements
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	shop.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Shop
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-cart-quantity-bg: var(--cnvs-contrast-200);
+  --cnvs-cart-quantity-color: var(--cnvs-contrast-800);
+  --cnvs-cart-quantity-color-hover: var(--cnvs-cart-quantity-color);
+  --cnvs-cart-quantity-border-color: rgba(var(--cnvs-contrast-rgb), 0.1);
+  --cnvs-cart-quantity-bg-hover: var(--cnvs-contrast-300);
+}
+
+/* Shop - Single
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Cart
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	event.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Events
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+	shortcodes
+-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: countdown.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+
+	Countdown
+
+-----------------------------------------------------------------*/
+
+/* Countdown - Coming Soon
+-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: buttons.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Buttons
+-----------------------------------------------------------------*/
+.button {
+  --cnvs-btn-padding-x: 1.375rem;
+  --cnvs-btn-padding-y: 0.5rem;
+  --cnvs-btn-fontsize: 1rem;
+  --cnvs-btn-color: var(--cnvs-themecolor);
+  --cnvs-btn-color-dark: var(--bs-gray-900);
+  --cnvs-btn-color-light: #e9ecef;
+  --cnvs-btn-color-hover: var(--cnvs-btn-color-dark);
+  --cnvs-btn-lineheight: calc(var(--cnvs-btn-fontsize) * 1.6);
+  --cnvs-btn-border-width: 1px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  margin: 5px;
+  padding: var(--cnvs-btn-padding-y) var(--cnvs-btn-padding-x);
+  font-size: var(--cnvs-btn-fontsize);
+  line-height: var(--cnvs-btn-lineheight);
+  text-align: center;
+  background-color: var(--cnvs-btn-color);
+  color: #fff;
+  font-weight: 500;
+  border: var(--cnvs-btn-border-width) solid transparent;
+  transition: all 0.2s ease-in-out;
+  /* Buttons - Border
+  -----------------------------------------------------------------*/
+  /* Buttons - 3D
+  -----------------------------------------------------------------*/
+  /* Buttons - Icon Reveal
+  -----------------------------------------------------------------*/
+}
+.button i {
+  position: relative;
+  margin-right: 10px;
+  width: 1rem;
+  text-align: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
+.button:hover {
+  background-color: var(--cnvs-btn-color-dark);
+  color: #fff;
+}
+
+/* Buttons - Promo 100% Width
+-----------------------------------------------------------------*/
+
+/* Buttons - Circle
+-----------------------------------------------------------------*/
+
+/* Buttons - Flat
+-----------------------------------------------------------------*/
+
+/* Buttons - Action
+-----------------------------------------------------------------*/
+
+/* Buttons - Fill Effect
+-----------------------------------------------------------------*/
+
+/* Buttons - Fill Effect
+-----------------------------------------------------------------*/
+
+/* Buttons - Colors
+-----------------------------------------------------------------*/
+
+/* Buttons - No Hover
+-----------------------------------------------------------------*/
+
+/* Buttons - States
+-----------------------------------------------------------------*/
+ .button:disabled {
+  opacity: 0.65 !important;
+  pointer-events: none !important;
+}
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: promo.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Promo Boxes
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: feature-box.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Featured Boxes
+-----------------------------------------------------------------*/
+
+/* Animated Icon Hovers
+-----------------------------------------------------------------*/
+
+/* Icon Effects - Bordered
+-----------------------------------------------------------------*/
+
+/* Media Featured Box
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: process-steps.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Process Steps
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: alerts.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Alerts
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: styled-icons.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Styled Icons
+-----------------------------------------------------------------*/
+
+/* Icon Size - Small
+-----------------------------------------------------------------*/
+
+/* Icon Size - Small
+-----------------------------------------------------------------*/
+
+/* Icon Size - Large
+-----------------------------------------------------------------*/
+
+/* Icon Size - Extra Large
+-----------------------------------------------------------------*/
+
+/* Icon Size - Extra Extra Large
+-----------------------------------------------------------------*/
+
+/* Icon Lists
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: social-icons.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Social Icons
+-----------------------------------------------------------------*/
+
+/* Social Icons - Group
+-----------------------------------------------------------------*/
+[class*=-flex],
+[class*=row] {
+  --cnvs-socialicon-gap: 5px;
+  --cnvs-socialicon-gap-x: var(--cnvs-socialicon-gap);
+  --cnvs-socialicon-gap-y: 0px;
+}
+
+/* Social Icons - Sticky
+-----------------------------------------------------------------*/
+
+/* Social Icons - colors
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: toggles-accordions.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Toggle
+-----------------------------------------------------------------*/
+
+/* Toggle - with Title Background
+-----------------------------------------------------------------*/
+
+/* Toggle - Bordered
+-----------------------------------------------------------------*/
+
+/* Toggle - FAQs
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Accordions
+-----------------------------------------------------------------*/
+
+/* Accordion - with Title Background
+-----------------------------------------------------------------*/
+
+/* Accordion - Bordered
+-----------------------------------------------------------------*/
+
+/* Accordion - Large
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: tabs.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Tabs
+-----------------------------------------------------------------*/
+
+/* Bootstrap Tabs */
+
+/* Tab Icons */
+
+/* Tab Bordered */
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: faqs.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	FAQ List
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: clients.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Clients
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Testimonials
+-----------------------------------------------------------------*/
+/* Testimonials - Grid
+-----------------------------------------------------------------*/
+
+/* Testimonial - Pagination
+-----------------------------------------------------------------*/
+
+/* Testimonial - Full Scroller
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: team.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Team
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: pricing.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Pricing Boxes
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: counter-skills.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Counter
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Animated Rounded Skills
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Skills Bar
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Skills Bar
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: carousels.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Owl Carousel CSS
+-----------------------------------------------------------------*/
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Owl Carousel - Controls
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Arrows
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Dots
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Dots - Positions
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Dots - Sizes
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Dots - Border
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Dots - square
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Dots - square
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Dots - Dashed
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Dots - Numbers
+-----------------------------------------------------------------*/
+
+/* Owl Carousel - Controls - Arrows - Sizes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	Flip Cards
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Flip Cards
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: headings.scss
+
+-----------------------------------------------------------------------------------*/
+/* Titular
+-----------------------------------------------------------------*/
+
+/* Block Titles
+-----------------------------------------------------------------*/
+
+/* Heading Block - with Subtitle
+-----------------------------------------------------------------*/
+
+/* Emphasis Title
+-----------------------------------------------------------------*/
+
+/* Justify Border Title
+-----------------------------------------------------------------*/
+
+/* Fancy Title - Center Align
+-----------------------------------------------------------------*/
+
+/* Fancy Title - Right Align
+-----------------------------------------------------------------*/
+
+/* Fancy Title - Bottom Short Border
+-----------------------------------------------------------------*/
+
+/* Sub Heading
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-before-heading-font-size: 1rem;
+  --cnvs-before-heading-font-weight: 400;
+  --cnvs-before-heading-font-family: var(--cnvs-secondary-font);
+  --cnvs-before-heading-ls: 0px;
+  --cnvs-before-heading-tt: none;
+  --cnvs-before-heading-fst: normal;
+  --cnvs-before-heading-color: var(--cnvs-contrast-600);
+  --cnvs-before-heading-margin-bottom: 0.25rem;
+}
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: dividers.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Divider
+-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: misc.scss
+
+-----------------------------------------------------------------------------------*/
+/* Infinity Scroll - Message Style
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Quotes & Blockquotes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Cascading Images
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Hover 3D
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Scroll Effects
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Dropcaps & Highlights
+-----------------------------------------------------------------*/
+
+.highlight {
+  padding: 2px 5px;
+  background-color: #444;
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* ----------------------------------------------------------------
+	Text Rotater
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Underliner
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Overlays
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Google Maps
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Google Custom Search
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Magazine Specific Classes
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Go To Top
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Read More
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	GDPR Settings
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Error 404
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Landing Pages
+-----------------------------------------------------------------*/
+
+/* Navigation Tree
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Wedding
+-----------------------------------------------------------------*/
+
+/* --------------------------------------------------------------
+	SWITCH
+--------------------------------------------------------------  */
+
+/* --------------------------------------------------------------
+	SWITCH 1 - ROUND
+----------------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+	SWITCH 2 - ROUND FLAT
+-------------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+	Tour Driver
+-------------------------------------------------------------- */
+@keyframes pulsate {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+/* ----------------------------------------------------------------------------
+	Canvas Cursor
+---------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------
+	Grid Border
+---------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+	Media Actions
+-------------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+	App Menu
+-------------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+	Circle Stack
+-------------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+	Ticker
+-------------------------------------------------------------- */
+@keyframes tickerAnim {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: Forms.scss
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Forms
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-form-processor-bg: #fff;
+  --cnvs-input-btn-input-color: var(--bs-body-color);
+  --cnvs-input-btn-input-bg: var(--bs-body-bg);
+  --cnvs-input-btn-border-color: var(--bs-border-color);
+  --cnvs-input-label-mb: 0.5rem;
+  --cnvs-form-label-font-weight: 500;
+  --cnvs-form-label-error: var(--bs-danger);
+}
+
+/* ----------------------------------------------------------------
+	Contact Form
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Preloaders
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	footer.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Footer
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	widgets.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Widgets
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-widget-border: 1px solid rgba(var(--cnvs-contrast-rgb), 0.1);
+}
+/* Widget - Quick Contact Form
+-----------------------------------------------------------------*/
+
+/* Newsletter Widget
+-----------------------------------------------------------------*/
+
+/* Twitter Feed Widget
+-----------------------------------------------------------------*/
+
+/* Widget Filter Links
+-----------------------------------------------------------------*/
+
+/* Tag Cloud
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	Paginations.scss
+
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Styled Paginations
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-pagination-circle-size: 35px;
+  --cnvs-pagination-margin: 5px;
+  --bs-pagination-hover-color: var(--cnvs-contrast-0);
+}
+
+/* ----------------------------------------------------------------
+	extras.scss
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+	Bootstrap Specific
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Shape Dividers
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	HTML5 Youtube Video Backgrounds
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Datepicker Component
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Star Ratings Component
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Custom Animate.css Styles
+-----------------------------------------------------------------*/
+@keyframes fadeInDownSmall {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeftSmall {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRightSmall {
+  from {
+    opacity: 0;
+    transform: translate3d(50%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeOutDownSmall {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+}
+@keyframes fadeOutLeftSmall {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+@keyframes fadeOutRightSmall {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(50%, 0, 0);
+  }
+}
+@keyframes fadeOutUpSmall {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+/* ----------------------------------------------------------------
+
+	pageloaders.scss
+
+-----------------------------------------------------------------*/
+:root {
+  --cnvs-loader-color: var(--cnvs-contrast-300);
+}
+
+/* ----------------------------------------------------------------
+	Page Transitions
+-----------------------------------------------------------------*/
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+@keyframes cssspinnerbounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  }
+  50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes scaleout {
+  0% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes ball-grid-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.6);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+@keyframes ballrotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ball-zig-deflect {
+  17% {
+    transform: translate(-15px, -30px);
+  }
+  34% {
+    transform: translate(15px, -30px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  67% {
+    transform: translate(15px, -30px);
+  }
+  84% {
+    transform: translate(-15px, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes ball-zag-deflect {
+  17% {
+    transform: translate(15px, 30px);
+  }
+  34% {
+    transform: translate(-15px, 30px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  67% {
+    transform: translate(-15px, 30px);
+  }
+  84% {
+    transform: translate(15px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes ball-scale-multiple {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes ball-triangle-path-1 {
+  33% {
+    transform: translate(25px, -50px);
+  }
+  66% {
+    transform: translate(50px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes ball-triangle-path-2 {
+  33% {
+    transform: translate(25px, 50px);
+  }
+  66% {
+    transform: translate(-25px, 50px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes ball-triangle-path-3 {
+  33% {
+    transform: translate(-50px, 0px);
+  }
+  66% {
+    transform: translate(-25px, -50px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes ball-pulse-sync {
+  33% {
+    transform: translateY(10px);
+    opacity: 0.85;
+  }
+  66% {
+    transform: translateY(-10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes ball-scale-ripple-multiple {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Magnific Popup SCSS */
+:root {
+  --cnvs-mfp-overlay-color: #0b0b0b;
+  --cnvs-mfp-overlay-opacity: 0.9;
+  --cnvs-mfp-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  --cnvs-mfp-popup-padding-left: 8px;
+  --cnvs-mfp-popup-padding-left-mobile: 6px;
+  --cnvs-mfp-z-index-base: 1040;
+  --cnvs-mfp-controls-opacity: 0.65;
+  --cnvs-mfp-controls-color: #FFF;
+  --cnvs-mfp-inner-close-icon-color: #333;
+  --cnvs-mfp-controls-text-color: #CCC;
+  --cnvs-mfp-controls-text-color-hover: #FFF;
+  --cnvs-mfp-preloader-size: 2rem;
+  --cnvs-mfp-close-btn-size: 4rem;
+  --cnvs-mfp-close-btn-font-size: 1.5rem;
+  --cnvs-mfp-arrow-size: 4rem;
+  --cnvs-mfp-title-padding: 1rem;
+  --cnvs-mfp-title-border-radius: 0.25rem;
+  --cnvs-mfp-link-color: #CCC;
+  --cnvs-mfp-iframe-padding-top: 40px;
+  --cnvs-mfp-iframe-background: #000;
+  --cnvs-mfp-iframe-max-width: 900px;
+  --cnvs-mfp-iframe-ratio: 9/16;
+  --cnvs-mfp-image-background: #444;
+  --cnvs-mfp-caption-title-color: #F3F3F3;
+  --cnvs-mfp-caption-subtitle-color: #BDBDBD;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Main image in popup */
+
+/* The shadow behind the image */
+
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  /**
+   * Remove all paddings around the image on small screen
+   */
+}
+/*!
+ * animate.css - https://animate.style/
+ * Version - 4.1.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2020 Animate.css
+ */
+:root {
+  --cnvs-animate-duration: 1s;
+  --cnvs-animate-delay: 1s;
+  --cnvs-animate-repeat: 1;
+}
+
+/* Attention seekers  */
+@keyframes bounce {
+  from, 20%, 53%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0) scaleY(1.1);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0) scaleY(1.05);
+  }
+  80% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0) scaleY(0.95);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0) scaleY(1.02);
+  }
+}
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes shakeX {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@keyframes shakeY {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(0, -10px, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(0, 10px, 0);
+  }
+}
+@keyframes headShake {
+  0% {
+    transform: translateX(0);
+  }
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes jello {
+  from, 11.1%, to {
+    transform: translate3d(0, 0, 0);
+  }
+  22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  77.7% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+  88.8% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+/* Back entrances */
+@keyframes backInDown {
+  0% {
+    transform: translateY(-1200px) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes backInLeft {
+  0% {
+    transform: translateX(-2000px) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes backInRight {
+  0% {
+    transform: translateX(2000px) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes backInUp {
+  0% {
+    transform: translateY(1200px) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Back exits */
+@keyframes backOutDown {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(700px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+@keyframes backOutLeft {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-2000px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+@keyframes backOutRight {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(2000px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+@keyframes backOutUp {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-700px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+/* Bouncing entrances  */
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0) scaleY(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0) scaleY(0.9);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0) scaleY(0.95);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0) scaleY(0.985);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0) scaleX(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0) scaleX(1);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0) scaleX(0.98);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0) scaleX(0.995);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0) scaleX(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0) scaleX(1);
+  }
+  75% {
+    transform: translate3d(10px, 0, 0) scaleX(0.98);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0) scaleX(0.995);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0) scaleY(5);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0) scaleY(0.9);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0) scaleY(0.95);
+  }
+  90% {
+    transform: translate3d(0, -5px, 0) scaleY(0.985);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Bouncing exits  */
+@keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+@keyframes bounceOutDown {
+  20% {
+    transform: translate3d(0, 10px, 0) scaleY(0.985);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0) scaleY(0.9);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0) scaleY(3);
+  }
+}
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    transform: translate3d(20px, 0, 0) scaleX(0.9);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0) scaleX(2);
+  }
+}
+@keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    transform: translate3d(-20px, 0, 0) scaleX(0.9);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0) scaleX(2);
+  }
+}
+@keyframes bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0) scaleY(0.985);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, 20px, 0) scaleY(0.9);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0) scaleY(3);
+  }
+}
+
+/* Fading entrances  */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInTopLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInTopRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInBottomLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInBottomRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Fading exits */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes fadeOutDownBig {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes fadeOutLeftBig {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes fadeOutRightBig {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+@keyframes fadeOutTopLeft {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, -100%, 0);
+  }
+}
+@keyframes fadeOutTopRight {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, -100%, 0);
+  }
+}
+@keyframes fadeOutBottomRight {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 100%, 0);
+  }
+}
+@keyframes fadeOutBottomLeft {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 100%, 0);
+  }
+}
+
+/* Flippers */
+@keyframes flip {
+  from {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+  to {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+@keyframes flipOutX {
+  from {
+    transform: perspective(400px);
+  }
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+@keyframes flipOutY {
+  from {
+    transform: perspective(400px);
+  }
+  30% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+/* Lightspeed */
+@keyframes lightSpeedInRight {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+  80% {
+    transform: skewX(-5deg);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes lightSpeedInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: skewX(-20deg);
+    opacity: 1;
+  }
+  80% {
+    transform: skewX(5deg);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes lightSpeedOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+@keyframes lightSpeedOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(-100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+/* Rotating entrances */
+@keyframes rotateIn {
+  from {
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes rotateInDownLeft {
+  from {
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes rotateInDownRight {
+  from {
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes rotateInUpLeft {
+  from {
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes rotateInUpRight {
+  from {
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* Rotating exits */
+@keyframes rotateOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+}
+@keyframes rotateOutDownLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+}
+@keyframes rotateOutDownRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+@keyframes rotateOutUpLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+@keyframes rotateOutUpRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0;
+  }
+}
+
+/* Specials */
+@keyframes hinge {
+  0% {
+    animation-timing-function: ease-in-out;
+  }
+  20%, 60% {
+    transform: rotate3d(0, 0, 1, 80deg);
+    animation-timing-function: ease-in-out;
+  }
+  40%, 80% {
+    transform: rotate3d(0, 0, 1, 60deg);
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes rollOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+  }
+}
+
+/* Zooming entrances */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+@keyframes zoomInLeft {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+@keyframes zoomInRight {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+/* Zooming exits */
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes zoomOutDown {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+@keyframes zoomOutLeft {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.1) translate3d(-2000px, 0, 0);
+  }
+}
+@keyframes zoomOutRight {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.1) translate3d(2000px, 0, 0);
+  }
+}
+@keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+/* Sliding entrances */
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Sliding exits */
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+/*-----------------------------------------------------------------------------------
+	Dark Scheme - sass/dark.scss
+-----------------------------------------------------------------------------------*/
