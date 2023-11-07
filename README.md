@@ -1,9 +1,5 @@
 <!-- markdownlint-disable MD022 MDO31 MD032 MD033 MD034 -->
 <p align="center">
-      <img src="https://readme-typing-svg.demolab.com/?lines=G4T5+Life+Below+Water&font=Fira%20Code&center=true&width=380&height=50&duration=4000&pause=1000">
-</p>
-
-<p align="center">
       <img src="images/logo.png">
 </p>
 
