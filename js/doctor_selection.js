@@ -84,7 +84,7 @@ async function filter_specialty(){
                     <th>Clinic Name</th>
                     <th>Country</th>
                     <th>Specialty</th>
-                    <th>Avialiabity</th>
+                    <th>Availability</th>
                 </tr>`;
 
 
