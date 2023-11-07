@@ -49,8 +49,8 @@ https://github.com/BeeeeenY/GetDiagnosed
 2. If users need quick remedies or symptom checking, they can click on the robot icon at the bottom right-hand corner to start a chat with the chatbot.
 3. Users enter a prompt to initiate a conversation with the chatbot.
 4. If users want to see a doctor via video, they will be prompted to log in via the login page.
-5. Once logged in, the user can fill in the consultation page using the following credentials:
-Username: hyunbinhandsome
+5. Once logged in, the user can fill in the consultation page using the following credentials: <br>
+Username: hyunbinhandsome <br>
 Password: Kyongispretty@2
 6. They will be directed to a list of doctors who are available and can click on the doctor they would like to see.
 7. Users will be informed to be ready, as the next page will link the doctor to the patient directly.
